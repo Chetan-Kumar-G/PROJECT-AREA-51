@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { AudioPlayer } from '../ui/AudioPlayer'
-import { saveTorch } from './surfaceState'
+import { saveTorch, savePace } from './surfaceState'
 import { storyFor } from '../missions/stories'
 import { plainObject } from '../discovery/plain'
 import { useStore } from '../store/store'
@@ -108,6 +108,7 @@ function Hud({ touch }: { touch: boolean }) {
             {S.camMode === 'third' ? 'First person' : 'Third person'} <kbd>V</kbd>
           </button>
           {site.bodyId === 'moon' && <TorchButton />}
+          <PaceButtons />
           <AudioPlayer />{/* the one Sound control (the app's top bar is hidden on a surface) */}
           <button className="btn ghost" onClick={() => S.set({ helpOpen: true })} aria-label="Controls help">? <kbd>H</kbd></button>
           <button className="btn" onClick={() => expedition.returnToOrbit()} data-testid="return-to-orbit">⤴ Return to orbit</button>
@@ -160,6 +161,21 @@ function Hud({ touch }: { touch: boolean }) {
         </div>
       )}
     </div>
+  )
+}
+
+/** 1× 2× 3×: how fast the visit runs (walking, and the landing and liftoff sequences); remembered */
+function PaceButtons() {
+  const pace = useSurface((s) => s.pace)
+  const set = useSurface((s) => s.set)
+  return (
+    <span className="surf-pace" role="radiogroup" aria-label="Speed">
+      {([1, 2, 3] as const).map((n) => (
+        <button key={n} className={'btn ghost small' + (pace === n ? ' on' : '')} role="radio" aria-checked={pace === n} data-testid={`pace-${n}`} title={n === 1 ? 'Real pace' : `${n} times faster`} onClick={() => { set({ pace: n }); savePace(n) }}>
+          {n}×
+        </button>
+      ))}
+    </span>
   )
 }
 

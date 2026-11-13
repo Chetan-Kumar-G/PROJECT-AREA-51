@@ -20,6 +20,14 @@ describe('astronaut controller', () => {
     expect(Math.abs(s.yaw + Math.PI / 2)).toBeLessThan(0.05)
   })
 
+  it('the 1× 2× 3× pace control: three times the walking speed covers about three times the ground', () => {
+    const fast = { ...moon, walkSpeed: moon.walkSpeed * 3, runSpeed: moon.runSpeed * 3 }
+    const d1 = Math.hypot(...run(newCharacter(0, 0, flat), { ...idle, forward: 1 }, moon, 10).pos.filter((_, i) => i !== 1))
+    const d3 = Math.hypot(...run(newCharacter(0, 0, flat), { ...idle, forward: 1 }, fast, 10).pos.filter((_, i) => i !== 1))
+    expect(d3 / d1).toBeGreaterThan(2.6)
+    expect(d3 / d1).toBeLessThan(3.2)
+  })
+
   it('accelerates and stops smoothly, then does not drift (no sliding)', () => {
     let s = run(newCharacter(0, 0, flat), { ...idle, forward: 1 }, moon, 3)
     expect(Math.hypot(s.vel[0], s.vel[2])).toBeCloseTo(moon.walkSpeed, 2)

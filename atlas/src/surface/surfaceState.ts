@@ -35,6 +35,8 @@ export interface SurfaceUI {
   lander: { phase: 'parked' | 'descent' | 'ascent'; t0: number }
   /** Neil's helmet torch: on / off, and whether the user chose it (a manual choice is never overridden) */
   torch: { on: boolean; manual: boolean; beam: 'wide' | 'narrow' }
+  /** how fast the visit runs: 1 = real pace; 2 and 3 speed up walking and the landing / liftoff sequences */
+  pace: Pace
   /** the expedition lander's height above its pad (m) while landing / lifting off, and whether it has touched down */
   landerAlt: number
   /** HUD snapshot of the astronaut (updated ~10×/s) */
@@ -65,6 +67,11 @@ const initial = {
   lander: { phase: 'parked' as 'parked' | 'descent' | 'ascent', t0: 0 },
   landerAlt: 0,
 }
+/** playback speed, shared with the main site's 1× 2× 3× control (same storage key) and remembered */
+export type Pace = 1 | 2 | 3
+const PACE_KEY = 'goe:speed'
+const readPace = (): Pace => { try { const v = Number(localStorage.getItem(PACE_KEY)); return v === 2 || v === 3 ? v : 1 } catch { return 1 } }
+export const savePace = (p: Pace) => { try { localStorage.setItem(PACE_KEY, String(p)) } catch { /* private mode */ } }
 /** the torch is kept across sites in the session (a manual choice stays a manual choice) */
 const TORCH_KEY = 'abnf.moon.torch'
 const readTorch = (): SurfaceUI['torch'] => { try { const v = JSON.parse(sessionStorage.getItem(TORCH_KEY) ?? 'null'); if (v && typeof v.on === 'boolean') return { on: v.on, manual: !!v.manual, beam: v.beam === 'narrow' ? 'narrow' : 'wide' } } catch { /* private mode */ } return { on: false, manual: false, beam: 'wide' } }
@@ -86,6 +93,7 @@ export const useSurface = create<SurfaceUI>((set) => ({
   siteId: null,
   ...initial,
   torch: typeof window === 'undefined' ? { on: false, manual: false, beam: 'wide' } : readTorch(),
+  pace: typeof window === 'undefined' ? 1 : readPace(),
   set: (p) => set(p),
   reset: (siteId) => set({ siteId, ...initial, discovered: [] }),
 }))

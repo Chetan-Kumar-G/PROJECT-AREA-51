@@ -2933,6 +2933,9 @@ mark.spoken-word { background: rgba(251, 191, 36, 0.35); color: inherit; border-
 @media (prefers-reduced-motion: reduce) { .surf-discovery { animation: none; } }
 /* the helmet torch control */
 .surf-torch { display: inline-flex; gap: 4px; }
+.surf-pace { display: inline-flex; gap: 2px; padding: 2px; border: 1px solid var(--line); border-radius: var(--r-sm); }
+.surf-pace .btn { min-width: 34px; padding: 0 8px; border: 0; }
+.surf-pace .btn.on { background: var(--accent); color: var(--accent-ink); }
 .surf-torch .btn.on { border-color: var(--warm); color: var(--warm); }
 
 /* the Sound control in a surface header: icon only, the panel opens below it */

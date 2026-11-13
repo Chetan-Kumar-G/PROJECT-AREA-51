@@ -385,6 +385,8 @@ function Player({ env }: { env: SceneEnv }) {
   const astro = useRef<AstronautHandle>(null)
   const g = SURFACE_BODIES[env.site.bodyId].gravity.value!
   const params = useMemo(() => paramsForGravity(g, env.site.halfExtentM), [g, env.site])
+  // the 1× 2× 3× control: the same astronaut, moving two or three times as fast
+  const paced = useMemo(() => [1, 2, 3].map((k) => ({ ...params, walkSpeed: params.walkSpeed * k, runSpeed: params.runSpeed * k })), [params])
   const ground = env.terrain
   const lm = env.placed[0]
   const followRef = useRef({ x: 0, z: 0 })
@@ -665,7 +667,8 @@ function Player({ env }: { env: SceneEnv }) {
           jump: input.isHeld('jump') || virtualInput.jump,
           camYaw: L.yaw,
         }
-    if (!S.paused) ch.current = stepCharacter(ch.current, inp, params, ground, env.colliders, dt)
+    const pace = S.pace
+    if (!S.paused) ch.current = stepCharacter(ch.current, inp, paced[pace - 1], ground, env.colliders, dt)
     const c = ch.current
     followRef.current.x = c.pos[0]
     followRef.current.z = c.pos[2]
@@ -818,7 +821,7 @@ function Player({ env }: { env: SceneEnv }) {
     const lst = landerState.current
     let astroHidden = false
     if (LS.phase === 'descent') {
-      const el = nowL - LS.t0
+      const el = (nowL - LS.t0) * pace
       const tau = Math.min(1, el / LANDER_T.descent)
       lst.h = tau < 1 ? 420 * Math.pow(1 - tau, 1.8) : 0
       lst.thrust = tau < 1 ? 1 : 0
@@ -826,7 +829,7 @@ function Player({ env }: { env: SceneEnv }) {
       astroHidden = el < LANDER_T.descent + LANDER_T.egress
       if (el > LANDER_T.descent + LANDER_T.settle) S.set({ intro: false, lander: { phase: 'parked', t0: 0 } })
     } else if (LS.phase === 'ascent') {
-      const el = (nowL - LS.t0) / 1000
+      const el = ((nowL - LS.t0) / 1000) * pace
       lst.ramp = Math.max(0, 1 - el / 1.5)
       lst.h = el > 2 ? 0.5 * 3 * (el - 2) * (el - 2) : 0
       lst.thrust = el > 1.6 ? 1 : 0
@@ -841,7 +844,7 @@ function Player({ env }: { env: SceneEnv }) {
     const lookAtLander = () => groundSpot.clone().lerp(landerTarget, Math.min(1, 0.35 + lst.h / 900))
     if (LS.phase === 'descent') {
       // ... then a glide into the normal third-person view at the foot of the ramp
-      const w = Math.min(1, Math.max(0, (nowL - LS.t0 - LANDER_T.descent - 600) / 3200))
+      const w = Math.min(1, Math.max(0, ((nowL - LS.t0) * pace - LANDER_T.descent - 600) / 3200))
       const e = w * w * (3 - 2 * w)
       camPos.current.copy(obsAt(lst.h).lerp(desired, e))
       camTarget.current.copy(lookAtLander().lerp(target, e))
@@ -850,7 +853,7 @@ function Player({ env }: { env: SceneEnv }) {
       camPos.current.lerp(obsAt(lst.h), k)
       camTarget.current.lerp(lookAtLander(), k)
     } else if (S.intro) {
-      const t = Math.min(1, (performance.now() - t0.current) / (reduced ? 1 : 4200))
+      const t = Math.min(1, ((performance.now() - t0.current) * pace) / (reduced ? 1 : 4200))
       const e = 1 - Math.pow(1 - t, 3)
       const high = new THREE.Vector3(lm.x + 60, lm.y + 260, lm.z + 120)
       camPos.current.copy(high.lerp(desired, e))
