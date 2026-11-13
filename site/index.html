@@ -37,10 +37,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
-  <link rel="stylesheet" href="css/style.css?v=9c999ce7">
+  <link rel="stylesheet" href="css/style.css?v=3f5cdc4f">
   <link rel="icon" href="assets/ui/star.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <meta name="theme-color" content="#060a13">
+  <meta name="theme-color" content="#060709">
   <link rel="apple-touch-icon" href="assets/ui/apple-touch-icon.png">
 </head>
 <body>
@@ -103,8 +103,8 @@
     </div>
     <label class="set-row switch"><span data-i="set.motion" class="set-label">Reduce motion</span><input type="checkbox" id="reduceMotion"><span class="track" aria-hidden="true"></span></label>
     <label class="set-row switch"><span data-i="set.spacing" class="set-label">Dyslexia-friendly spacing</span><input type="checkbox" id="spacing"><span class="track" aria-hidden="true"></span></label>
-    <button data-i="set.install" class="btn btn-small" id="installBtn" type="button" hidden>📲 Install as an app (works offline)</button>
-    <p data-i="set.note" class="set-note">Every story can be read aloud — look for the <span aria-hidden="true">🔊</span> button.</p>
+    <button data-i="set.install" class="btn btn-small" id="installBtn" type="button" hidden>Install as an app (works offline)</button>
+    <p data-i="set.note" class="set-note">Every story can be read aloud — look for the “Read aloud” button.</p>
   </section>
 
   <main id="main">
@@ -224,8 +224,8 @@
         <p data-i="oppy.desc">Built to last 90 days, she explored Mars for more than 14 years. Step through her life with her own memories of each moment, then put on the X-ray goggles and look inside her.</p>
       </header>
       <div class="oppy-tabs seg" role="tablist" aria-label="Opportunity, up close">
-        <button role="tab" aria-selected="true" aria-controls="oppyLife" id="oppyTabLife" data-i="oppy.tabLife">📅 Her life</button>
-        <button role="tab" aria-selected="false" aria-controls="oppyBody" id="oppyTabBody" data-i="oppy.tabBody">🔬 Inside the rover</button>
+        <button role="tab" aria-selected="true" aria-controls="oppyLife" id="oppyTabLife" data-i="oppy.tabLife">Her life</button>
+        <button role="tab" aria-selected="false" aria-controls="oppyBody" id="oppyTabBody" data-i="oppy.tabBody">Inside the rover</button>
       </div>
       <div id="oppyLife" role="tabpanel" aria-labelledby="oppyTabLife"></div>
       <div id="oppyBody" role="tabpanel" aria-labelledby="oppyTabBody" hidden></div>
@@ -249,7 +249,7 @@
       <div class="play-cta">
         <img src="assets/ui/trophy.png" alt="" width="56" height="56">
         <div data-i="how.cta"><b>Think you could do better than a robot?</b><br><span>Try landing on the Moon, on Mars and in Jezero crater yourself, with real gravity.</span></div>
-        <a data-i="how.play" class="btn btn-primary" href="lander.html">🚀 Play “Land it yourself”</a>
+        <a data-i="how.play" class="btn btn-primary" href="lander.html">Play “Land it yourself”</a>
       </div>
     </section>
 
@@ -315,7 +315,7 @@
             <button data-i="ask.btn" class="btn btn-primary" type="submit">Ask <span aria-hidden="true">→</span></button>
           </form>
           <div class="askc-chips" id="askcChips" role="group" aria-label="Example questions"></div>
-          <p data-i="ask.note" class="askc-note"><span aria-hidden="true">📚</span> Answers come from this site's NASA mission facts, and it works offline. <a href="ask.html">Open the full chat →</a></p>
+          <p data-i="ask.note" class="askc-note"><span aria-hidden="true"></span> Answers come from this site's NASA mission facts, and it works offline. <a href="ask.html">Open the full chat →</a></p>
         </div>
         <div class="askc-preview" aria-hidden="true">
           <div class="askc-window">
@@ -374,12 +374,12 @@
       <h2 id="w3dTitle" data-i="w3d.title">Stand where they stand</h2>
       <p data-i="w3d.desc" class="w3d-desc">Walk around the real landing sites on measured Moon and Mars terrain, find the hardware still sitting there, and relive two missions from launch to their last day. Each button switches into the 3D app; use “← Ghosts of Exploration” to come back.</p>
       <div class="w3d-grid">
-        <a class="w3d-card moon" data-atlas="site:tranquility-base" href="atlas/index.html?go=site&amp;id=tranquility-base"><span class="w3d-ico" aria-hidden="true">🌕</span><b data-i="w3d.moon">Walk on the Moon</b><small data-i="w3d.moonSub">Tranquility Base, where Eagle landed. Five more Apollo sites inside.</small></a>
-        <a class="w3d-card mars" data-atlas="site:victoria-crater" href="atlas/index.html?go=site&amp;id=victoria-crater"><span class="w3d-ico" aria-hidden="true">🔴</span><b data-i="w3d.mars">Drive on Mars</b><small data-i="w3d.marsSub">Victoria crater with Opportunity. Seven more Mars sites inside.</small></a>
+        <a class="w3d-card moon" data-atlas="site:tranquility-base" href="atlas/index.html?go=site&amp;id=tranquility-base"><span class="w3d-ico" aria-hidden="true">◐</span><b data-i="w3d.moon">Walk on the Moon</b><small data-i="w3d.moonSub">Tranquility Base, where Eagle landed. Five more Apollo sites inside.</small></a>
+        <a class="w3d-card mars" data-atlas="site:victoria-crater" href="atlas/index.html?go=site&amp;id=victoria-crater"><span class="w3d-ico" aria-hidden="true">●</span><b data-i="w3d.mars">Drive on Mars</b><small data-i="w3d.marsSub">Victoria crater with Opportunity. Seven more Mars sites inside.</small></a>
         <a class="w3d-card" data-atlas="relive:apollo-11" href="atlas/index.html?go=relive&amp;id=apollo-11"><span class="w3d-ico" aria-hidden="true">▶</span><b data-i="w3d.a11">Relive Apollo 11</b><small data-i="w3d.a11Sub">From launch to splashdown, step by step.</small></a>
         <a class="w3d-card" data-atlas="relive:mer-opportunity" href="atlas/index.html?go=relive&amp;id=mer-opportunity"><span class="w3d-ico" aria-hidden="true">▶</span><b data-i="w3d.opp">Relive Opportunity</b><small data-i="w3d.oppSub">Fourteen years on Mars, drive by drive.</small></a>
-        <a class="w3d-card" data-atlas="tour" href="atlas/index.html?go=tour"><span class="w3d-ico" aria-hidden="true">🪐</span><b data-i="w3d.tour">Solar System tour</b><small data-i="w3d.tourSub">A guided flight past the planets on real orbits.</small></a>
-        <a class="w3d-card" data-atlas="missions" href="atlas/index.html?go=missions"><span class="w3d-ico" aria-hidden="true">📚</span><b data-i="w3d.missions">Mission records</b><small data-i="w3d.missionsSub">Dates, hardware and sources for every mission.</small></a>
+        <a class="w3d-card" data-atlas="tour" href="atlas/index.html?go=tour"><span class="w3d-ico" aria-hidden="true">◎</span><b data-i="w3d.tour">Solar System tour</b><small data-i="w3d.tourSub">A guided flight past the planets on real orbits.</small></a>
+        <a class="w3d-card" data-atlas="missions" href="atlas/index.html?go=missions"><span class="w3d-ico" aria-hidden="true">≡</span><b data-i="w3d.missions">Mission records</b><small data-i="w3d.missionsSub">Dates, hardware and sources for every mission.</small></a>
       </div>
       <p class="w3d-note" data-i="w3d.note">Needs a computer or a recent phone with 3D graphics. Mars sites download about 100 MB the first time.</p>
     </section>
@@ -433,18 +433,18 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
-  <script src="js/data.js?v=83e574d5"></script>
+  <script src="js/data.js?v=d36b787f"></script>
   <script src="js/records.js?v=1a89d14e"></script>
-  <script src="js/models.js?v=5e208a34"></script>
+  <script src="js/models.js?v=e65e26d3"></script>
   <script src="js/atlas-links.js?v=b6d58afb"></script>
   <script src="js/eyes-data.js?v=67a28b33"></script>
-  <script src="js/explainers.js?v=dd550e2b"></script>
-  <script>if (window.GOE_LANG !== "en") document.write('<script src="' + { es: "js/i18n/es.js?v=21193e9b", hi: "js/i18n/hi.js?v=78b878dd" }[window.GOE_LANG] + '"><\/script>');</script>
+  <script src="js/explainers.js?v=bf2c38a4"></script>
+  <script>if (window.GOE_LANG !== "en") document.write('<script src="' + { es: "js/i18n/es.js?v=12197335", hi: "js/i18n/hi.js?v=9f6c0859" }[window.GOE_LANG] + '"><\/script>');</script>
   <script src="js/oppy-data.js?v=7b093852"></script>
   <script src="js/i18n.js?v=22597147"></script>
-  <script src="js/app.js?v=cb697046"></script>
-  <script src="js/oppy.js?v=248ddea4"></script>
+  <script src="js/app.js?v=d9d3ff1e"></script>
+  <script src="js/oppy.js?v=61b7ea20"></script>
   <script src="js/story.js?v=af049dc5"></script>
-  <script src="js/pwa.js?v=68dca921"></script>
+  <script src="js/pwa.js?v=ce1b7644"></script>
 </body>
 </html>

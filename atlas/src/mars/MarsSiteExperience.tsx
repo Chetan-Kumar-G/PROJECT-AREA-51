@@ -125,7 +125,7 @@ function Inspector({ siteId, def, ready, hwId, component, onComponent, onClose }
         {tab === 'overview' && (
           <>
             {objectId && plainObject(objectId) && <p className="discovery-plain" data-testid="vehicle-plain">{plainObject(objectId)}</p>}
-            {comps.length > 0 && <button className="btn small" onClick={() => setTab('parts')} data-testid="vehicle-inspect-parts">🔍 Inspect its instruments ({comps.length})</button>}
+            {comps.length > 0 && <button className="btn small" onClick={() => setTab('parts')} data-testid="vehicle-inspect-parts">Inspect its instruments ({comps.length})</button>}
             <details className="cr-more" data-testid="vehicle-more">
             <summary>How do we know? · mission record</summary>
             {mission?.summary && <p>{mission.summary}</p>}
@@ -407,9 +407,9 @@ export default function MarsSiteExperience() {
               <nav className="surf-top-actions" aria-label="Surface actions">
                 <button className="btn ghost" onClick={() => S.set({ catalogueOpen: true })} data-testid="open-catalogue">◈ Discoveries <kbd>J</kbd></button>
                 <MissionControlButton />
-                <button className="btn ghost" onClick={() => { setMapTab('here'); S.set({ mapOpen: true }) }}>🗺 Map <kbd>M</kbd></button>
-                <button className="btn ghost" onClick={() => { setMapTab('mars'); S.set({ mapOpen: true }) }} data-testid="open-travel">🧭 Travel</button>
-                <button className="btn ghost" onClick={() => setStoryOpen(true)} data-testid="open-story">📖 Story</button>
+                <button className="btn ghost" onClick={() => { setMapTab('here'); S.set({ mapOpen: true }) }}>Map <kbd>M</kbd></button>
+                <button className="btn ghost" onClick={() => { setMapTab('mars'); S.set({ mapOpen: true }) }} data-testid="open-travel">Travel</button>
+                <button className="btn ghost" onClick={() => setStoryOpen(true)} data-testid="open-story">Story</button>
                 <AudioPlayer />{/* the one Sound control (the app's top bar is hidden on a surface) */}
                 <button className="btn ghost" onClick={() => S.set({ helpOpen: true })} aria-label="Controls help">? <kbd>H</kbd></button>
                 <button className="btn" onClick={() => expedition.returnToOrbit()} data-testid="return-to-orbit">⤴ Return to orbit</button>
@@ -423,13 +423,13 @@ export default function MarsSiteExperience() {
                 </div>
               )}
               {!inspecting && weather.mode === 'storm' && (
-                <button className="surf-chip mwm-storm" onClick={() => weather.setStorm(false)} data-testid="weather-chip" title="A simulated dust storm (no weather model or historical observation drives it). Click to end it.">🌪 Simulated dust storm · end ✕</button>
+                <button className="surf-chip mwm-storm" onClick={() => weather.setStorm(false)} data-testid="weather-chip" title="A simulated dust storm (no weather model or historical observation drives it). Click to end it.">Simulated dust storm · end ✕</button>
               )}
               {!inspecting && <MarsGuideChip siteId={siteId} pose={pose} onOpenMap={() => { setMapTab('here'); S.set({ mapOpen: true }) }} />}
               {!inspecting && (
                 <button className="surf-chip mars-scene-note" data-open={sceneOpen ? 'on' : 'off'} data-testid="mars-scene-note" aria-expanded={sceneOpen}
                   title={sceneOpen ? def.origin.registration : `Scene: ${def.scene.label}`} onClick={() => setSceneOpen(!sceneOpen)}>
-                  🕰 {sceneOpen ? <>Scene: {def.scene.label}</> : 'Scene ▸'}
+                  {sceneOpen ? <>Scene: {def.scene.label}</> : 'Scene ▸'}
                 </button>
               )}
             </div>
@@ -522,7 +522,7 @@ export default function MarsSiteExperience() {
             <h2>Paused</h2>
             <button className="btn big" onClick={() => S.set({ paused: false })}>Resume exploration</button>
             <button className="btn ghost" onClick={() => S.set({ helpOpen: true })}>Controls</button>
-            <button className="btn ghost" onClick={() => { weather.setStorm(weather.mode !== 'storm'); S.set({ paused: false }) }} data-testid="weather-storm">{weather.mode === 'storm' ? '🌤 End the simulated dust storm' : '🌪 Simulate a dust storm'}</button>
+            <button className="btn ghost" onClick={() => { weather.setStorm(weather.mode !== 'storm'); S.set({ paused: false }) }} data-testid="weather-storm">{weather.mode === 'storm' ? 'End the simulated dust storm' : 'Simulate a dust storm'}</button>
             <button className="btn ghost" onClick={() => S.set({ mapOpen: true, paused: false })}>Site map</button>
             <MissionControlButton />
             <button className="btn" onClick={() => expedition.returnToOrbit()} data-testid="return-to-orbit">⤴ Return to orbit</button>

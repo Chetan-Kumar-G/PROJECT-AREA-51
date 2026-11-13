@@ -11,9 +11,9 @@
 .mars-scene-note { max-width: 420px; cursor: pointer; font: inherit; color: inherit; text-align: center; }
 .mars-scene-note[data-open='off'] { opacity: 0.85; padding-inline: 10px; }
 /* bright Martian ground: the shared provenance / key-hint text needs a backing to stay legible */
-.mars-root .surf-provenance { color: #e2e8f0; opacity: 1; background: rgba(6, 10, 20, 0.7); border-radius: 6px; padding: 0 10px; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); }
-.mars-root .surf-keys { color: #e2e8f0; background: rgba(6, 10, 20, 0.62); border-radius: 6px; padding: 2px 10px; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); }
-.mars-telemetry { display: flex; flex-direction: column; gap: 2px; padding: 8px 12px; border-radius: var(--r-sm); background: rgba(6, 10, 20, 0.72); border: 1px solid var(--line); pointer-events: auto; min-width: 210px; }
+.mars-root .surf-provenance { color: #e8e9ec; opacity: 1; background: rgba(8, 9, 12, 0.7); border-radius: 6px; padding: 0 10px; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); }
+.mars-root .surf-keys { color: #e8e9ec; background: rgba(8, 9, 12, 0.62); border-radius: 6px; padding: 2px 10px; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); }
+.mars-telemetry { display: flex; flex-direction: column; gap: 2px; padding: 8px 12px; border-radius: var(--r-sm); background: rgba(8, 9, 12, 0.72); border: 1px solid var(--line); pointer-events: auto; min-width: 210px; }
 .mars-telemetry .eyebrow { font-size: 10px; color: #fdba74; letter-spacing: 0.12em; }
 .mars-telemetry b { font: 700 18px var(--font-mono); color: var(--txt); }
 .mars-blocked { color: #fca5a5; font-size: 12px; font-weight: 600; }
@@ -24,14 +24,14 @@
 .mm-label { fill: #f8fafc; font: 600 34px system-ui, sans-serif; paint-order: stroke; stroke: rgba(0, 0, 0, 0.7); stroke-width: 6px; }
 .mm-start { fill: none; stroke: #a7f3d0; stroke-width: 4; }
 .mm-opp { fill: #fbbf24; stroke: #000; stroke-width: 3; }
-.mm-you { fill: #67e8f9; stroke: #000; stroke-width: 3; }
+.mm-you { fill: #ffb347; stroke: #000; stroke-width: 3; }
 
 /* persistent minimap (Moon parity) stacked above the rover telemetry */
 .mars-bottom-left { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; pointer-events: none; }
 .mars-bottom-left > * { pointer-events: auto; }
 .mars-minimap-wrap { display: flex; align-items: flex-end; gap: 6px; }
 .mars-minimap { width: clamp(118px, 11vw, 168px); }
-.mars-minimap-toggle { font: 600 11px var(--font-mono); color: var(--txt-dim); background: rgba(6, 10, 20, 0.72); border: 1px solid var(--line); border-radius: 6px; padding: 2px 7px; cursor: pointer; }
+.mars-minimap-toggle { font: 600 11px var(--font-mono); color: var(--txt-dim); background: rgba(8, 9, 12, 0.72); border: 1px solid var(--line); border-radius: 6px; padding: 2px 7px; cursor: pointer; }
 .mars-minimap-toggle:hover { border-color: var(--line-hi); color: var(--txt); }
 @media (max-height: 560px) { .mars-minimap { width: 92px; } }
 
@@ -45,14 +45,14 @@
 .site-facts dd { margin: 0; }
 .site-parts { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 5px; }
 .site-parts button { width: 100%; text-align: left; padding: 7px 10px; border-radius: var(--r-sm); border: 1px solid var(--line); background: rgba(255, 255, 255, 0.03); color: var(--txt); cursor: pointer; font: inherit; font-size: 13px; }
-.site-parts button.on { border-color: var(--cy); background: rgba(103, 232, 249, 0.12); }
+.site-parts button.on { border-color: var(--cy); background: rgba(255, 179, 71, 0.12); }
 .site-parts button:disabled { opacity: 0.5; cursor: not-allowed; }
 .site-timeline { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; font-size: 13px; }
 .site-sources { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; font-size: 13px; }
 .site-sources a { color: var(--cy); }
 
 /* E3: THEIA arrival sequence — a compact card at the bottom, so the landing itself (centre of the view) stays visible */
-.theia-arrival { bottom: 16px; max-width: min(380px, calc(100vw - 32px)); gap: 4px; padding: 10px 14px; border-radius: var(--r-sm); background: rgba(6, 10, 20, 0.72); border: 1px solid var(--line); border-left: 2px solid #fdba74; text-shadow: none; }
+.theia-arrival { bottom: 16px; max-width: min(380px, calc(100vw - 32px)); gap: 4px; padding: 10px 14px; border-radius: var(--r-sm); background: rgba(8, 9, 12, 0.72); border: 1px solid var(--line); border-left: 2px solid #fdba74; text-shadow: none; }
 /* a corner card, so the landing carrier and the ramp in the middle of the view stay clear */
 .theia-arrival { left: 16px; transform: none; align-items: flex-start; text-align: left; }
 @media (max-width: 560px) { .theia-arrival { left: 8px; right: 8px; max-width: none; } }

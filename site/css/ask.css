@@ -1,7 +1,7 @@
 /* "Ask the Archive" chat page */
 body.ask-page { min-height: 100vh; min-height: 100dvh; background:
   radial-gradient(900px 500px at 85% -10%, rgba(255,179,71,.08), transparent 60%),
-  radial-gradient(800px 500px at -10% 110%, rgba(127,212,255,.07), transparent 60%), var(--bg); }
+  radial-gradient(800px 500px at -10% 110%, rgba(255,179,71,.07), transparent 60%), var(--bg); }
 .mainnav a.active { color: var(--text); background: var(--panel2); }
 
 .ask-wrap { max-width: 880px; margin: 0 auto; padding: clamp(20px, 4vw, 40px) 16px 24px; display: flex; flex-direction: column; min-height: calc(100dvh - 64px); }
@@ -50,7 +50,7 @@ body.ask-page { min-height: 100vh; min-height: 100dvh; background:
 
 .ask-form {
   position: sticky; bottom: max(10px, env(safe-area-inset-bottom)); display: flex; gap: 8px; align-items: flex-end;
-  background: rgba(11,17,32,.92); backdrop-filter: blur(10px); border: 1px solid var(--line2); border-radius: 20px; padding: 8px; box-shadow: var(--shadow);
+  background: rgba(18,19,21,.92); backdrop-filter: blur(10px); border: 1px solid var(--line2); border-radius: 20px; padding: 8px; box-shadow: var(--shadow);
 }
 .ask-form textarea {
   flex: 1; resize: none; border: 0; background: transparent; color: var(--text); font: inherit; padding: 10px 10px; max-height: 160px; min-height: 44px; outline: none;

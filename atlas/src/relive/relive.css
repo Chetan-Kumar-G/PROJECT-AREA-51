@@ -32,9 +32,9 @@
 .relive-menu { position: absolute; top: 66px; right: var(--rl-gap); z-index: 6; width: min(340px, calc(100vw - 20px)); padding: 12px 14px; display: flex; flex-direction: column; gap: 10px; font-size: 13px; }
 .relive-menu label { display: flex; align-items: center; gap: 8px; }
 .relive-menu label > span:first-child { min-width: 58px; color: var(--txt-dim); }
-.relive-q select { background: rgba(13, 22, 46, 0.8); color: #f0f4ff; border: 1px solid rgba(140, 185, 255, 0.3); border-radius: 8px; padding: 5px 8px; font: inherit; font-size: 12.5px; }
-.relive-fps { font-size: 11px; color: #8ca2c8; font-family: var(--font-mono, monospace); min-width: 44px; }
-.relive-vol input { flex: 1; accent-color: #67e8f9; }
+.relive-q select { background: rgba(20, 22, 27, 0.8); color: #f2f2f0; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 8px; padding: 5px 8px; font: inherit; font-size: 12.5px; }
+.relive-fps { font-size: 11px; color: #9a9da5; font-family: var(--font-mono, monospace); min-width: 44px; }
+.relive-vol input { flex: 1; accent-color: #ffb347; }
 .relive-check { cursor: pointer; }
 .relive-keys { margin: 0; line-height: 1.5; }
 
@@ -52,7 +52,7 @@
 /* ───────── story card: small, in the corner away from the vehicle */
 .relive-card {
   position: absolute; width: min(340px, calc(100vw - 2 * var(--rl-gap))); padding: 10px 12px 9px; z-index: 3;
-  background: rgba(4, 8, 20, 0.78); border-left: 2px solid var(--warm); animation: relive-in 0.45s ease-out both;
+  background: rgba(9, 10, 13, 0.78); border-left: 2px solid var(--warm); animation: relive-in 0.45s ease-out both;
 }
 .relive-card.c-bl { left: var(--rl-gap); bottom: 104px; }
 .relive-card.c-br { right: var(--rl-gap); bottom: 104px; }
@@ -90,16 +90,16 @@
 .relive-phase-note { margin-left: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .relive-jumps { display: flex; gap: 5px; align-items: center; margin-left: 8px; overflow-x: auto; scrollbar-width: none; min-width: 0; flex: 1; }
 .relive-jumps::-webkit-scrollbar { display: none; }
-.relive-jumps .chip { flex: none; padding: 3px 10px; border-radius: 999px; border: 1px solid rgba(140, 185, 255, 0.22); background: rgba(13, 22, 46, 0.55); color: #cad7f2; font-size: 12px; cursor: pointer; }
-.relive-jumps .chip:hover { border-color: rgba(100, 215, 255, 0.55); color: #fff; }
-.relive-jumps .chip.on { border-color: #67e8f9; color: #67e8f9; }
+.relive-jumps .chip { flex: none; padding: 3px 10px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.22); background: rgba(20, 22, 27, 0.55); color: #d2d4d8; font-size: 12px; cursor: pointer; }
+.relive-jumps .chip:hover { border-color: rgba(255, 179, 71, 0.55); color: #fff; }
+.relive-jumps .chip.on { border-color: #ffb347; color: #ffb347; }
 .relive-tl-bar { position: relative; height: 32px; border-radius: 7px; background: rgba(255, 255, 255, 0.04); border: 1px solid var(--line); cursor: pointer; touch-action: none; overflow: hidden; }
 .relive-tl-bar:focus-visible { outline: 2px solid var(--cy); }
-.relive-tl-bar .fill { position: absolute; left: 0; top: 0; bottom: 0; background: linear-gradient(90deg, rgba(103, 232, 249, 0.05), rgba(103, 232, 249, 0.14)); pointer-events: none; }
+.relive-tl-bar .fill { position: absolute; left: 0; top: 0; bottom: 0; background: linear-gradient(90deg, rgba(255, 179, 71, 0.05), rgba(255, 179, 71, 0.14)); pointer-events: none; }
 .relive-tl-bar .ph { position: absolute; top: 0; bottom: 0; border-right: 1px solid rgba(255, 255, 255, 0.08); display: flex; align-items: flex-end; padding: 0 5px 3px; overflow: hidden; pointer-events: none; }
 .relive-tl-bar .ph span { font-size: 10.5px; color: var(--mut); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .relive-tl-bar .ph.on span { color: var(--cy); }
-.relive-tl-bar .tick { position: absolute; top: 3px; width: 3px; height: 8px; margin-left: -1px; border: 0; padding: 0; border-radius: 2px; background: rgba(240, 244, 255, 0.45); cursor: pointer; }
+.relive-tl-bar .tick { position: absolute; top: 3px; width: 3px; height: 8px; margin-left: -1px; border: 0; padding: 0; border-radius: 2px; background: rgba(245, 246, 249, 0.45); cursor: pointer; }
 .relive-tl-bar .tick.on, .relive-tl-bar .tick:hover { background: var(--warm); height: 11px; } /* ticks in the top band, phase names in the bottom band: they no longer overlap */
 .relive-tl-bar .head { position: absolute; top: -2px; bottom: -2px; width: 2px; margin-left: -1px; background: var(--cy); box-shadow: 0 0 10px var(--cy-glow); pointer-events: none; }
 
@@ -120,7 +120,7 @@
 .relive-ended { width: min(600px, calc(100vw - 32px)); max-height: calc(100vh - 40px); overflow-y: auto; }
 .relive-ended .left-behind { border-left: 2px solid var(--warm); padding-left: 10px; }
 .relive-ended-more summary { cursor: pointer; color: var(--cy); font-size: 13px; }
-.relive-final { display: grid; gap: 6px; margin: 10px 0; padding: 10px 12px; border: 1px solid rgba(140, 185, 255, 0.18); border-radius: 8px; background: rgba(13, 22, 46, 0.55); }
+.relive-final { display: grid; gap: 6px; margin: 10px 0; padding: 10px 12px; border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 8px; background: rgba(20, 22, 27, 0.55); }
 .relive-final div { display: grid; grid-template-columns: 150px 1fr; gap: 10px; }
 .relive-final dt { font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mut); padding-top: 2px; }
 .relive-final dd { margin: 0; font-size: 13px; line-height: 1.45; }
@@ -138,25 +138,25 @@
 .relive-info ul, .relive-info ol { margin: 0; padding-left: 18px; color: var(--txt-dim); font-size: 12.5px; line-height: 1.45; }
 .relive-info a { color: var(--cy); }
 .relive-info details summary { cursor: pointer; color: var(--cy); font-size: 12.5px; margin-top: 6px; }
-.relive-rec { display: grid; gap: 3px; margin: 8px 0 0; padding: 8px 10px; border-top: 1px solid rgba(140, 185, 255, 0.16); font-size: 11.5px; }
+.relive-rec { display: grid; gap: 3px; margin: 8px 0 0; padding: 8px 10px; border-top: 1px solid rgba(255, 255, 255, 0.16); font-size: 11.5px; }
 .relive-rec div { display: grid; grid-template-columns: 78px 1fr; gap: 8px; }
 .relive-rec dt { color: var(--mut); text-transform: uppercase; letter-spacing: 0.1em; font-size: 9.5px; padding-top: 1px; }
-.relive-rec dd { margin: 0; line-height: 1.4; color: var(--txt-dim, #cad7f2); }
+.relive-rec dd { margin: 0; line-height: 1.4; color: var(--txt-dim, #d2d4d8); }
 .relive-events { display: flex; flex-direction: column; }
-.relive-events header { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-bottom: 1px solid rgba(140, 185, 255, 0.16); }
+.relive-events header { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.16); }
 .relive-events header .x { margin-left: auto; }
 .relive-events-body { overflow-y: auto; flex: 1; padding: 4px 6px 8px; }
 .relive-events section { margin-top: 6px; }
 .relive-events .ph-h { display: block; width: 100%; text-align: left; background: none; border: 0; color: #fbbf24; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; padding: 6px 6px 3px; cursor: pointer; font-family: inherit; }
 .relive-events ol { list-style: none; margin: 0; padding: 0; }
-.relive-events li button { display: grid; grid-template-columns: 20px 1fr; gap: 6px; width: 100%; text-align: left; padding: 5px 6px; border: 1px solid transparent; border-radius: 6px; background: none; color: #f0f4ff; cursor: pointer; font-family: inherit; align-items: center; }
-.relive-events li button:hover { background: rgba(103, 232, 249, 0.06); }
-.relive-events li button.on { border-color: rgba(103, 232, 249, 0.55); background: rgba(103, 232, 249, 0.1); }
+.relive-events li button { display: grid; grid-template-columns: 20px 1fr; gap: 6px; width: 100%; text-align: left; padding: 5px 6px; border: 1px solid transparent; border-radius: 6px; background: none; color: #f2f2f0; cursor: pointer; font-family: inherit; align-items: center; }
+.relive-events li button:hover { background: rgba(255, 179, 71, 0.06); }
+.relive-events li button.on { border-color: rgba(255, 179, 71, 0.55); background: rgba(255, 179, 71, 0.1); }
 .relive-events .ev-ic { font-size: 13px; text-align: center; }
 .relive-events .ev-t { font-size: 13px; }
 
-.exp-card.relive-a11 { background: linear-gradient(135deg, rgba(251, 191, 36, 0.18), rgba(13, 22, 46, 0.7)); }
-.exp-card.relive-mer { background: linear-gradient(135deg, rgba(251, 146, 60, 0.2), rgba(13, 22, 46, 0.7)); }
+.exp-card.relive-a11 { background: linear-gradient(135deg, rgba(251, 191, 36, 0.18), rgba(20, 22, 27, 0.7)); }
+.exp-card.relive-mer { background: linear-gradient(135deg, rgba(251, 146, 60, 0.2), rgba(20, 22, 27, 0.7)); }
 
 /* ───────── laptop / tablet: icon-only secondary buttons */
 @media (max-width: 1180px) {
@@ -194,7 +194,7 @@
 
 /* the panels float over a live 3-D view: a light blur keeps them readable at a fraction of the compositing cost of the
    global .glass blur (18 px + saturate), which has to be recomputed over the moving scene every frame */
-.relive .glass { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.relive .glass { }
 
 /* mission complete: a compact corner panel, the final scene stays visible (rover at rest, the terrain, the sky) */
 .relive-ended-compact { position: absolute; left: 16px; bottom: 112px; z-index: 20; width: min(440px, calc(100vw - 32px)); max-height: min(62vh, 560px); overflow-y: auto; padding: 14px 16px; border-radius: var(--r); }
@@ -211,4 +211,4 @@
 /* a usable hit area around each 3 px event tick (pointer and touch) */
 .relive-tl-bar .tick::before { content: ''; position: absolute; inset: -3px -5px -5px; }
 /* the intro card sits over the live scene: opaque enough that the vehicle never shows through the text */
-.relive-intro.glass, .relive-intro { background: rgba(5, 9, 20, 0.97); }
+.relive-intro.glass, .relive-intro { background: rgba(7, 8, 11, 0.97); }

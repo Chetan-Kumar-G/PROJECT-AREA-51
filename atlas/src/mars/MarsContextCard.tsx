@@ -70,8 +70,8 @@ export function MarsContextCard({
       <div className="mctx-actions">
         {mode === 'nearby' && <button className="btn small" onClick={onExplore} data-testid="mctx-explore"><kbd>E</kbd> Explore</button>}
         <button className="btn small ghost" onClick={onDetails} data-testid="mctx-details">View details</button>
-        {mission && <button className="btn small ghost" onClick={onStory} data-testid="mctx-story">📖 Mission story</button>}
-        {onRelive && <button className="btn small" onClick={onRelive} data-testid="relive-mission">⏪ Relive the mission</button>}
+        {mission && <button className="btn small ghost" onClick={onStory} data-testid="mctx-story">Mission story</button>}
+        {onRelive && <button className="btn small" onClick={onRelive} data-testid="relive-mission">Relive the mission</button>}
       </div>
     </section>
   )

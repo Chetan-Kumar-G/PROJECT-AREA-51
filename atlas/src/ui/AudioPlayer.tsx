@@ -41,7 +41,7 @@ export function AudioPlayer() {
     <div className="audio-player-widget" ref={ref}>
       <button className={'btn ghost audio-btn' + (muted ? ' muted' : '')} onClick={() => { void audio.unlock(); setOpen(!open) }}
         aria-label={`Sound settings: sound is ${muted ? 'off' : 'on'}`} aria-expanded={open} data-testid="sound-button" data-muted={muted ? 'true' : 'false'}>
-        <span className="audio-icon" aria-hidden>{muted ? '🔇' : '🔊'}</span>
+        <span className="audio-icon" aria-hidden>{muted ? 'Muted' : 'Sound'}</span>
         <span className="audio-label">Sound {muted ? 'off' : 'on'}</span>
       </button>
       {open && (

@@ -281,7 +281,7 @@ export function NavMapModal({ onClose }: { onClose: () => void }) {
 
         {/* Search Input Filter */}
         <div className="search">
-          <span className="search-ic">🔍</span>
+          <span className="search-ic">⌕</span>
           <input
             type="text"
             value={query}
@@ -414,7 +414,7 @@ export function NavMapModal({ onClose }: { onClose: () => void }) {
                   style={{ width: '100%', height: '36px' }}
                   onClick={() => handleStartAutopilot(true)}
                 >
-                  ⚡ Engage Warp Cruise Transfer
+                  Engage Warp Cruise Transfer
                 </button>
                 <button
                   className="btn"

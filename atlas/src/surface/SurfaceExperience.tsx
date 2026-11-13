@@ -103,9 +103,9 @@ function Hud({ touch }: { touch: boolean }) {
         </div>
         <nav className="surf-top-actions" aria-label="Surface actions">
           <MissionControlButton />
-          <button className="btn ghost" onClick={() => S.set({ mapOpen: true })}>🗺 Map <kbd>M</kbd></button>
+          <button className="btn ghost" onClick={() => S.set({ mapOpen: true })}>Map <kbd>M</kbd></button>
           <button className="btn ghost" onClick={() => S.set({ camMode: S.camMode === 'third' ? 'first' : 'third' })}>
-            {S.camMode === 'third' ? '👁 First person' : '🧑‍🚀 Third person'} <kbd>V</kbd>
+            {S.camMode === 'third' ? 'First person' : 'Third person'} <kbd>V</kbd>
           </button>
           {site.bodyId === 'moon' && <TorchButton />}
           <AudioPlayer />{/* the one Sound control (the app's top bar is hidden on a surface) */}
@@ -170,7 +170,7 @@ function TorchButton() {
   const put = (v: typeof t) => { set({ torch: v }); saveTorch(v) }
   return (
     <span className="surf-torch" role="group" aria-label="Helmet torch">
-      <button className={'btn ghost' + (t.on ? ' on' : '')} onClick={() => put({ ...t, on: !t.on, manual: true })} aria-pressed={t.on} data-testid="torch-toggle" title="Neil's helmet torch (lights what it falls on; no visible beam in a vacuum)">🔦 Torch {t.on ? 'on' : 'off'} <kbd>T</kbd></button>
+      <button className={'btn ghost' + (t.on ? ' on' : '')} onClick={() => put({ ...t, on: !t.on, manual: true })} aria-pressed={t.on} data-testid="torch-toggle" title="Neil's helmet torch (lights what it falls on; no visible beam in a vacuum)">Torch {t.on ? 'on' : 'off'} <kbd>T</kbd></button>
       {t.on && <button className="btn ghost small" onClick={() => put({ ...t, beam: t.beam === 'wide' ? 'narrow' : 'wide' })} data-testid="torch-beam" title="Beam width">{t.beam === 'wide' ? '◐ wide' : '◑ narrow'}</button>}
     </span>
   )

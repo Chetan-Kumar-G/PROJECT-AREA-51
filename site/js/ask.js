@@ -12,7 +12,7 @@
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const byId = Object.fromEntries(ARTIFACTS.map(a => [a.id, a]));
-  const TYPE_EMOJI = { rover: "🚙", lander: "🛸", vehicle: "🛞", experiment: "📡", impactor: "☄️", probe: "🛰️", helicopter: "🚁", debris: "🪂", orbiter: "🛰️", telescope: "🔭" };
+  const TYPE_EMOJI = {};
   const ENDPOINT = (window.ASK_ENDPOINT || "").replace(/\/+$/, "");
   const store = {
     get(k, d) { try { const v = localStorage.getItem("goe:" + k); return v == null ? d : JSON.parse(v); } catch { return d; } },
@@ -341,7 +341,7 @@
     const el = document.createElement("div");
     el.className = "msg " + role;
     el.innerHTML = role === "user"
-      ? `<span class="avatar" aria-hidden="true">🧑‍🚀</span><div class="bubble">${html}</div>`
+      ? `<span class="avatar" aria-hidden="true">✦</span><div class="bubble">${html}</div>`
       : `<span class="avatar" aria-hidden="true"><img src="assets/ui/book.png" alt=""></span><div class="bubble">${html}</div>`;
     log.appendChild(el);
     el.scrollIntoView({ block: "end", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
@@ -349,13 +349,13 @@
   }
   function finishBot(el, text, ids, source) {
     const bubble = $(".bubble", el);
-    bubble.innerHTML = `<span class="badge-src">${source === "ai" ? "✨ AI guide" : "📚 Archive guide"}</span>` + md(text);
+    bubble.innerHTML = `<span class="badge-src">${source === "ai" ? "AI guide" : "Archive guide"}</span>` + md(text);
     const tools = document.createElement("div");
     tools.className = "msg-tools";
     tools.innerHTML = (ids || []).filter(id => byId[id]).map(id => {
       const a = byId[id], c = cover(a);
-      return `<a class="chip-link" href="index.html#artifact=${id}">${c ? `<img src="${c}" alt="">` : `<span class="ph">${TYPE_EMOJI[a.type]}</span>`}${esc(a.name)} →</a>`;
-    }).join("") + `<button class="speak-btn" aria-pressed="false" type="button">🔊 Read aloud</button>`;
+      return `<a class="chip-link" href="index.html#artifact=${id}">${c ? `<img src="${c}" alt="">` : `<span class="ph">✦</span>`}${esc(a.name)} →</a>`;
+    }).join("") + `<button class="speak-btn" aria-pressed="false" type="button">Read aloud</button>`;
     bubble.appendChild(tools);
     $(".speak-btn", tools).addEventListener("click", e => speak(e.currentTarget, text.replace(/\*+/g, "").replace(/^- /gm, "")));
   }
@@ -400,7 +400,7 @@
       if (text.startsWith("\u0000ERROR")) { history.pop(); return { failed: "server" }; }
       if (performance.now() - last > 60) {
         last = performance.now();
-        bubble.innerHTML = `<span class="badge-src">✨ AI guide</span>` + md(text);
+        bubble.innerHTML = `<span class="badge-src">AI guide</span>` + md(text);
         el.scrollIntoView({ block: "end" });
       }
     }

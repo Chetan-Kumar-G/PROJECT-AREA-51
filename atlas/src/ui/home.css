@@ -32,7 +32,7 @@
 .home-entry-ic { grid-row: span 2; align-self: center; font-size: 18px; line-height: 1; text-align: center; color: var(--txt-dim); }
 .home-entry b { font-size: var(--fs-base); font-weight: 600; color: #fff; }
 .home-entry small { color: var(--mut); font-size: var(--fs-xs); line-height: 1.35; }
-.home-entry.moon .home-entry-ic { color: #d9dee8; }
+.home-entry.moon .home-entry-ic { color: #dedfe2; }
 .home-entry.mars .home-entry-ic { color: #e07a4f; }
 .home-entry.solar .home-entry-ic { color: #ffd27a; }
 .home-entry.primary { border-color: var(--accent-line); background: linear-gradient(0deg, var(--accent-tint), var(--accent-tint)), var(--surface-2); }
@@ -64,11 +64,11 @@
 .home-card {
   scroll-snap-align: start; display: flex; flex-direction: column; gap: var(--s-2); min-width: 0; min-height: 188px;
   padding: var(--s-4); border-radius: var(--r-md);
-  background: rgba(5, 9, 20, 0.96); border: 1px solid var(--line); box-shadow: inset 0 2px 0 var(--world, var(--line-hi));
+  background: rgba(7, 8, 11, 0.96); border: 1px solid var(--line); box-shadow: inset 0 2px 0 var(--world, var(--line-hi));
   transition: border-color 0.15s;
 }
 .home-card:hover, .home-card:focus-within { border-color: var(--line-strong); }
-.home-card.moon { --world: #c8cfdc; }
+.home-card.moon { --world: #d0d1d4; }
 .home-card.mars { --world: #d9704a; }
 .home-card-top { display: flex; align-items: center; justify-content: space-between; gap: var(--s-2); }
 .home-card-meta { font-size: var(--fs-xs); letter-spacing: 0.08em; text-transform: uppercase; color: var(--mut); white-space: nowrap; }

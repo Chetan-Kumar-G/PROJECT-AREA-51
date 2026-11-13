@@ -240,7 +240,7 @@ export function Info() {
         </button>
         {(o.id === 'moon' || o.id === 'mars') && (
           <button className="btn exp-start-btn" data-testid={`info-expedition-${o.id}`} onClick={() => expedition.start(o.id as 'moon' | 'mars')} title="Depart from Earth, fly there and land at a historic site">
-            🚀 Begin expedition to {o.id === 'moon' ? 'the Moon' : 'Mars'}
+            Begin expedition to {o.id === 'moon' ? 'the Moon' : 'Mars'}
           </button>
         )}
         <button
@@ -522,7 +522,7 @@ export function MissionEventSelect() {
         setSim(ev.ms)
       }}
     >
-      <option value="">{scoped ? `🛰 ${BY_ID[scoped]?.name ?? scoped} missions…` : '🛰 Mission events…'}</option>
+      <option value="">{scoped ? `${BY_ID[scoped]?.name ?? scoped} missions…` : 'Mission events…'}</option>
       {events.map((e, i) => (
         <option key={i} value={i}>
           {e.date.slice(0, 10)} · {e.missionName} — {e.title}

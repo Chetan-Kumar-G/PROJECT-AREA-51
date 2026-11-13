@@ -8,7 +8,7 @@ const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const byId = Object.fromEntries(ARTIFACTS.map(a => [a.id, a]));
-const TYPE_EMOJI = { rover: "🚙", lander: "🛸", vehicle: "🛞", experiment: "📡", impactor: "☄️", probe: "🛰️", helicopter: "🚁", debris: "🪂", orbiter: "🛰️", telescope: "🔭" };
+const TYPE_EMOJI = {};
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const auNow = d => d.au2025 + d.rate * ((Date.now() - Date.UTC(2025, 0, 1)) / (365.25 * 864e5));
 try { localStorage.setItem("goe:explored", "true"); } catch { /* ignore */ }
@@ -16,12 +16,13 @@ try { localStorage.setItem("goe:explored", "true"); } catch { /* ignore */ }
 /* ---------- renderer / scene ---------- */
 let renderer;
 try {
-  renderer = new THREE.WebGLRenderer({ antialias: true });
+  // ask for the fast graphics card: on laptops with two, browsers otherwise pick the slow built-in one
+  renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: "high-performance" });
 } catch (e) {
   $("#xError").hidden = false; $("#xLoading").classList.add("done");
   throw e;
 }
-renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5));
 renderer.setSize(innerWidth, innerHeight);
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 $("#scene").appendChild(renderer.domElement);
@@ -152,8 +153,8 @@ const deep = { sun: null, planets: {}, attached: [], loose: [] };
     planetLabels.push({ el: makeLabel(n, "planet"), obj: p, world: "deep" });
   });
   // heliopause shell
-  const hp = new THREE.Mesh(new THREE.SphereGeometry(R(120), 64, 32), new THREE.MeshBasicMaterial({ color: 0x8fb8ff, transparent: true, opacity: 0.05, side: THREE.BackSide, depthWrite: false }));
-  const hpWire = new THREE.Mesh(new THREE.SphereGeometry(R(120), 36, 18), new THREE.MeshBasicMaterial({ color: 0x8fb8ff, wireframe: true, transparent: true, opacity: 0.06, depthWrite: false }));
+  const hp = new THREE.Mesh(new THREE.SphereGeometry(R(120), 64, 32), new THREE.MeshBasicMaterial({ color: 0xb9c2d2, transparent: true, opacity: 0.05, side: THREE.BackSide, depthWrite: false }));
+  const hpWire = new THREE.Mesh(new THREE.SphereGeometry(R(120), 36, 18), new THREE.MeshBasicMaterial({ color: 0xb9c2d2, wireframe: true, transparent: true, opacity: 0.06, depthWrite: false }));
   grp.add(hp, hpWire);
   const hpAnchor = new THREE.Object3D(); hpAnchor.position.set(0, R(120) * 0.72, 0); grp.add(hpAnchor);
   planetLabels.push({ el: makeLabel("Heliopause — edge of the Sun's bubble (~120 AU)", "planet"), obj: hpAnchor, world: "deep" });
@@ -324,7 +325,7 @@ function openCard(a) {
   const dist = a.dist ? `<div><small>Distance now (est.)</small>~${auNow(a.dist).toFixed(0)} AU</div>` : "";
   $("#xCard").innerHTML = `
     <button class="icon-btn close" id="xClose" aria-label="Close">✕</button>
-    ${m ? `<img src="assets/nasa/${m.f}" alt="${esc(m.cap)}">` : `<div class="ph">${TYPE_EMOJI[a.type]}</div>`}
+    ${m ? `<img src="assets/nasa/${m.f}" alt="${esc(m.cap)}">` : `<div class="ph">✦</div>`}
     <div class="in">
       <span class="pill" style="color:${STATUS[a.status].color}">${STATUS[a.status].label}</span>
       <h2>${esc(a.name)}</h2>
@@ -333,9 +334,9 @@ function openCard(a) {
       <div class="mini"><div><small>Arrived</small>${esc(a.dates.arrive)}</div><div><small>Last word</small>${esc(a.dates.last)}</div>${dist}<div><small>Type</small>${esc(TYPES[a.type])}</div></div>
       <div class="row">
         <a class="btn btn-primary btn-small" href="index.html#artifact=${a.id}">Open full dossier</a>
-        ${window.hasModel && hasModel(a.id) ? `<button class="btn btn-small" id="xModel">🧊 3D model</button>` : ""}
-        ${typeof ATLAS_SITES !== "undefined" && ATLAS_SITES[a.id] ? `<a class="btn btn-small" data-atlas="site:${ATLAS_SITES[a.id]}" href="atlas/index.html?go=site&amp;id=${ATLAS_SITES[a.id]}">🚶 Walk there</a>` : ""}
-        <button class="btn btn-small" id="xSpeak" aria-pressed="false">🔊 Read aloud</button>
+        ${window.hasModel && hasModel(a.id) ? `<button class="btn btn-small" id="xModel">3D model</button>` : ""}
+        ${typeof ATLAS_SITES !== "undefined" && ATLAS_SITES[a.id] ? `<a class="btn btn-small" data-atlas="site:${ATLAS_SITES[a.id]}" href="atlas/index.html?go=site&amp;id=${ATLAS_SITES[a.id]}">Walk there</a>` : ""}
+        <button class="btn btn-small" id="xSpeak" aria-pressed="false">Read aloud</button>
       </div>
     </div>`;
   $("#xCard").hidden = false; document.body.classList.add("has-card");

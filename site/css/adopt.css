@@ -1,7 +1,7 @@
 /* "Adopt a Ghost" certificate page */
 body.adopt-page { background:
   radial-gradient(900px 500px at 85% -10%, rgba(255,179,71,.08), transparent 60%),
-  radial-gradient(800px 500px at -10% 110%, rgba(127,212,255,.06), transparent 60%), var(--bg); }
+  radial-gradient(800px 500px at -10% 110%, rgba(255,179,71,.06), transparent 60%), var(--bg); }
 .mainnav a.active { color: var(--text); background: var(--panel2); }
 
 .ad-wrap { max-width: 1400px; margin: 0 auto; padding: 24px 16px 32px; display: grid; grid-template-columns: 340px minmax(0, 1fr); gap: 28px; align-items: start; }
@@ -26,7 +26,7 @@ body.adopt-page { background:
 
 /* ---------- the certificate (A4 landscape; sizes in cqw so the preview scales) ---------- */
 .cert {
-  --ink: #13203a; --soft: #4a5a78; --gold: #c8841a; --gold2: #e9a93f; --paper: #fbf6ea;
+  --ink: #212224; --soft: #4a5a78; --gold: #c8841a; --gold2: #e9a93f; --paper: #fbf6ea;
   container-type: inline-size; position: relative; aspect-ratio: 297 / 210; width: 100%;
   background: var(--paper); color: var(--ink); border-radius: 6px; overflow: hidden; box-shadow: var(--shadow);
   font-family: "Atkinson Hyperlegible", var(--font);
@@ -36,10 +36,10 @@ body.adopt-page { background:
   padding: 2.6cqw 3.4cqw 2.2cqw; display: grid; grid-template-rows: auto auto 1fr auto; gap: 1.1cqw;
   background:
     radial-gradient(circle at 100% 0%, rgba(233,169,63,.14), transparent 30%),
-    radial-gradient(circle at 0% 100%, rgba(19,32,58,.07), transparent 35%);
+    radial-gradient(circle at 0% 100%, rgba(33,34,36,.07), transparent 35%);
 }
 .cert-head { display: flex; align-items: center; justify-content: center; gap: 1cqw; letter-spacing: .3em; text-transform: uppercase; font: 700 1.15cqw/1 "Space Grotesk", sans-serif; color: var(--soft); }
-.cert-moon { width: 2.2cqw; height: 2.2cqw; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff, #cfd8e3 38%, #6b7a90 75%, #2a3344); outline: .15cqw dashed var(--gold2); outline-offset: .35cqw; }
+.cert-moon { width: 2.2cqw; height: 2.2cqw; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff, #cfd8e3 38%, #6b7a90 75%, #343537); outline: .15cqw dashed var(--gold2); outline-offset: .35cqw; }
 .cert-title { text-align: center; }
 .cert-title h2 { font: 700 3.6cqw/1.05 "Space Grotesk", sans-serif; margin: 0; color: var(--ink); letter-spacing: .01em; }
 .cert-title p { margin: .5cqw 0 0; font-size: 1.45cqw; color: var(--soft); }
@@ -47,7 +47,7 @@ body.adopt-page { background:
 .cert-machine { font: 700 3.3cqw/1.05 "Space Grotesk", sans-serif; color: var(--gold); display: block; margin: .3cqw 0 0; }
 .cert-mission { font-size: 1.35cqw; color: var(--soft); }
 .cert-body { display: grid; grid-template-columns: 30% 1fr; gap: 2.4cqw; align-items: center; min-height: 0; }
-.cert-photo { position: relative; aspect-ratio: 4 / 3; border-radius: .8cqw; overflow: hidden; border: .35cqw solid #fff; box-shadow: 0 .5cqw 1.6cqw rgba(19,32,58,.25); background: #0b1120; }
+.cert-photo { position: relative; aspect-ratio: 4 / 3; border-radius: .8cqw; overflow: hidden; border: .35cqw solid #fff; box-shadow: 0 .5cqw 1.6cqw rgba(33,34,36,.25); background: #121315; }
 .cert-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .cert-photo small { position: absolute; right: .5cqw; bottom: .4cqw; font-size: .8cqw; color: #fff; background: rgba(0,0,0,.45); padding: .1cqw .5cqw; border-radius: .4cqw; }
 .cert-facts { display: grid; gap: .9cqw; font-size: 1.35cqw; line-height: 1.4; }

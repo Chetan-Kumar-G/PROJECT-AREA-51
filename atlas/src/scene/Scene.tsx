@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
+import { useAdaptiveDpr } from './adaptiveDpr'
 import * as THREE from 'three'
 import { OBJECTS, BY_ID, CosmicObject, positionOf, radiusLyOf, isDynamic } from '../data/catalog'
 import { nav, stepNavigation, updateNearest, interrupt, setCameraAt, clampToSolarSystem } from '../store/nav'
@@ -1499,6 +1500,7 @@ export function CosmicCanvas() {
   const onSurface = useStore((s) => !!s.surfaceSiteId)
   // Relive Mission draws its own scene: the orbital one is paused meanwhile (one live renderer at a time)
   const reliving = useRelive((s) => !!s.id)
+  const { dpr, monitor } = useAdaptiveDpr(quality)
 
   return (
     <Canvas
@@ -1510,12 +1512,13 @@ export function CosmicCanvas() {
         toneMapping: THREE.ACESFilmicToneMapping,
         toneMappingExposure: 1.1,
       }}
-      dpr={quality === 'performance' ? 1 : quality === 'balanced' ? [1, 1.5] : [1, 2]}
+      dpr={dpr}
       camera={{ fov: 55, near: 0.001, far: 1e13, position: [0, 0, 0] }}
       onPointerMissed={() => {}}
       frameloop={onSurface || reliving ? 'never' : 'always'}
     >
       <color attach="background" args={['#000004']} />
+      {monitor}
       <GLWatch />
       <Rig />
       <HomeFraming />

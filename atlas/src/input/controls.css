@@ -7,7 +7,7 @@
 .controls-row dd { margin: 0; color: var(--txt-dim); }
 .controls-row kbd {
   font-family: var(--font-mono); font-size: 11.5px; line-height: 1; padding: 4px 7px; border-radius: 6px;
-  border: 1px solid var(--line-hi); background: rgba(103, 232, 249, 0.08); color: var(--txt); white-space: nowrap;
+  border: 1px solid var(--line-hi); background: rgba(255, 179, 71, 0.08); color: var(--txt); white-space: nowrap;
 }
 .controls-settings { display: grid; gap: 8px; border: 1px solid var(--line); border-radius: var(--r-sm); padding: 10px 12px; margin: 0; }
 .controls-settings legend { padding: 0 6px; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--mut); }
@@ -24,6 +24,6 @@
   appearance: none; border: 0; background: transparent; color: var(--txt-dim); font: 600 11px/1 var(--font);
   letter-spacing: 0.06em; text-transform: uppercase; padding: 7px 12px; cursor: pointer;
 }
-.pilot-switch button[aria-pressed='true'] { background: rgba(103, 232, 249, 0.18); color: var(--txt); }
+.pilot-switch button[aria-pressed='true'] { background: rgba(255, 179, 71, 0.18); color: var(--txt); }
 .pilot-switch button:focus-visible { outline: 2px solid var(--cy); outline-offset: -2px; }
 .pilot-hint { font-size: 11.5px; color: var(--mut); }

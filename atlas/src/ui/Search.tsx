@@ -8,7 +8,7 @@ import { leaveForSite } from '../missionControl/MissionControl'
 import { finishOpening } from '../opening/openingState'
 
 const ICON: Record<SearchEntry['kind'], string> = {
-  planet: '●', moon: '○', 'small-body': '◐', site: '◉', mission: '✪', replay: '▶', hardware: '🛰', instrument: '⚙', landmark: '⛰',
+  planet: '●', moon: '○', 'small-body': '◐', site: '◉', mission: '✪', replay: '▶', hardware: '◇', instrument: '⚙', landmark: '⛰',
 }
 
 /** what choosing a result does — every result leads to something that exists in the app */

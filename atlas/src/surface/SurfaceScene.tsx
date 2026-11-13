@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef } from 'react'
 import { planetaryAudio } from '../audio/planetaryAudio'
 import { saveTorch } from './surfaceState'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
+import { useAdaptiveDpr } from '../scene/adaptiveDpr'
 import * as THREE from 'three'
 import { useStore } from '../store/store'
 import { OBJECT_BY_ID } from '../missions'
@@ -1046,15 +1047,17 @@ export function SurfaceScene({ site, dtm }: { site: SurfaceSite; dtm: DtmData })
   const segments = quality === 'performance' ? 260 : quality === 'balanced' ? 400 : 520
   // a historical replay started from here: this scene stays loaded (state kept) and stops rendering until it ends
   const reliving = useRelive((s) => !!s.id)
+  const { dpr, monitor } = useAdaptiveDpr(quality)
   return (
     <Canvas
       frameloop={reliving ? 'never' : 'always'}
-      shadows="soft"
+      shadows={quality === 'high' ? 'soft' : 'percentage'}
       gl={{ antialias: quality !== 'performance', toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 1.0, powerPreference: 'high-performance', logarithmicDepthBuffer: true }}
-      dpr={quality === 'performance' ? 1 : quality === 'balanced' ? [1, 1.5] : [1, 2]}
+      dpr={dpr}
       camera={{ fov: 62, near: 0.05, far: 60000, position: [0, 200, 200] }}
       data-testid="surface-canvas"
     >
+      {monitor}
       <color attach="background" args={[env.planet.sky.background]} />
       {/* no sky light on an airless body: only a faint bounce from the grey regolith fills the shadows */}
       <hemisphereLight args={['#000000', env.planet.ground.bounce, env.sunUp ? 0.95 : 0.03]} />

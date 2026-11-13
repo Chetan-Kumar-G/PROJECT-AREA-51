@@ -4,7 +4,7 @@ import type { ReplayDef } from './replay'
 import './replay.css'
 
 const ICON: Record<string, string> = {
-  launch: '🚀', flyby: '↷', arrival: '◎', 'orbit-insertion': '◌', landing: '⬇', 'surface-op': '⛭', release: '⇣', 'last-contact': '📡', end: '■', other: '•',
+  launch: '▲', flyby: '↷', arrival: '◎', 'orbit-insertion': '◌', landing: '⬇', 'surface-op': '⛭', release: '⇣', 'last-contact': '◉', end: '■', other: '•',
 }
 
 /** the mission's dated events; SHOWN ones jump the 3-D replay, TOLD ones explain where and why they are not shown */

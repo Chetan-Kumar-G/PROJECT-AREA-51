@@ -1,6 +1,6 @@
 /* NASA Eyes on the Solar System page */
 body.eyes-page { background:
-  radial-gradient(900px 500px at 80% -10%, rgba(127,212,255,.08), transparent 60%),
+  radial-gradient(900px 500px at 80% -10%, rgba(255,179,71,.08), transparent 60%),
   radial-gradient(800px 500px at -10% 110%, rgba(255,179,71,.06), transparent 60%), var(--bg); }
 .mainnav a.active { color: var(--text); background: var(--panel2); }
 
@@ -32,7 +32,7 @@ body.eyes-page { background:
 .ey-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
 .ey-loading {
   position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted); font-weight: 700; letter-spacing: .08em;
-  background: radial-gradient(circle at 50% 50%, #0b1424, #000 70%); pointer-events: none; transition: opacity .4s;
+  background: radial-gradient(circle at 50% 50%, #141517, #000 70%); pointer-events: none; transition: opacity .4s;
 }
 .ey-help { color: var(--dim); font-size: .85rem; margin: 8px 2px 0; }
 
@@ -67,7 +67,7 @@ body.eyes-page { background:
 .ey-list .ey-tag { grid-area: t; align-self: center; }
 .ey-tag { display: inline-block; font-size: .68rem; font-weight: 700; letter-spacing: .04em; padding: 2px 7px; border-radius: 999px; white-space: nowrap; }
 .ey-tag.self { background: rgba(94,230,168,.14); color: var(--ok); }
-.ey-tag.world { background: rgba(143,184,255,.14); color: var(--deep); }
+.ey-tag.world { background: rgba(190,198,212,.14); color: var(--deep); }
 
 .ey-stories button { display: block; }
 .ey-stories b { display: block; }

@@ -150,14 +150,14 @@ export function MarsReplay({ ready, pose }: { ready: MarsReady; pose: MarsPose |
     <div className="replay-root replay-root-mars" data-testid="replay-root" role="region" aria-label="Historical replay">
       <header className="replay-top glass">
         <div>
-          <span className="eyebrow replay-eyebrow">⏪ HISTORICAL REPLAY · OPPORTUNITY AT VICTORIA CRATER</span>
+          <span className="eyebrow replay-eyebrow">HISTORICAL REPLAY · OPPORTUNITY AT VICTORIA CRATER</span>
           <b className="replay-title">{def.title}</b>
           <span className="replay-when mono" data-testid="replay-when">
             sol {Math.floor(sol)} · {pose?.utc ? new Date(pose.utc).toUTCString().slice(5, 16) : '…'} (Earth date, UTC)
           </span>
         </div>
         <button className="btn big replay-back" data-testid="go-back-to-present" onClick={goBackToPresent}>
-          ⏩ GO BACK TO PRESENT <kbd>Esc</kbd>
+          GO BACK TO PRESENT <kbd>Esc</kbd>
         </button>
       </header>
       {!storyOpen && (
@@ -190,7 +190,7 @@ export function MarsReplay({ ready, pose }: { ready: MarsReady; pose: MarsPose |
               </select>
             </label>
             <span className="muted small">Sol {lo} → {hi} · {ready.route!.points.toLocaleString('en-US')} recorded drive points</span>
-            <button className="btn small ghost" onClick={() => { setPlaying(false); setStoryOpen(true) }} data-testid="replay-whole-story">📖 Whole mission story</button>
+            <button className="btn small ghost" onClick={() => { setPlaying(false); setStoryOpen(true) }} data-testid="replay-whole-story">Whole mission story</button>
           </div>
           <div className="replay-scrub">
             <input type="range" min={lo} max={hi + 0.999} step={0.01} value={sol}

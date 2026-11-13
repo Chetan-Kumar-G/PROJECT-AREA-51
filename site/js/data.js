@@ -80,7 +80,7 @@ const TYPES_PLURAL = {
 const WORLDS = {
   moon: { name: "The Moon", short: "Moon", tagline: "384,400 km away · 1.3 light-seconds", color: "#cfd8e3" },
   mars: { name: "Mars", short: "Mars", tagline: "55–400 million km away · 3–22 light-minutes", color: "#ff8a5c" },
-  deep: { name: "Elsewhere", short: "Elsewhere", tagline: "Earth orbit to interstellar space · up to a light-day away", color: "#8fb8ff" }
+  deep: { name: "Elsewhere", short: "Elsewhere", tagline: "Earth orbit to interstellar space · up to a light-day away", color: "#b9c2d2" }
 };
 
 const ARTIFACTS = [
@@ -1210,18 +1210,18 @@ const THEN_NOW = [
 
 /* Real sounds (the soundtrack of NASA videos, streamed from images.nasa.gov). */
 const SOUNDS = [
-  { id: "JPL-20210222-M2020f-0003a-M2020_Audio_A_002", title: "Wind on Mars", for: "backshell", icon: "🌬️",
+  { id: "JPL-20210222-M2020f-0003a-M2020_Audio_A_002", title: "Wind on Mars", for: "backshell", icon: "",
     what: "Recorded by Perseverance's microphone on 20 February 2021, two days after it landed. You hear the rover's own hum, then a gust of Martian wind, among the first sounds ever recorded on Mars." },
-  { id: "JPL-20210506-Listen to NASA’s Ingenuity Helicopter as it Flies on Mars-1080", title: "Ingenuity flying", for: "ingenuity", icon: "🚁",
+  { id: "JPL-20210506-Listen to NASA’s Ingenuity Helicopter as it Flies on Mars-1080", title: "Ingenuity flying", for: "ingenuity", icon: "",
     what: "On 30 April 2021, Perseverance's microphone heard Ingenuity's spinning blades hum from about 80 m away: the first time a spacecraft recorded the sound of another spacecraft on another planet." },
-  { id: "JPL-20220401-M2020f-0001-Puff Whir Zap New Sounds from Mars", title: "Puff, whir, zap!", for: "backshell", icon: "⚡",
+  { id: "JPL-20220401-M2020f-0001-Puff Whir Zap New Sounds from Mars", title: "Puff, whir, zap!", for: "backshell", icon: "",
     what: "More Perseverance recordings: puffs from a rover tool, light Martian wind, Ingenuity whirring, and the clicks of Perseverance's laser zapping rocks." },
-  { id: "JPL-20230516-M2020f-0002-Sounds of Mars NoVoiceOver", title: "How sound changes on Mars", for: "backshell", icon: "👂",
+  { id: "JPL-20230516-M2020f-0002-Sounds of Mars NoVoiceOver", title: "How sound changes on Mars", for: "backshell", icon: "",
     what: "Mars's thin air makes sounds much quieter, and high-pitched sounds arrive a tiny bit before low ones. This compares the same sounds on Earth and on Mars." },
-  { id: "JPL-20190423-INSIGHf-0001-First Likely Marsquake Heard by NASAs InSight", title: "A marsquake", for: "insight", icon: "🫨",
+  { id: "JPL-20190423-INSIGHf-0001-First Likely Marsquake Heard by NASAs InSight", title: "A marsquake", for: "insight", icon: "",
     what: "InSight's seismometer felt this quake in April 2019. The vibrations are too slow for our ears, so scientists sped them up so we can hear them." },
-  { id: "JPL-20220919-INSIGHf-0001-InSight Captures Sound of a Meteoroid Striking Mars_1080", title: "A meteoroid hits Mars", for: "insight", icon: "☄️",
+  { id: "JPL-20220919-INSIGHf-0001-InSight Captures Sound of a Meteoroid Striking Mars_1080", title: "A meteoroid hits Mars", for: "insight", icon: "",
     what: "In September 2021 a space rock broke apart and hit Mars. InSight felt the impacts; the odd “bloop” comes from the way Mars's atmosphere carries the waves." },
-  { id: "Apollo 15 Never Been on a Ride like this Before", title: "Astronauts driving on the Moon", for: "apollo15", icon: "🛞",
+  { id: "Apollo 15 Never Been on a Ride like this Before", title: "Astronauts driving on the Moon", for: "apollo15", icon: "",
     what: "Dave Scott and Jim Irwin talk to Mission Control as they bounce across the Moon in the first Moon car, in 1971." }
 ];

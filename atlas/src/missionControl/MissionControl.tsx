@@ -133,7 +133,7 @@ function ExploreTab({ dest }: { dest: Destination }) {
               <h3>{b === 'moon' ? 'The Moon' : 'Mars'}</h3>
               <span className="muted small">{b === 'moon' ? 'You explore on foot, as an astronaut, on measured LROC terrain.' : 'You drive THEIA, a CONCEPTUAL rover (not NASA hardware), on measured HiRISE terrain.'}</span>
               <button className="btn ghost small" onClick={() => { missionControl.close(); expedition.start(b) }} data-testid={`mc-expedition-${b}`} title="A conceptual journey from Earth (not a historical mission)">
-                🚀 Expedition from Earth <span className="mc-tag">conceptual</span>
+                Expedition from Earth <span className="mc-tag">conceptual</span>
               </button>
             </header>
             <ul className="mc-sites">

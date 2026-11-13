@@ -24,7 +24,7 @@
     // Small, dismissible, and only offered once per visit.
     try { if (sessionStorage.getItem("goe:noInstall")) return document.createElement("button"); } catch { }
     const wrap = document.createElement("div"); wrap.className = "install-float";
-    wrap.innerHTML = `<button class="btn btn-small" type="button">${(window.t || ((k, f) => f))("pwa.install", "📲 Install app")}</button><button class="install-x" type="button" aria-label="Dismiss">✕</button>`;
+    wrap.innerHTML = `<button class="btn btn-small" type="button">${(window.t || ((k, f) => f))("pwa.install", "Install app")}</button><button class="install-x" type="button" aria-label="Dismiss">✕</button>`;
     const [b, x] = wrap.querySelectorAll("button");
     const close = () => { wrap.remove(); try { sessionStorage.setItem("goe:noInstall", "1"); } catch { } };
     x.addEventListener("click", close); setTimeout(close, 12000);

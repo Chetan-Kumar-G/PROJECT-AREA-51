@@ -60,7 +60,7 @@ export function MarsMiniMap({ onOpen }: { onOpen: () => void }) {
           ctx.beginPath(); ctx.arc(sx(0), sy(0), 400 / mpp, 0, Math.PI * 2); ctx.stroke(); ctx.setLineDash([])
         }
         // camera view wedge
-        ctx.fillStyle = 'rgba(103, 232, 249, 0.16)'
+        ctx.fillStyle = 'rgba(255, 179, 71, 0.16)'
         ctx.beginPath(); ctx.moveTo(w / 2, h / 2)
         const a0 = pose.camYaw - 0.45, a1 = pose.camYaw + 0.45, R = Math.min(w, h) * 0.48
         ctx.arc(w / 2, h / 2, R, a0 - Math.PI / 2, a1 - Math.PI / 2); ctx.closePath(); ctx.fill()
@@ -89,14 +89,14 @@ export function MarsMiniMap({ onOpen }: { onOpen: () => void }) {
           let gx = sx(g.x), gy = sy(g.z)
           const dx = gx - w / 2, dy = gy - h / 2, d = Math.hypot(dx, dy), lim = Math.min(w, h) / 2 - 8
           if (d > lim) { gx = w / 2 + (dx / d) * lim; gy = h / 2 + (dy / d) * lim }
-          ctx.strokeStyle = 'rgba(103, 232, 249, 0.9)'; ctx.lineWidth = 1.5; ctx.setLineDash([4, 3])
+          ctx.strokeStyle = 'rgba(255, 179, 71, 0.9)'; ctx.lineWidth = 1.5; ctx.setLineDash([4, 3])
           ctx.beginPath(); ctx.moveTo(w / 2, h / 2); ctx.lineTo(gx, gy); ctx.stroke(); ctx.setLineDash([])
-          ctx.fillStyle = '#67e8f9'; ctx.strokeStyle = '#000'; ctx.lineWidth = 1.2
+          ctx.fillStyle = '#ffb347'; ctx.strokeStyle = '#000'; ctx.lineWidth = 1.2
           ctx.beginPath(); ctx.moveTo(gx, gy - 6); ctx.lineTo(gx + 6, gy); ctx.lineTo(gx, gy + 6); ctx.lineTo(gx - 6, gy); ctx.closePath(); ctx.fill(); ctx.stroke()
         }
         // the rover: an arrow along its heading
         ctx.save(); ctx.translate(w / 2, h / 2); ctx.rotate(pose.heading)
-        ctx.fillStyle = '#67e8f9'; ctx.beginPath(); ctx.moveTo(0, -9); ctx.lineTo(6, 7); ctx.lineTo(0, 3.5); ctx.lineTo(-6, 7); ctx.closePath(); ctx.fill(); ctx.stroke()
+        ctx.fillStyle = '#ffb347'; ctx.beginPath(); ctx.moveTo(0, -9); ctx.lineTo(6, 7); ctx.lineTo(0, 3.5); ctx.lineTo(-6, 7); ctx.closePath(); ctx.fill(); ctx.stroke()
         ctx.restore()
       }
       raf = requestAnimationFrame(draw)

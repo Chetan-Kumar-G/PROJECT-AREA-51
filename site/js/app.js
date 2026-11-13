@@ -6,7 +6,7 @@
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const byId = Object.fromEntries(ARTIFACTS.map(a => [a.id, a]));
-  const TYPE_EMOJI = { rover: "🚙", lander: "🛸", vehicle: "🛞", experiment: "📡", impactor: "☄️", probe: "🛰️", helicopter: "🚁", debris: "🪂", orbiter: "🛰️", telescope: "🔭" };
+  const TYPE_EMOJI = {};
   const t = window.t || ((k, f) => f);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
@@ -337,7 +337,7 @@
         <li><span>${t("d.heading", "Heading")}</span><b>${esc(a.heading)}</b></li></ul></div>`;
     }
     $("#drawerBody").innerHTML = `
-      <div class="d-hero">${m0 ? `<img id="dImg" src="assets/nasa/${m0.f}" alt="${esc(m0.cap)}">` : `<div class="ph" aria-hidden="true">${TYPE_EMOJI[a.type]}</div>`}${hasModel(a.id) ? `<button class="btn btn-small model-btn" data-model="${a.id}">🧊 ${t("d.model", "View 3D model")}</button>` : ""}</div>
+      <div class="d-hero">${m0 ? `<img id="dImg" src="assets/nasa/${m0.f}" alt="${esc(m0.cap)}">` : `<div class="ph" aria-hidden="true">✦</div>`}${hasModel(a.id) ? `<button class="btn btn-small model-btn" data-model="${a.id}">${t("d.model", "View 3D model")}</button>` : ""}</div>
       ${a.media.length > 1 ? `<div class="d-thumbs" role="group" aria-label="More photos">${a.media.map((m, i) => `<button data-i="${i}" aria-current="${i === 0}" aria-label="Photo ${i + 1}"><img src="assets/nasa/${m.f}" alt=""></button>`).join("")}</div>` : ""}
       ${m0 ? `<p class="d-cap" id="dCap">${esc(m0.cap)} <a href="${NASA_PAGE(m0.id)}" target="_blank" rel="noopener">NASA · ${esc(m0.id)}</a></p>` : `<p class="d-cap">No close-up photo exists of this one — it crashed where no camera could see.</p>`}
       <div class="d-main">
@@ -349,7 +349,7 @@
         <div class="ghost">
           <blockquote id="ghostText">${esc(a.ghost)}</blockquote>
           <div class="ghost-actions">
-            <button class="btn btn-small speak" id="speakBtn" aria-pressed="false"><span aria-hidden="true">🔊</span> ${t("readAloud", "Read aloud")}</button>
+            <button class="btn btn-small speak" id="speakBtn" aria-pressed="false"><span aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z"/></svg></span> ${t("readAloud", "Read aloud")}</button>
             <small style="color:var(--dim)">${t("d.voiceNote", "Written in {name}’s voice, from real mission facts.").replace("{name}", esc(a.name))}</small>
           </div>
         </div>
@@ -385,14 +385,14 @@
         ${a.video ? `<div class="d-block"><h3>${t("d.watch", "Watch")}</h3>${videoHTML(a.video)}${a.video2 ? "<br>" + videoHTML(a.video2) : ""}</div>` : ""}
         ${sourcesHTML(a)}
         <div class="d-links">
-          ${hasModel(a.id) ? `<button class="btn btn-small" data-model="${a.id}">🧊 Spin the NASA 3D model</button>` : ""}
+          ${hasModel(a.id) ? `<button class="btn btn-small" data-model="${a.id}">Spin the NASA 3D model</button>` : ""}
           ${a.world !== "deep" ? `<a class="btn btn-small" href="explore.html#${a.world}:${a.id}">See it on the 3D ${WORLDS[a.world].short} →</a>` : `<a class="btn btn-small" href="explore.html#deep:${a.id}">${t("d.see3dDeep", "See it in 3D deep space →")}</a>`}
-          ${typeof ATLAS_SITES !== "undefined" && ATLAS_SITES[a.id] ? `<a class="btn btn-small btn-w3d" data-atlas="site:${ATLAS_SITES[a.id]}" href="atlas/index.html?go=site&amp;id=${ATLAS_SITES[a.id]}">🚶 ${t("d.walk3d", "Walk there in 3D")}</a>` : ""}
+          ${typeof ATLAS_SITES !== "undefined" && ATLAS_SITES[a.id] ? `<a class="btn btn-small btn-w3d" data-atlas="site:${ATLAS_SITES[a.id]}" href="atlas/index.html?go=site&amp;id=${ATLAS_SITES[a.id]}">${t("d.walk3d", "Walk there in 3D")}</a>` : ""}
           ${typeof ATLAS_RELIVE !== "undefined" && ATLAS_RELIVE[a.id] ? `<a class="btn btn-small btn-w3d" data-atlas="relive:${ATLAS_RELIVE[a.id]}" href="atlas/index.html?go=relive&amp;id=${ATLAS_RELIVE[a.id]}">▶ ${t("d.relive3d", "Relive the mission in 3D")}</a>` : ""}
-          ${a.world !== "deep" && a.type !== "impactor" ? `<a class="btn btn-small" href="lander.html?level=${a.world === "moon" ? "moon" : ["curiosity", "backshell", "ingenuity"].includes(a.id) ? "jezero" : "mars"}">🚀 Try landing it yourself</a>` : ""}
-          ${a.id === "opportunity" || a.id === "spirit" ? `<a class="btn btn-small btn-upclose" href="#upclose" data-upclose>🔍 ${t("d.upclose", "Opportunity, up close: her life and insides")}</a>` : ""}
-          <a class="btn btn-small" href="adopt.html#${a.id}">🎖 ${t("d.adopt", "Adopt this ghost")}</a>
-          <a class="btn btn-small" href="ask.html?q=${encodeURIComponent("Tell me about " + a.name)}">💬 Ask about ${esc(a.name)}</a>
+          ${a.world !== "deep" && a.type !== "impactor" ? `<a class="btn btn-small" href="lander.html?level=${a.world === "moon" ? "moon" : ["curiosity", "backshell", "ingenuity"].includes(a.id) ? "jezero" : "mars"}">Try landing it yourself</a>` : ""}
+          ${a.id === "opportunity" || a.id === "spirit" ? `<a class="btn btn-small btn-upclose" href="#upclose" data-upclose>${t("d.upclose", "Opportunity, up close: her life and insides")}</a>` : ""}
+          <a class="btn btn-small" href="adopt.html#${a.id}">${t("d.adopt", "Adopt this ghost")}</a>
+          <a class="btn btn-small" href="ask.html?q=${encodeURIComponent("Tell me about " + a.name)}">Ask about ${esc(a.name)}</a>
           ${m0 ? `<a class="btn btn-small" href="${NASA_PAGE(m0.id)}" target="_blank" rel="noopener">${t("d.nasaLib", "Open in NASA library ↗")}</a>` : ""}
         </div>
       </div>`;
@@ -497,7 +497,7 @@
         <p class="ch-quote">${esc(a.ghost)}</p>
         <p class="ch-body">${esc(isSci ? a.deep : a.story)}</p>
         <div class="ch-foot">
-          <button class="btn btn-small speak" id="chSpeak" aria-pressed="false"><span aria-hidden="true">🔊</span> ${t("readAloud", "Read aloud")}</button>
+          <button class="btn btn-small speak" id="chSpeak" aria-pressed="false"><span aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z"/></svg></span> ${t("readAloud", "Read aloud")}</button>
           <button class="btn btn-small" id="chOpen">${t("ch.open", "Open dossier")}</button>
           <span class="spacer"></span>
           <button class="icon-btn" id="chPrev" aria-label="Previous chapter" ${chapter === 0 ? "disabled" : ""}>←</button>
@@ -528,7 +528,7 @@
     $("#tl").innerHTML = Object.entries(decades).map(([d, list]) => `
       <div class="decade"><h3>${d}s</h3>
         ${list.map(a => `<button class="tl-item" data-id="${a.id}" style="--c:${WORLDS[a.world].color}">
-          ${cover(a) ? `<img src="${cover(a)}" alt="" loading="lazy">` : `<span class="ph" aria-hidden="true">${TYPE_EMOJI[a.type]}</span>`}
+          ${cover(a) ? `<img src="${cover(a)}" alt="" loading="lazy">` : `<span class="ph" aria-hidden="true">✦</span>`}
           <span><b>${esc(a.name)}</b><small>${a.year} · ${esc(WORLDS[a.world].short)} · ${esc(STATUS[a.status].label)}</small></span></button>`).join("")}
       </div>`).join("");
     $$("#tl .tl-item").forEach(b => b.addEventListener("click", () => openDrawer(b.dataset.id, b)));
@@ -561,7 +561,7 @@
     $$("#ruler .probe").forEach(b => b.addEventListener("click", () => openDrawer(b.dataset.id, b)));
     $("#deepCards").innerHTML = ARTIFACTS.filter(a => a.world === "deep").map(a => `
       <button class="card" data-id="${a.id}">
-        ${cover(a) ? `<img src="${cover(a)}" alt="" loading="lazy">` : `<span class="ph">${TYPE_EMOJI[a.type]}</span>`}
+        ${cover(a) ? `<img src="${cover(a)}" alt="" loading="lazy">` : `<span class="ph">✦</span>`}
         <span class="card-body">${pill(a.status)}${hasModel(a.id) ? '<span class="tag3d">3D model</span>' : ""}<b>${esc(a.name)}</b>
           <p>${esc(a.dist ? "~" + fmtKm(auNow(a.dist)) + " from the Sun" : a.fixedPlace)}</p>
           <p class="live">${a.dist ? t("deep.signal", "Signal travel time: ~") + lightTime(auNow(a.dist)) : t("deep.launched", "Launched ") + a.dates.launch}</p></span>
@@ -592,7 +592,7 @@
     const o = rec(a.id)?.orbit;
     if (!o) return "";
     return `<div class="d-block d-orbit"><h3>${t("d.orbit", "See it from orbit")}</h3><p>${esc(o.cap)}</p>
-      <a class="btn btn-small" href="${esc(o.url)}" target="_blank" rel="noopener">🛰️ ${t("d.hirise", "Open HiRISE image")} ${esc(o.img)} ↗</a></div>`;
+      <a class="btn btn-small" href="${esc(o.url)}" target="_blank" rel="noopener">${t("d.hirise", "Open HiRISE image")} ${esc(o.img)} ↗</a></div>`;
   }
   // NASA Eyes block in the dossier: tap to load; "Show:" switches spacecraft ↔ classic landing site.
   function startEyes(b) {
@@ -678,7 +678,7 @@
       if (ok) quiz.score++;
       $$(".q-opt", box).forEach(x => { x.disabled = true; if (x.dataset.id === q.a.id) x.classList.add("right"); });
       if (!ok) b.classList.add("wrong");
-      $("#qFeed").innerHTML = `<p>${ok ? "✅ Correct!" : "❌ Not quite — it was <b>" + esc(q.a.name) + "</b>."} ${esc(q.a.fun)}</p>
+      $("#qFeed").innerHTML = `<p>${ok ? "Correct!" : "Not quite — it was <b>" + esc(q.a.name) + "</b>."} ${esc(q.a.fun)}</p>
         <button class="btn btn-primary btn-small" id="qNext">${quiz.i === quiz.qs.length - 1 ? t("q.score", "See my score") : t("q.next", "Next question →")}</button>
         <button class="btn btn-small" id="qLearn">${t("q.openDossier", "Open its dossier")}</button>`;
       $("#qNext").addEventListener("click", () => { quiz.i++; quiz.answered = false; renderQuiz(); $("#quizBox").scrollIntoView({ block: "nearest" }); });
@@ -779,10 +779,10 @@
     // Example conversations (short versions of real answers from the archive guide)
     const v1 = byId.voyager1.dist ? auNow(byId.voyager1.dist).toFixed(0) : "170";
     const DEMO = [
-      ["How did Curiosity land?", "A parachute slowed it down, then a rocket-powered <b>sky crane</b> lowered it on cables about 7.5 m long, and flew away to crash. 🪂", "curiosity"],
-      ["Talk to me as Ingenuity", "<i>“Nobody had ever flown on another planet. I was meant to fly five times. I flew 72.”</i> 🚁", "ingenuity"],
-      ["How far away is Voyager 1?", `About <b>${v1} AU</b> from the Sun: so far that its radio signal takes almost a whole day to reach us. 🛰️`, "voyager1"],
-      ["What did Opportunity discover?", "Tiny round “blueberries” of hematite that formed in water, proof that Mars was once wet. 💧", "opportunity"]
+      ["How did Curiosity land?", "A parachute slowed it down, then a rocket-powered <b>sky crane</b> lowered it on cables about 7.5 m long, and flew away to crash. ", "curiosity"],
+      ["Talk to me as Ingenuity", "<i>“Nobody had ever flown on another planet. I was meant to fly five times. I flew 72.”</i> ", "ingenuity"],
+      ["How far away is Voyager 1?", `About <b>${v1} AU</b> from the Sun: so far that its radio signal takes almost a whole day to reach us. `, "voyager1"],
+      ["What did Opportunity discover?", "Tiny round “blueberries” of hematite that formed in water, proof that Mars was once wet. ", "opportunity"]
     ];
     const log = $("#askcLog");
     const still = () => prefs.motion || matchMedia("(prefers-reduced-motion: reduce)").matches;

@@ -161,7 +161,7 @@
   }
 
   function showResult(ok, st, title, text, extra) {
-    $("#rStars").textContent = ok ? "★".repeat(st) + "☆".repeat(3 - st) : "💥";
+    $("#rStars").textContent = ok ? "★".repeat(st) + "☆".repeat(3 - st) : "✕";
     $("#rTitle").textContent = title;
     $("#rText").textContent = text + (extra ? " " + extra : "");
     $("#rFact").innerHTML = `<b>${ok ? "Just like the real thing" : "What the real missions did"}:</b> ${ok ? L.win : (L.chute && S.chute ? "Phoenix cut loose from its parachute about 1 km up and fired 12 thrusters to slow down." : L.win)}`;
@@ -243,7 +243,7 @@
       if (S.chute) tip = alt > 650 ? "Under the parachute… cut it (C / ✂) when you're below about 600 m" : "Cut the parachute now! (C / ✂)";
       else if (S.fuel <= 0) tip = "Out of fuel!";
       else if (S.fuel < 20) tip = "Low fuel!";
-      else if (alt < 60 && vy > 6) tip = "Slow down! Hold the engine 🔥";
+      else if (alt < 60 && vy > 6) tip = "Slow down! Hold the engine";
       else if (S.t < 4) tip = L.intro;
     }
     $("#lgTip").textContent = tip;

@@ -88,7 +88,7 @@ export function drawSurfaceMap(ctx: CanvasRenderingContext2D, w: number, h: numb
   const wp = site.objects.find((o) => o.objectId === S.waypointId)
   if (wp) {
     const [ax, ay] = toS(me.x, me.z), [bx, by] = toS(wp.x, wp.z)
-    ctx.strokeStyle = '#58b6ff'
+    ctx.strokeStyle = '#ffb347'
     ctx.lineWidth = 2
     ctx.setLineDash([8, 6])
     ctx.beginPath(); ctx.moveTo(ax, ay); ctx.lineTo(bx, by); ctx.stroke()
@@ -104,7 +104,7 @@ export function drawSurfaceMap(ctx: CanvasRenderingContext2D, w: number, h: numb
     ctx.fillStyle = found ? '#ffcf5a' : '#c9d6ea'
     ctx.fill()
     ctx.lineWidth = sel ? 3 : 1.5
-    ctx.strokeStyle = sel ? '#58b6ff' : '#0b1220'
+    ctx.strokeStyle = sel ? '#ffb347' : '#0b1220'
     ctx.stroke()
     if (!opts.compact) {
       const name = OBJECT_BY_ID[o.objectId].name.replace(/^Apollo 11 /, '')

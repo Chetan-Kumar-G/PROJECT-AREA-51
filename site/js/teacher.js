@@ -43,7 +43,7 @@
 
   function sheets() {
     const hunt = `<div class="sheet" id="sheet-hunt">
-      <div class="sheet-head"><h3>Worksheet 1: Ghost hunt</h3><button class="btn btn-small no-print" data-print="sheet-hunt">🖨 Print</button></div>
+      <div class="sheet-head"><h3>Worksheet 1: Ghost hunt</h3><button class="btn btn-small no-print" data-print="sheet-hunt">Print</button></div>
       ${nameRow}
       <p class="sheet-intro">Use the <b>Ghosts of Exploration</b> website to find the answers. The hint tells you where to look.</p>
       <ol class="q-list">${HUNT.map(q => `<li><p>${esc(q[0])} <span class="hint">(Hint: ${esc(q[1])})</span></p>${line(2)}</li>`).join("")}</ol>
@@ -51,7 +51,7 @@
     </div>`;
 
     const log = `<div class="sheet" id="sheet-log">
-      <div class="sheet-head"><h3>Worksheet 2: Write a ghost log</h3><button class="btn btn-small no-print" data-print="sheet-log">🖨 Print</button></div>
+      <div class="sheet-head"><h3>Worksheet 2: Write a ghost log</h3><button class="btn btn-small no-print" data-print="sheet-log">Print</button></div>
       ${nameRow}
       <p class="sheet-intro">A <b>ghost log</b> is a story told by a machine itself, like the ones on the website. Choose any machine and research it in its dossier.</p>
       <table class="facts-table"><tr><th>My machine</th><td>${line()}</td></tr><tr><th>Where it is now</th><td>${line()}</td></tr><tr><th>What it was sent to do</th><td>${line()}</td></tr><tr><th>One thing it discovered</th><td>${line()}</td></tr><tr><th>How its mission ended</th><td>${line()}</td></tr></table>
@@ -62,7 +62,7 @@
     </div>`;
 
     const data = `<div class="sheet" id="sheet-data">
-      <div class="sheet-head"><h3>Worksheet 3: Planned vs. what really happened</h3><button class="btn btn-small no-print" data-print="sheet-data">🖨 Print</button></div>
+      <div class="sheet-head"><h3>Worksheet 3: Planned vs. what really happened</h3><button class="btn btn-small no-print" data-print="sheet-data">Print</button></div>
       ${nameRow}
       <p class="sheet-intro">Engineers plan a mission to last a certain time. Many lasted much longer! Divide <b>actual</b> by <b>planned</b> to find how many times longer each one lasted (round to a whole number).</p>
       <table class="data-table"><thead><tr><th>Machine</th><th>Unit</th><th>Planned</th><th>Actual</th><th>How many times longer?</th></tr></thead>
@@ -77,7 +77,7 @@
     </div>`;
 
     const land = `<div class="sheet" id="sheet-land">
-      <div class="sheet-head"><h3>Worksheet 4: Landing methods</h3><button class="btn btn-small no-print" data-print="sheet-land">🖨 Print</button></div>
+      <div class="sheet-head"><h3>Worksheet 4: Landing methods</h3><button class="btn btn-small no-print" data-print="sheet-land">Print</button></div>
       ${nameRow}
       <p class="sheet-intro">Watch the <b>How it worked</b> animations, then write the letter of the landing method next to each machine.</p>
       <div class="two-col"><ul class="methods">${METHODS.map(m => `<li><b>${m[0]}</b> ${esc(m[1])}</li>`).join("")}</ul>
@@ -146,7 +146,7 @@
     if (qi < qs.length - 1) { qi++; renderQ(); return; }
     const top = Math.max(...teams.map(t => t.s)), win = teams.filter(t => t.s === top).map(t => t.n);
     $("#cqCount").textContent = "Final scores";
-    $("#cqClue").textContent = top ? `🏆 ${win.join(" & ")} win${win.length > 1 ? "" : "s"} with ${top} point${top === 1 ? "" : "s"}!` : "Game over!";
+    $("#cqClue").textContent = top ? `${win.join(" & ")} win${win.length > 1 ? "" : "s"} with ${top} point${top === 1 ? "" : "s"}!` : "Game over!";
     $("#cqOpts").innerHTML = ""; $("#cqAns").hidden = true;
   }
   $("#cqReveal").addEventListener("click", reveal);

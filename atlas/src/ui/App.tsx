@@ -351,7 +351,7 @@ export function App() {
               <button className="sel-chip-btn" onClick={() => set({ rightOpen: true })} title="Open the Inspector (I)">Details</button>
               <button className="sel-chip-btn" onClick={() => st.travel(sel.id)} title="Fly here">Fly here</button>
               {(sel.id === 'moon' || sel.id === 'mars') && (
-                <button className="sel-chip-btn" onClick={() => expedition.start(sel.id as 'moon' | 'mars')} title="Depart from Earth, fly there and land at a historic site">🚀 Expedition</button>
+                <button className="sel-chip-btn" onClick={() => expedition.start(sel.id as 'moon' | 'mars')} title="Depart from Earth, fly there and land at a historic site">Expedition</button>
               )}
               <button className="sel-chip-x" onClick={() => st.select(null)} aria-label="Clear selection" title="Clear selection">✕</button>
             </div>

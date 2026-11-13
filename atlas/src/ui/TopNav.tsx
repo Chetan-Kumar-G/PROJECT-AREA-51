@@ -37,13 +37,13 @@ export function TopNav(a: TopNavActions) {
     { key: 'solar', icon: '☀', label: 'Solar System', title: 'Fly to the Solar System overview', run: a.goSolarSystem, testid: 'nav-solar' },
     { key: 'explore', icon: '◉', label: 'Explore', title: 'Land at a Moon or Mars site (Missions › Explore)', run: a.openExplore, className: 'mc-nav-btn', testid: 'nav-explore' },
     { key: 'missions', icon: '✪', label: 'Missions', title: 'Historical missions: relive, catalogue and sources (G)', run: a.openMissions, testid: 'nav-missions' },
-    { key: 'discoveries', icon: '🛰', label: 'Discoveries', title: 'The historical hardware and instruments you have found', run: a.openDiscoveries, testid: 'nav-discoveries' },
+    { key: 'discoveries', icon: '◇', label: 'Discoveries', title: 'The historical hardware and instruments you have found', run: a.openDiscoveries, testid: 'nav-discoveries' },
   ]
   const experiences: Item[] = [
     { key: 'relive', icon: '▶', label: 'Relive a mission', title: 'Apollo 11 and Opportunity, from launch to their documented conclusions', run: a.openRelive, testid: 'nav-relive' },
     { key: 'tour', icon: '✦', label: 'Solar System tour', title: 'A guided flight from the Sun to Neptune', run: a.startTour, testid: 'nav-tour' },
-    { key: 'travel', icon: '🚀', label: 'Travel Mode', title: 'Pilot a spacecraft through the Solar System', run: a.enterTravel, testid: 'nav-travel' },
-    { key: 'archive', icon: '🛰', label: 'Spacecraft archive', title: 'Official NASA 3D models, validated against sourced dimensions', run: a.openArchive, testid: 'nav-archive' },
+    { key: 'travel', icon: '▲', label: 'Travel Mode', title: 'Pilot a spacecraft through the Solar System', run: a.enterTravel, testid: 'nav-travel' },
+    { key: 'archive', icon: '◇', label: 'Spacecraft archive', title: 'Official NASA 3D models, validated against sourced dimensions', run: a.openArchive, testid: 'nav-archive' },
     { key: 'opening', icon: '◎', label: 'Replay the opening', title: 'From the Milky Way into the Solar System', run: a.replayOpening, testid: 'nav-replay-opening' },
   ]
   const help: Item[] = [

@@ -71,12 +71,12 @@ export function MoonReplay() {
     <div className="replay-root" data-testid="replay-root" role="region" aria-label="Historical replay">
       <header className="replay-top glass">
         <div>
-          <span className="eyebrow replay-eyebrow">⏪ HISTORICAL REPLAY · RELIVING THE MISSION</span>
+          <span className="eyebrow replay-eyebrow">HISTORICAL REPLAY · RELIVING THE MISSION</span>
           <b className="replay-title">{def.title}</b>
           <span className="replay-when mono" data-testid="replay-when">{new Date(simMs).toISOString().slice(0, 16).replace('T', ' ')} UTC · the Sun and shadows of that moment</span>
         </div>
         <button className="btn big replay-back" data-testid="go-back-to-present" onClick={goBackToPresent}>
-          ⏩ GO BACK TO PRESENT <kbd>Esc</kbd>
+          GO BACK TO PRESENT <kbd>Esc</kbd>
         </button>
       </header>
       <ReplayTimeline

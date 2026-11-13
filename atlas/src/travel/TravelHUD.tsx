@@ -70,7 +70,7 @@ export function TravelHUD() {
       {/* Top Telemetry & Mode Bar */}
       <div className="travel-top-bar glass">
         <div className="travel-title">
-          <span className="logo" aria-hidden>🚀</span>
+          <span className="logo" aria-hidden>▲</span>
           <div>
             <b>SPACECRAFT FLIGHT CONTROLLER</b>
             <div className="sub">ATLAS-I INTERPLANETARY SCOUT</div>
@@ -89,7 +89,7 @@ export function TravelHUD() {
             onClick={() => setFlightModel(ship.flightModel === 'assisted' ? 'inertial' : 'assisted')}
             title="Toggle Flight Model (F key): Assisted (auto-stabilized) vs Inertial (Newtonian coasting)"
           >
-            {ship.flightModel === 'assisted' ? '⚡ Assisted Flight' : '⟲ Inertial Flight'}
+            {ship.flightModel === 'assisted' ? 'Assisted Flight' : '⟲ Inertial Flight'}
           </button>
 
           {/* Stabilization Toggle */}
@@ -120,7 +120,7 @@ export function TravelHUD() {
             onClick={cycleCameraView}
             title="Cycle Camera View (V key): Cockpit / Chase / External"
           >
-            🎥 {ship.cameraView.toUpperCase()}
+            {ship.cameraView.toUpperCase()}
           </button>
 
           {/* Navigation Map Button */}
@@ -129,7 +129,7 @@ export function TravelHUD() {
             onClick={() => set({ navMapOpen: !navMapOpen })}
             title="Open Solar System Astrogation Map (M key)"
           >
-            🗺 Nav Map (M)
+            Nav Map (M)
           </button>
 
           {/* Quick Help */}
@@ -171,7 +171,7 @@ export function TravelHUD() {
 
           <div className="tf-metric">
             <label>THROTTLE</label>
-            <b>{Math.round(ship.thrust * 100)}% {ship.boost ? '⚡ BOOST' : ship.reverse ? '⏪ REV' : ''}</b>
+            <b>{Math.round(ship.thrust * 100)}% {ship.boost ? 'BOOST' : ship.reverse ? 'REV' : ''}</b>
             <div className="mini-progress">
               <i
                 style={{

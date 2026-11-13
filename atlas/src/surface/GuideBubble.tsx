@@ -25,7 +25,7 @@ export function GuideBubble() {
   if (!line) return null
   return (
     <div ref={ref} className={`guide-bubble kind-${line.kind}`} data-docked="true" data-testid="guide-bubble" role="status" aria-live="polite">
-      <span className="guide-who">🧑‍🚀 {KIND_LABEL[line.kind]}</span>
+      <span className="guide-who">{KIND_LABEL[line.kind]}</span>
       <p className="guide-text">{line.kind === 'story' ? <SpokenText text={line.text} charIdx={charIdx} /> : line.text}</p>
       {line.sources.length > 0 && (
         <span className="guide-src">

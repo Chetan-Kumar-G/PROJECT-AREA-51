@@ -32,7 +32,7 @@
 .mwm-title { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .mwm-tabs { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
 .mwm-tabs button, .mstory-views button { font: inherit; font-size: 0.85rem; padding: 5px 14px; background: transparent; color: var(--txt-dim); border: 0; cursor: pointer; }
-.mwm-tabs button.on, .mstory-views button.on { background: rgba(103, 232, 249, 0.16); color: var(--cy); }
+.mwm-tabs button.on, .mstory-views button.on { background: rgba(255, 179, 71, 0.16); color: var(--cy); }
 .mwm-body { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 14px; align-items: start; }
 .mwm-svg { max-height: min(64vh, calc(100vh - 200px)); }
 .mwm-side { max-height: min(64vh, calc(100vh - 200px)); overflow-y: auto; }
@@ -43,7 +43,7 @@
 .mwm-t { cursor: pointer; }
 .mwm-t circle { fill: #fbbf24; stroke: #000; stroke-width: 3; }
 .mwm-t path { fill: #f97316; stroke: #000; stroke-width: 3; }
-.mwm-t rect { fill: #cbd5e1; stroke: #000; stroke-width: 3; }
+.mwm-t rect { fill: #d4d5d8; stroke: #000; stroke-width: 3; }
 .mwm-t.on circle, .mwm-t.on path, .mwm-t.on rect { stroke: var(--cy); stroke-width: 6; }
 .mwm-guide-line { stroke: var(--cy); stroke-width: 5; stroke-dasharray: 16 10; }
 .mwm-globe { width: 100%; border-radius: var(--r-sm); background: #000; }
@@ -79,7 +79,7 @@
 .mstory-know { font-size: 0.7rem; padding: 1px 7px; border-radius: 999px; border: 1px solid var(--line); margin-left: 6px; white-space: nowrap; }
 .mstory-know.k-record { color: var(--ok); border-color: rgba(52, 211, 153, 0.4); }
 .mstory-know.k-derived { color: var(--warm); border-color: rgba(251, 191, 36, 0.4); }
-.mstory-know.k-reconstruction { color: var(--vi); border-color: rgba(167, 139, 250, 0.4); }
+.mstory-know.k-reconstruction { color: var(--vi); border-color: rgba(217, 160, 102, 0.4); }
 .mstory-where { color: var(--cy); }
 .mstory-controls { display: flex; align-items: center; gap: 8px; }
 .mstory-strip { position: relative; height: 34px; margin: 8px 0 2px; }

@@ -129,7 +129,7 @@ const NASA_VIEWER = {
       <model-viewer src="assets/models/${esc(m.file)}" alt="3D model of ${esc(m.title)}"
         camera-controls touch-action="pan-y" ${reduce ? "" : "auto-rotate auto-rotate-delay=\"800\" rotation-per-second=\"18deg\""}
         ar ar-modes="webxr scene-viewer quick-look" shadow-intensity="0.8" exposure="1.05" environment-image="neutral" interaction-prompt="auto">
-        <button slot="ar-button" class="btn btn-primary btn-small mm-ar">📱 View in your space</button>
+        <button slot="ar-button" class="btn btn-primary btn-small mm-ar">View in your space</button>
         <div slot="progress-bar" class="mm-progress"><i></i></div>
       </model-viewer>`;
     const mv = stage.querySelector("model-viewer"), bar = stage.querySelector(".mm-progress i");

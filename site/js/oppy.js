@@ -51,14 +51,14 @@
           <button class="icon-btn" id="oppyPrev" type="button" aria-label="${esc(t("oppy.prev", "Previous moment"))}">←</button>
           <span class="oppy-count" id="oppyCount"></span>
           <button class="icon-btn" id="oppyNext" type="button" aria-label="${esc(t("oppy.next", "Next moment"))}">→</button>
-          <button class="btn btn-small speak" id="oppySpeak" type="button" aria-pressed="false"><span aria-hidden="true">🔊</span> ${esc(t("readAloud", "Read aloud"))}</button>
+          <button class="btn btn-small speak" id="oppySpeak" type="button" aria-pressed="false"><span aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z"/></svg></span> ${esc(t("readAloud", "Read aloud"))}</button>
         </div>
       </div>
       <div class="oppy-odo">
         <p class="odo-num"><b id="oppyKm">0.00</b> km <small>${esc(t("oppy.driven", "driven on Mars so far"))}</small></p>
         <div class="odo-track" aria-hidden="true">
           <div class="odo-fill" id="oppyFill"></div>
-          <span class="odo-rover" id="oppyRover">🚙</span>
+          <span class="odo-rover" id="oppyRover">◆</span>
           ${OPPY.stops.map((s, k) => `<span class="odo-stop ${k % 2 ? "low" : ""} ${k === OPPY.stops.length - 1 ? "end" : ""}" style="left:${(s.km / MAX * 100).toFixed(2)}%"><i></i><em>${esc(s.name)}</em></span>`).join("")}
         </div>
         <p class="odo-note">${esc(t("oppy.planned", "Her mission plan: 90 sols and about 600 m of driving. What she did: 5,111 sols and 45.16 km."))}</p>
@@ -133,7 +133,7 @@
   const P = OPPY.parts;
   $("#oppyBody").innerHTML = `
     <div class="oppy-xbar">
-      <label class="xray-switch"><input type="checkbox" id="oppyXray"><span class="track" aria-hidden="true"></span><b>🥽 ${esc(t("oppy.xray", "X-ray goggles"))}</b></label>
+      <label class="xray-switch"><input type="checkbox" id="oppyXray"><span class="track" aria-hidden="true"></span><b>${esc(t("oppy.xray", "X-ray goggles"))}</b></label>
       <p id="oppyXhint">${esc(t("oppy.hintOut", "Tap a number to learn about a part. Put on the X-ray goggles to see inside her body."))}</p>
     </div>
     <div class="oppy-rover">

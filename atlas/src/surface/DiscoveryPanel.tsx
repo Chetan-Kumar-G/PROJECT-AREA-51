@@ -336,7 +336,7 @@ export function DiscoveryPanel({ inspectNote, clockButtons = true, onRelive, onC
       <footer className="discovery-foot">
         {onRelive && (
           <button className="btn relive-btn" data-testid="relive-mission" onClick={() => { narrator.stop(); onRelive() }} title="Travel back through this mission's documented events">
-            ⏪ Relive the mission
+            Relive the mission
           </button>
         )}
         <button className="btn" onClick={close}>Return to Exploration</button>

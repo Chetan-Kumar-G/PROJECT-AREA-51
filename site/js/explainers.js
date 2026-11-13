@@ -144,7 +144,7 @@ window.GOESpeed = window.GOESpeed || (() => {
           <rect x="414" y="318" width="10" height="8" fill="#444"/>
           ${flame("vFlame", 384, 338, 18, 4, "small")}${flame("vFlame2", 416, 338, 18, 4, "small")}
         </g>
-        <g data-k="cam" class="fx"><circle cx="419" cy="322" r="14" fill="none" stroke="#7fd4ff" stroke-width="2"/><circle cx="419" cy="322" r="24" fill="none" stroke="#7fd4ff" stroke-width="1.5" opacity=".6"/></g>
+        <g data-k="cam" class="fx"><circle cx="419" cy="322" r="14" fill="none" stroke="#ffd08a" stroke-width="2"/><circle cx="419" cy="322" r="24" fill="none" stroke="#ffd08a" stroke-width="1.5" opacity=".6"/></g>
         ${label("l1", 570, 250, "Surveyor is still standing here", 430, 320)}`,
       init: { sv: { x: -320, y: -290, r: -20 }, casing: { x: -320, y: -290, r: -20 } },
       steps: [
@@ -264,7 +264,7 @@ window.GOESpeed = window.GOESpeed || (() => {
       title: T[0], world: comet ? "space" : "moon",
       svg: P => `<rect width="800" height="450" fill="#04060c"/>${stars(80, 5, 360)}${ground}
         <circle cx="70" cy="70" r="26" fill="#3d7bd9"/><path d="M58 60 Q66 52 76 60 Q84 72 70 78 Q58 76 58 60Z" fill="#5fae5f"/><text x="70" y="114" text-anchor="middle" font-size="12" fill="#9eabc2">Earth</text>
-        <g data-k="photos" class="fx flicker"><circle cx="300" cy="200" r="3" fill="#7fd4ff"/><circle cx="220" cy="160" r="3" fill="#7fd4ff"/><circle cx="140" cy="115" r="3" fill="#7fd4ff"/></g>
+        <g data-k="photos" class="fx flicker"><circle cx="300" cy="200" r="3" fill="#ffd08a"/><circle cx="220" cy="160" r="3" fill="#ffd08a"/><circle cx="140" cy="115" r="3" fill="#ffd08a"/></g>
         <g data-k="plume" class="fx" data-px="440" data-py="372"><polygon points="440,372 360,230 520,230" fill="url(#${P}pl)"/><circle cx="440" cy="368" r="20" fill="#fff6d0"/></g>
         <g data-k="rings" class="fx" data-px="440" data-py="378"><ellipse cx="440" cy="378" rx="90" ry="14" fill="none" stroke="#ffb347" stroke-width="2"/><ellipse cx="440" cy="378" rx="170" ry="24" fill="none" stroke="#ffb347" stroke-width="1.5" opacity=".6"/><ellipse cx="440" cy="378" rx="260" ry="34" fill="none" stroke="#ffb347" stroke-width="1" opacity=".35"/></g>
         ${comet ? `<g data-k="mother" class="fx" data-px="560" data-py="140"><rect x="546" y="132" width="28" height="18" fill="#c9ccd2" stroke="#666"/><rect x="520" y="136" width="26" height="9" fill="#2e3d66"/><rect x="574" y="136" width="26" height="9" fill="#2e3d66"/></g>` : ""}
@@ -308,9 +308,9 @@ window.GOESpeed = window.GOESpeed || (() => {
       <circle cx="-60" cy="225" r="110" fill="url(#${P}sun)"/><text x="30" y="380" font-size="13" fill="#9eabc2">toward the Sun</text>
       <path d="M140 450 Q420 120 800 210" fill="none" stroke="#334466" stroke-width="2" stroke-dasharray="6 6"/>
       <g data-k="planet" data-px="420" data-py="236"><circle cx="420" cy="236" r="44" fill="#d9b38c"/><path d="M378 226 Q420 216 462 226" stroke="#b98a5e" stroke-width="7" fill="none"/><path d="M380 250 Q420 242 460 250" stroke="#c99a6e" stroke-width="5" fill="none"/></g>
-      <path data-k="trail" d="M130 420 Q330 336 432 322 Q508 310 498 250 Q486 192 548 166 Q636 122 790 40" fill="none" stroke="#7fd4ff" stroke-width="2" pathLength="1"/>
+      <path data-k="trail" d="M130 420 Q330 336 432 322 Q508 310 498 250 Q486 192 548 166 Q636 122 790 40" fill="none" stroke="#ffd08a" stroke-width="2" pathLength="1"/>
       <path data-k="route" d="M130 420 Q330 336 432 322 Q508 310 498 250 Q486 192 548 166 Q636 122 790 40" fill="none" stroke="none"/>
-      <g data-k="probe" data-path="route"><circle cx="0" cy="0" r="6" fill="#fff"/><circle cx="0" cy="0" r="12" fill="#7fd4ff" opacity=".35"/></g>
+      <g data-k="probe" data-path="route"><circle cx="0" cy="0" r="6" fill="#fff"/><circle cx="0" cy="0" r="12" fill="#ffd08a" opacity=".35"/></g>
       <text x="600" y="400" font-size="15" fill="#9eabc2">probe speed</text><text data-k="spd" x="600" y="430" font-size="26" font-weight="700" fill="#ffd08a" font-family="Space Grotesk, sans-serif">10 km/s</text>
       <defs><radialGradient id="${P}sun"><stop offset="0" stop-color="#fff6c8"/><stop offset=".6" stop-color="#ffb347"/><stop offset="1" stop-color="#ff8a3d" stop-opacity="0"/></radialGradient></defs>`,
     init: { probe: { p: 0 }, trail: { d: 0 }, planet: { x: -80, y: 30 } },
@@ -359,7 +359,7 @@ window.GOESpeed = window.GOESpeed || (() => {
         <g data-k="src" class="fx"><polygon points="${moon ? "180,110 188,94 196,110 212,112 199,122 204,138 188,128 172,138 177,122 164,112" : "160,140 168,124 176,140 192,142 179,152 184,168 168,158 152,168 157,152 144,142"}" fill="#ffd08a"/></g>
         <g data-k="w1" class="fx" data-px="${moon ? 188 : 168}" data-py="${moon ? 116 : 146}"><circle cx="${moon ? 188 : 168}" cy="${moon ? 116 : 146}" r="60" fill="none" stroke="#ffd08a" stroke-width="3"/></g>
         <g data-k="w2" class="fx" data-px="${moon ? 188 : 168}" data-py="${moon ? 116 : 146}"><circle cx="${moon ? 188 : 168}" cy="${moon ? 116 : 146}" r="60" fill="none" stroke="#ffd08a" stroke-width="2" opacity=".6"/></g>
-        <path data-k="ray" class="fx" d="${moon ? "M188 116 Q300 200 410 180" : "M168 146 Q300 330 428 300"}" fill="none" stroke="#7fd4ff" stroke-width="2.5" stroke-dasharray="6 5"/>
+        <path data-k="ray" class="fx" d="${moon ? "M188 116 Q300 200 410 180" : "M168 146 Q300 330 428 300"}" fill="none" stroke="#ffd08a" stroke-width="2.5" stroke-dasharray="6 5"/>
         <g><rect x="${moon ? 404 : 422}" y="${moon ? 166 : 286}" width="16" height="14" fill="#e2e5ea"/><text x="${moon ? 428 : 446}" y="${moon ? 178 : 298}" font-size="12" fill="#e9eef7">seismometer</text></g>
         <rect x="520" y="300" width="250" height="110" rx="10" fill="#0f1729" stroke="#2f4166"/><text x="534" y="322" font-size="12" fill="#9eabc2">seismometer reading</text>
         <path data-k="trace" d="M534 360 L560 360 L565 352 L570 368 L575 344 L580 376 L586 340 L592 380 L598 346 L604 372 L610 352 L616 366 L622 356 L628 364 L640 358 L660 362 L680 358 L700 361 L720 359 L756 360" fill="none" stroke="#ffd08a" stroke-width="2" pathLength="1"/>`,
@@ -411,7 +411,7 @@ window.GOESpeed = window.GOESpeed || (() => {
         <g opacity=".45"><path d="M0 190 Q200 175 400 192 T800 186" stroke="${c.band}" stroke-width="16" fill="none"/><path d="M0 280 Q220 266 420 284 T800 276" stroke="${c.band}" stroke-width="22" fill="none"/><path d="M0 370 Q200 356 400 374 T800 366" stroke="${c.band}" stroke-width="18" fill="none"/></g>
         <circle cx="60" cy="48" r="16" fill="#3d7bd9"/><text x="60" y="80" text-anchor="middle" font-size="13" fill="#cfd8e6">Earth</text>
         ${relay ? `<g data-k="mother"><rect x="640" y="40" width="26" height="14" fill="#c9ccd2"/><rect x="618" y="44" width="22" height="6" fill="#2e3d66"/><rect x="666" y="44" width="22" height="6" fill="#2e3d66"/><text x="653" y="76" text-anchor="middle" font-size="13" fill="#cfd8e6">${v === "galileo" ? "Galileo orbiter" : "carrier"}</text></g>` : ""}
-        <g data-k="sig" class="fx flicker"><circle cx="${sx[0]}" cy="150" r="4" fill="#7fd4ff"/><circle cx="${sx[1]}" cy="100" r="4" fill="#7fd4ff"/><circle cx="${sx[2]}" cy="64" r="4" fill="#7fd4ff"/></g>
+        <g data-k="sig" class="fx flicker"><circle cx="${sx[0]}" cy="150" r="4" fill="#ffd08a"/><circle cx="${sx[1]}" cy="100" r="4" fill="#ffd08a"/><circle cx="${sx[2]}" cy="64" r="4" fill="#ffd08a"/></g>
         <g data-k="pr" data-px="400" data-py="150">
           <g data-k="chute" class="fx" data-px="400" data-py="118"><path d="M370 112 Q400 78 430 112Z" fill="#f2f2f2"/><line x1="372" y1="112" x2="394" y2="140" stroke="#ddd"/><line x1="428" y1="112" x2="406" y2="140" stroke="#ddd"/></g>
           ${body}
@@ -468,7 +468,7 @@ window.GOESpeed = window.GOESpeed || (() => {
         <button class="ex-btn" data-a="next" aria-label="Next step">⏭</button>
         <div class="ex-dots" role="group" aria-label="Steps"></div>
         ${GOESpeed.html()}
-        <button class="ex-btn ex-narr" data-a="narr" aria-pressed="false" title="Read the captions aloud">🔊</button>
+        <button class="ex-btn ex-narr" data-a="narr" aria-pressed="false" title="Read the captions aloud"><svg class="ico" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z"/></svg></button>
         <button class="ex-btn" data-a="replay" aria-label="Replay from the start">↻</button>
       </div>`;
     const svg = root.querySelector("svg"), cap = root.querySelector(".ex-cap"), dots = root.querySelector(".ex-dots");

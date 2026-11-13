@@ -33,9 +33,9 @@ import { COMPLETION, CONCLUSIONS, storyFor, timeKnownAs } from './story'
 import './relive.css'
 
 const ICON: Record<MissionEvent['kind'], string> = {
-  discovery: '🔬',
-  countdown: '⏱', ignition: '🔥', liftoff: '🚀', staging: '⇊', jettison: '✂', cutoff: '■', burn: '➶', orbit: '◌', docking: '⧉',
-  separation: '⇵', coast: '…', landing: '⬇', surface: '👣', entry: '☄', parachute: '☂', splashdown: '🌊', deploy: '⛭', comms: '📡', end: '◆',
+  discovery: '◈',
+  countdown: '◷', ignition: '▲', liftoff: '▲', staging: '⇊', jettison: '✂', cutoff: '■', burn: '➶', orbit: '◌', docking: '⧉',
+  separation: '⇵', coast: '…', landing: '⬇', surface: '▪', entry: '↘', parachute: '☂', splashdown: '≈', deploy: '⛭', comms: '◉', end: '◆',
 }
 
 const STATUS: Record<string, string> = { completed: 'Completed', ended: 'Ended', operating: 'Operating', lost: 'Lost', unknown: 'Unknown' }
@@ -588,9 +588,9 @@ export default function ReliveMission() {
           <span data-testid="relive-utc">{formatUtc(script.epochMs + S.t * 1000)}{S.rate * S.speed >= 1.5 ? ' · sped up' : ''}</span>
         </div>
         <div className="relive-actions">
-          <button className="btn icon" onClick={() => { void audio.unlock(); audio.setMuted(sound) }} aria-pressed={sound} title="Sound (recreated, not archival audio)" aria-label={sound ? 'Mute sound' : 'Turn sound on'} data-testid="relive-sound">{sound ? '🔊' : '🔇'}</button>
-          <button className="btn icon" onClick={() => setExplain(!explain)} aria-pressed={explain} title={explain ? 'Hide explanations (E)' : 'Show explanations (E)'} aria-label="Explanations" data-testid="relive-explain">💬</button>
-          <button className="btn" onClick={() => setCinema(!cinema)} aria-pressed={cinema} title="Cinematic mode: just the scene (H)" data-testid="relive-cinema">🎬 <span className="lbl">Cinematic</span></button>
+          <button className="btn icon" onClick={() => { void audio.unlock(); audio.setMuted(sound) }} aria-pressed={sound} title="Sound (recreated, not archival audio)" aria-label={sound ? 'Mute sound' : 'Turn sound on'} data-testid="relive-sound">{sound ? 'Sound' : 'Muted'}</button>
+          <button className="btn icon" onClick={() => setExplain(!explain)} aria-pressed={explain} title={explain ? 'Hide explanations (E)' : 'Show explanations (E)'} aria-label="Explanations" data-testid="relive-explain">Notes</button>
+          <button className="btn" onClick={() => setCinema(!cinema)} aria-pressed={cinema} title="Cinematic mode: just the scene (H)" data-testid="relive-cinema"><span className="lbl">Cinematic</span></button>
           <button className="btn" onClick={() => setList(!list)} aria-pressed={list} data-testid="relive-events-toggle" title="All events (L)">☰ <span className="lbl">Events</span></button>
           <button className="btn" onClick={() => setInfo(!info)} aria-pressed={info} data-testid="relive-info" title="Sources, exact times and how this replay is built (I)">? <span className="lbl">How do we know?</span></button>
           <button className="btn icon" onClick={() => setMenu(!menu)} aria-expanded={menu} aria-haspopup="menu" title="Quality, volume, free look" aria-label="Settings" data-testid="relive-settings">⚙</button>
