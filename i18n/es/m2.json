@@ -1,0 +1,156 @@
+{
+  "m": {
+    "opportunity": {
+      "story": "Opportunity debía durar 90 días. ¡Duró más de 14 años! Encontró pruebas de que Marte tuvo agua líquida, y luego una tormenta de polvo que cubrió todo el planeta tapó el Sol y sus baterías se agotaron.",
+      "ghost": "Aterricé dentro de un cráter pequeño, como un hoyo en uno, y encontré unas piedritas redondas que la ciencia llamó arándanos. Se formaron en agua. Seguí conduciendo más de 14 años, más lejos que un maratón. Entonces una enorme tormenta de polvo tapó el Sol. Mi último mensaje a casa hablaba de energía y oscuridad.",
+      "epitaph": "Planeado para 90 días. Me quedé catorce años.",
+      "fun": "Cuando Opportunity completó su maratón, el equipo en la Tierra corrió un maratón de relevos para celebrarlo.",
+      "quiz": "Me planearon para 90 días, pero exploré durante más de 14 años."
+    },
+    "phoenix": {
+      "story": "Phoenix aterrizó en el ártico de Marte. Su brazo robótico excavó el suelo y encontró hielo de agua de verdad justo debajo de la superficie.",
+      "ghost": "Cavé una zanja y encontré trozos blancos y brillantes. Unos días después habían desaparecido en el aire finísimo: ¡era hielo! Mi láser incluso vio caer nieve de las nubes sobre mí. Llegó el invierno, el Sol desapareció y mis paneles solares se rompieron bajo el peso del dióxido de carbono congelado.",
+      "epitaph": "Probé el hielo. Luego el invierno me enterró.",
+      "fun": "Phoenix lleva un mini-DVD llamado ‘Visions of Mars’: una biblioteca de historias y arte sobre Marte para que la encuentren futuros exploradores.",
+      "quiz": "Encontré hielo justo bajo el suelo y vi nevar en Marte."
+    },
+    "insight": {
+      "story": "InSight no se movió a ningún lado. Se quedó quieto escuchando los sismos marcianos. Estudiando cómo viajaban los sismos por el planeta, la ciencia descubrió cómo es el interior de Marte.",
+      "ghost": "Soy el médico de Marte. Puse un estetoscopio, un sismómetro, en el suelo y escuché. Oí más de 1.300 sismos marcianos y el golpe de meteoroides contra la superficie. Nos dijeron que Marte tiene un núcleo de metal líquido. El polvo cubrió mis paneles solares hasta que ya no pude seguir despierto.",
+      "epitaph": "Escuché temblar a Marte 1.319 veces.",
+      "fun": "InSight lleva dos chips de silicio con los nombres de unos 2,4 millones de personas.",
+      "quiz": "Escuché más de 1.300 sismos marcianos."
+    },
+    "ingenuity": {
+      "story": "Ingenuity era un pequeño helicóptero que viajó a Marte debajo del róver Perseverance. Fue la primera aeronave en volar en otro planeta y exploró el camino para el róver.",
+      "ghost": "Nadie había volado nunca en otro planeta. El aire de Marte es tan delgado que mis aspas tenían que girar unas 2.500 veces por minuto. Iba a volar cinco veces. Volé 72. En mi último vuelo se dañó una de mis aspas, así que ahora estoy quieto en la arena, una pequeña estación meteorológica que recuerda haber sido piloto.",
+      "epitaph": "Planeado para cinco vuelos. Volé setenta y dos.",
+      "fun": "Ingenuity lleva un trocito de tela, del tamaño de un sello postal, del avión Flyer de los hermanos Wright de 1903.",
+      "quiz": "Fui la primera aeronave en volar en otro planeta."
+    },
+    "backshell": {
+      "story": "Aterrizar en Marte deja piezas atrás: escudos térmicos, paracaídas y carcasas protectoras. Ingenuity fotografió el paracaídas y la carcasa trasera de Perseverance para que los ingenieros pudieran aprender de ellos.",
+      "ghost": "Soy la carcasa que envolvía a Perseverance mientras caía por el cielo marciano a unos 20.000 km/h. Abrí un paracaídas gigante, lo solté y me estrellé. Un año después, un helicóptero vino volando a tomarme una foto para que los ingenieros vieran cómo sobreviví.",
+      "epitaph": "Llevé a Perseverance hasta abajo, y luego lo solté.",
+      "fun": "El paracaídas de Perseverance tenía un mensaje secreto codificado en su diseño: “Dare Mighty Things” (“Atrévete a hacer cosas grandes”).",
+      "quiz": "Protegí a un róver mientras caía por el cielo de Marte, y luego un helicóptero me fotografió."
+    },
+    "curiosity": {
+      "story": "Curiosity sigue trabajando hoy en Marte. Descubrió que el cráter Gale tuvo un lago que pudo albergar formas de vida diminutas.",
+      "ghost": "No soy un fantasma… ¡todavía no! Sigo subiendo el monte Sharp. Estoy aquí para que compares: las máquinas de este archivo también estuvieron ocupadas como yo.",
+      "epitaph": "Sigo subiendo. Sigo hablando. Por ahora.",
+      "fun": "En su primer aniversario tocó ‘Cumpleaños feliz’ con las vibraciones de su instrumento para analizar el suelo."
+    },
+    "pioneer10": {
+      "story": "Pioneer 10 fue la primera nave en cruzar el cinturón de asteroides y pasar junto a Júpiter. Lleva una placa de metal que le cuenta a quien la encuentre de dónde viene.",
+      "ghost": "Fui la primera en cruzar el cinturón de asteroides y la primera en visitar Júpiter. Llevo una placa dorada con el dibujo de dos humanos y un mapa hacia nuestro Sol. Mi última y débil señal llegó a la Tierra en 2003. Dentro de unos dos millones de años pasaré cerca de la estrella Aldebarán.",
+      "epitaph": "Llevo un retrato tuyo, por si alguien pregunta.",
+      "fun": "Su energía venía de RTG, baterías nucleares que se fueron apagando poco a poco durante 30 años.",
+      "quiz": "Fui la primera en cruzar el cinturón de asteroides y llevo una placa con un mapa hacia nuestro Sol."
+    },
+    "pioneer11": {
+      "story": "Pioneer 11 fue la primera nave en visitar Saturno. Comprobó si una nave podía pasar con seguridad junto a los anillos de Saturno.",
+      "ghost": "Pasé tan cerca de Júpiter que su gravedad me lanzó a través del sistema solar hasta Saturno. Fui la primera visita del planeta de los anillos. Exploré el camino que seguirían las Voyager. Mi energía se apagó en 1995.",
+      "epitaph": "Yo te mostré Saturno primero.",
+      "fun": "Como Pioneer 10, lleva la famosa placa con un mapa hacia nuestro Sol.",
+      "quiz": "Fui la primera nave en visitar Saturno."
+    },
+    "voyager1": {
+      "story": "Voyager 1 visitó Júpiter y Saturno, y siguió adelante. Ahora está en el espacio interestelar, el espacio entre las estrellas. Lleva un Disco de Oro con sonidos e imágenes de la Tierra.",
+      "ghost": "Soy el objeto hecho por humanos más lejano. En 1990 me di la vuelta y tomé una foto de la Tierra: un punto azul pálido en un rayo de sol. En 2012 salí de la burbuja del Sol y entré en el espacio interestelar. Van apagando mis instrumentos uno a uno para ahorrar energía, pero sigo escuchando y sigo hablando.",
+      "epitaph": "Lo más lejos que han llegado, todavía diciendo hola.",
+      "fun": "El Disco de Oro incluye saludos en 55 idiomas, música de muchas culturas y el sonido de un corazón humano.",
+      "quiz": "Tomé la foto del Punto Azul Pálido y soy la nave más lejana de la Tierra."
+    },
+    "voyager2": {
+      "story": "Voyager 2 hizo el ‘gran recorrido’ por los cuatro planetas gigantes. Sigue siendo la única nave que ha visitado Urano y Neptuno.",
+      "ghost": "Soy la única visita que han tenido Urano y Neptuno. En 2023, alguien en la Tierra apuntó por error mi antena dos grados lejos de casa. Durante dos semanas no pude oír nada. Entonces una gran antena en Australia me ‘gritó’ una orden… y volví a girarme.",
+      "epitaph": "Urano y Neptuno solo han tenido una visita. Yo.",
+      "fun": "Voyager 2 despegó 16 días antes que Voyager 1, pero Voyager 1 tomó una ruta más rápida.",
+      "quiz": "Soy la única nave que ha visitado Urano y Neptuno."
+    },
+    "near": {
+      "story": "NEAR Shoemaker fue la primera nave en orbitar un asteroide y la primera en posarse en uno. Los asteroides son piezas sobrantes de cuando se formaron los planetas.",
+      "ghost": "Entré en órbita alrededor del asteroide Eros el Día de San Valentín de 2000. Un año después, el equipo decidió intentar algo atrevido: hacerme aterrizar, aunque no tenía patas. Me posé a la velocidad de una persona caminando y seguí enviando ciencia desde la superficie dos semanas más.",
+      "epitaph": "Nunca me construyeron para aterrizar, pero me posé en un asteroide de todos modos.",
+      "fun": "La nave recibió el nombre del geólogo planetario Eugene Shoemaker.",
+      "quiz": "Fui la primera nave en posarse en un asteroide."
+    },
+    "deepimpact": {
+      "story": "Deep Impact disparó a propósito una pequeña nave contra un cometa. El choque lanzó una enorme nube de polvo, hielo y gas para que la ciencia pudiera estudiarla.",
+      "ghost": "Era una bala de cañón, hecha sobre todo de cobre, disparada contra un cometa. Mi nave nodriza miró cómo me estrellaba contra Tempel 1. El destello y la nube de polvo fino le contaron a la ciencia de qué están hechos los cometas por dentro.",
+      "epitaph": "Choqué contra un cometa a propósito, el 4 de julio.",
+      "fun": "El impacto ocurrió el 4 de julio, Día de la Independencia de Estados Unidos: fuegos artificiales en el espacio.",
+      "quiz": "Me dispararon a propósito contra un cometa."
+    },
+    "newhorizons": {
+      "story": "New Horizons nos mostró la llanura helada con forma de corazón de Plutón y sigue explorando el borde lejano del sistema solar.",
+      "ghost": "¡Sigo despierta! Estoy aquí para que compares. Algún día yo también estaré en silencio, navegando junto a las Pioneer y las Voyager.",
+      "epitaph": "Te mostré el corazón de Plutón, y sigo adelante.",
+      "fun": "Despegó a la mayor velocidad de lanzamiento de cualquier nave hasta ese momento."
+    },
+    "messenger": {
+      "story": "MESSENGER fue la primera nave en orbitar Mercurio. Aunque Mercurio es el planeta más cercano al Sol, MESSENGER encontró agua congelada escondida en la sombra de sus cráteres polares.",
+      "ghost": "Soy la primera nave que dio vueltas alrededor de Mercurio, el planeta más cercano al Sol. Llevaba un parasol como un paraguas gigante para no cocinarme. Encontré hielo escondido en cráteres de los polos de Mercurio, donde nunca llega la luz del Sol. Cuando se acabó mi combustible, me estrellé contra el planeta que había estudiado durante cuatro años.",
+      "epitaph": "Sin combustible, volé con el gas que solo debía empujarlo.",
+      "fun": "Su choque final hizo un cráter nuevo de unos 16 m de ancho, pero nadie pudo verlo: golpeó el lado de Mercurio que no mira a la Tierra.",
+      "quiz": "Fui la primera nave en orbitar el planeta más cercano al Sol."
+    },
+    "pioneervenus": {
+      "story": "Pioneer Venus lanzó cuatro sondas a la atmósfera espesa y caliente de Venus para estudiar sus nubes y su aire. Increíblemente, una sonda sobrevivió al choque contra el suelo y siguió hablando más de una hora.",
+      "ghost": "Éramos cuatro sondas, una grande y tres pequeñas, lanzadas en distintos puntos de las espesas nubes de Venus. Medimos el aire durante todo el descenso. Nunca nos diseñaron para sobrevivir al aterrizaje, pero una de nosotras, la Sonda Día, lo logró. Susurró datos desde la superficie abrasadora durante 67 minutos antes de quedarse en silencio.",
+      "epitaph": "No nos hicieron para sobrevivir al aterrizaje. Una de nosotras lo logró igualmente.",
+      "fun": "La superficie de Venus está a unos 460 °C, lo bastante caliente para derretir el plomo.",
+      "quiz": "Una de nuestras sondas sobrevivió al choque contra Venus y habló más de una hora."
+    },
+    "galileo": {
+      "story": "Galileo fue la primera nave en orbitar Júpiter. Lanzó una pequeña sonda a las nubes del planeta gigante y descubrió que la luna Europa probablemente esconde un océano bajo su hielo.",
+      "ghost": "Mi antena principal se atascó y nunca se abrió, así que tuve que enviarlo todo a casa por una antena de reserva diminuta. Aun así, lancé una sonda dentro de Júpiter y encontré pistas de un océano salado bajo el hielo de Europa. Para mantener los gérmenes de la Tierra lejos de ese océano, al final mi equipo me dirigió hacia Júpiter.",
+      "epitaph": "Caí en Júpiter para que Europa siguiera limpia.",
+      "fun": "De camino a Júpiter, Galileo descubrió Dactyl, la primera luna encontrada orbitando un asteroide.",
+      "quiz": "Encontré pistas de un océano bajo el hielo de Europa y luego me lancé a Júpiter para protegerla."
+    },
+    "cassini": {
+      "story": "Cassini exploró Saturno, sus anillos y sus lunas durante 13 años. Descubrió que la pequeña luna Encélado lanza chorros de agua desde un océano escondido bajo su hielo.",
+      "ghost": "Durante 13 años di vueltas alrededor de Saturno. Llevé la sonda Huygens, que se posó en la luna Titán. Vi géiseres de hielo saliendo disparados de la pequeña Encélado. Cuando me quedaba poco combustible, pasé 22 veces entre Saturno y sus anillos, y luego me lancé dentro del planeta, enviando datos hasta el último segundo.",
+      "epitaph": "Te envié datos hasta el último segundo.",
+      "fun": "La última señal de Cassini llegó a la Tierra unos 83 minutos después de enviarse: así de lejos está Saturno.",
+      "quiz": "Vi géiseres de hielo en Encélado y me lancé a Saturno al final de mi misión."
+    },
+    "dawn": {
+      "story": "Dawn usó suaves motores iónicos para visitar dos mundos del cinturón de asteroides: Vesta y Ceres. Descubrió que las misteriosas manchas brillantes de Ceres son sal que dejó agua salada.",
+      "ghost": "Mis motores iónicos me empujaban con una fuerza tan leve como una hoja de papel sobre tu mano, pero casi nunca se detenían. Poco a poco llegué al asteroide Vesta y luego al planeta enano Ceres. Descubrí que las manchas brillantes de Ceres son sal. En 2018 se me acabó el combustible para orientarme, y ahora giro alrededor de Ceres en silencio.",
+      "epitaph": "Orbité dos mundos, y sigo aferrada al segundo.",
+      "fun": "Dawn sigue orbitando Ceres. Es un fantasma que nunca aterrizó.",
+      "quiz": "Usé motores iónicos para orbitar dos mundos, y todavía giro alrededor de Ceres."
+    },
+    "magellan": {
+      "story": "Magellan salió desde un transbordador espacial y voló hasta Venus. Usó un radar para ver a través de sus nubes espesas e hizo un mapa de casi todo el planeta.",
+      "ghost": "Venus se esconde bajo nubes tan espesas que ninguna cámara puede ver a través de ellas, así que usé un radar. Hice rebotar ondas de radio en el suelo y convertí los ecos en mapas de volcanes, llanuras de lava y cráteres. Al final, mi equipo giró mis paneles solares como las aspas de un molino y me dejó caer en las nubes que yo había atravesado con la mirada.",
+      "epitaph": "Vi a través de las nubes, y luego me volví parte de ellas.",
+      "fun": "Magellan fue la primera nave planetaria lanzada desde un transbordador espacial.",
+      "quiz": "Vi a través de las nubes de Venus con un radar e hice un mapa de casi todo el planeta."
+    },
+    "mariner9": {
+      "story": "Mariner 9 fue la primera nave en orbitar otro planeta. Llegó en plena tormenta de polvo gigante, esperó a que terminara y luego hizo un mapa de casi todo Marte.",
+      "ghost": "Fui la primera nave en dar vueltas alrededor de otro planeta. Cuando llegué, una tormenta de polvo cubría todo Marte. Solo asomaban las cimas de cuatro volcanes gigantes. Así que esperé. Cuando el polvo se despejó, te mostré cañones, cauces de ríos secos y el volcán más grande del sistema solar.",
+      "epitaph": "Llegué en plena tormenta y esperé a que se despejara el cielo.",
+      "fun": "El gigantesco sistema de cañones que encontró lleva su nombre: Valles Marineris significa ‘valles del Mariner’.",
+      "quiz": "Fui la primera nave en orbitar otro planeta y esperé a que pasara una tormenta de polvo."
+    },
+    "mco": {
+      "story": "El Mars Climate Orbiter se perdió porque dos equipos usaron unidades distintas, como si uno midiera en pulgadas y el otro en centímetros. Su trayectoria se desvió un poco y voló demasiado cerca de Marte.",
+      "ghost": "Una computadora le dijo a la otra con cuánta fuerza empujaban mis propulsores en libras. La otra pensó que los números estaban en newtons. Nadie se dio cuenta. El pequeño error creció y creció durante mi viaje de nueve meses, y llegué a Marte demasiado bajo. Me escondí detrás del planeta y nunca volví a salir.",
+      "epitaph": "¿Libras-fuerza o newtons? Nadie lo comprobó.",
+      "fun": "1 libra-fuerza son unos 4,45 newtons. Esa pequeña diferencia bastó para perder una nave entera.",
+      "quiz": "Me perdí en Marte porque dos equipos usaron unidades distintas."
+    },
+    "mgs": {
+      "story": "Mars Global Surveyor hizo el primer mapa detallado de las alturas y profundidades de Marte usando un láser. También fotografió barrancos que parecían haber tenido agua corriendo hacía poco.",
+      "ghost": "Hice mapas de Marte durante nueve años. Medí la altura de todo el planeta con un láser y tomé más de 240.000 fotos. Luego, un error en una orden enviada meses antes hizo que girara una de mis baterías hacia el Sol. Se recalentó y me quedé en silencio. Sigo aquí arriba, dando vueltas.",
+      "epitaph": "Una orden equivocada, y giré mi batería hacia el Sol.",
+      "fun": "Fotografió desde la órbita las huellas de Spirit y Opportunity, e incluso vio otras naves volando alrededor de Marte.",
+      "quiz": "Hice mapas de Marte durante nueve años, hasta que una orden equivocada recalentó mi batería."
+    }
+  }
+}

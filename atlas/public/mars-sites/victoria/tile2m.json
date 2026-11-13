@@ -1,0 +1,17 @@
+{
+ "width": 639,
+ "height": 847,
+ "rowOrder": "north-to-south",
+ "spacingM": [
+  2.022413231883914,
+  2.0237101475148
+ ],
+ "gridEastOfOriginM": -651.3629007475045,
+ "gridNorthOfOriginM": 894.793367790893,
+ "upMinM": -65.25039713369844,
+ "upMaxM": 14.175601424765727,
+ "quantStepM": 0.001211981544823514,
+ "nodata": 65535,
+ "source": "HiRISE DTM DTEEC_001414_1780_001612_1780_U01 (MRO-M-HIRISE-5-DTM-V1.0), 2 x 2 mean of the 1 m posts",
+ "curvature": "up includes the sphere curvature about the origin (R 3396.19 km)"
+}

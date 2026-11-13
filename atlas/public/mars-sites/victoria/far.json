@@ -1,0 +1,64 @@
+{
+ "width": 301,
+ "height": 301,
+ "rowOrder": "north-to-south",
+ "spacingM": [
+  200,
+  200
+ ],
+ "gridEastOfOriginM": -30000.0,
+ "gridNorthOfOriginM": 30000.0,
+ "upMinM": -711.7133911683231,
+ "upMaxM": 114.90546687918498,
+ "quantStepM": 0.012613587726180429,
+ "nodata": 65535,
+ "validCells": 84283,
+ "cells": 90601,
+ "source": "USGS Astrogeology controlled CTX DTMs (mro_ctx_controlled_usgs_dtms): G01_018701_1776_XN_02S005W__G02_018846_1791_XN_00S005W, D22_035909_1778_XN_02S005W__D21_035408_1772_XN_02S005W, B02_010486_1779_XN_02S005W__B02_010341_1778_XI_02S005W, K13_058564_1776_XN_02S005W__K14_058854_1776_XN_02S005W, B05_011765_1780_XN_02S005W__B08_012820_1779_XN_02S005W, F13_040828_1778_XN_02S005W__F13_040973_1778_XN_02S005W, G02_018912_1779_XN_02S005W__G04_019980_1779_XN_02S005W, P22_009708_1769_XI_03S005W__P22_009563_1769_XI_03S005W, G11_022670_1761_XN_03S005W__G12_023092_1772_XN_02S005W, F18_042674_1775_XN_02S005W__F18_042740_1775_XN_02S005W, D09_030727_1776_XN_02S005W__D06_029738_1759_XN_04S004W, D04_028670_1777_XN_02S005W__D04_028815_1777_XN_02S005W",
+ "elevationReferenceM": -1387.5589599609375,
+ "inpaintedNodes": 59,
+ "speckleNodes": 0,
+ "medianProductsPerNode": 4.0,
+ "gapFill": {
+  "source": "MGS MOLA global DEM 463 m (USGS Astrogeology mosaic)",
+  "nodes": 39517,
+  "offsetM": 287.4
+ },
+ "datumOffsetM": -295.20633899013126,
+ "overlapNodes": 7601,
+ "residualP90BeforeM": 9.078731898072533,
+ "seamP90M": 10.993780470392513,
+ "tileGapNodesFilled": 0,
+ "registration": {
+  "shiftEastM": -452.0,
+  "shiftNorthM": -34.0,
+  "p90BeforeM": 44.8191570324077,
+  "p90AfterM": 19.452563819411523,
+  "product": "G01_018701_1776_XN_02S005W__G02_018846_1791_XN_00S005W",
+  "method": "tile relief (every 16th post) matched to the CTX DTM sampled at 10 m; coarse +-1 km / 20 m, fine +-30 m / 2 m; minimum 90th-percentile height difference after the median"
+ },
+ "cutout": "nodes more than two cells inside the 24 m ring are left out; on its edge the far ring takes its height 0.5 m lower",
+ "curvature": "up includes the sphere curvature about the origin",
+ "provenance": "MEASURED (CTX DTM, ~20 m posts, sampled at 200 m)",
+ "albedo": {
+  "file": "far_albedo.jpg",
+  "spacingM": 100,
+  "valid": 0.610200414727534,
+  "overlapPixels": 29905,
+  "channelFit": [
+   [
+    0.4619129463683332,
+    0.2069226181125197
+   ],
+   [
+    0.3546974113727795,
+    0.10360909712014159
+   ],
+   [
+    0.2419339156880497,
+    0.06357288440852263
+   ]
+  ],
+  "source": "CTX orthoimages of the same DTMs, mapped per channel onto the HiRISE tile's ground image (itself an ILLUSTRATIVE tint of the single RED band) by a least-squares fit where they overlap"
+ }
+}

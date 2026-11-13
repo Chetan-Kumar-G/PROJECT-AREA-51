@@ -1,0 +1,144 @@
+{
+  "m": {
+    "ranger7": {
+      "story": "Antes de que las personas pudieran aterrizar en la Luna, la ciencia necesitaba saber cómo era de cerca. Ranger 7 voló directo hacia la Luna, tomando fotos todo el camino. ¡Sus últimas fotos mostraron cráteres más pequeños que un auto!",
+      "ghost": "Me construyeron para estrellarme. Seis Ranger antes que yo fallaron, así que todos contenían la respiración. Durante los últimos 17 minutos de mi vida, mis seis cámaras tomaron fotos tan rápido como pudieron. Envié 4.308 imágenes a casa y luego choqué contra la Luna a unos 2,6 km por segundo.",
+      "epitaph": "Me hicieron para caer, y tomé fotos hasta el final.",
+      "fun": "El mar lunar donde se estrelló pasó a llamarse Mare Cognitum, “el Mar que se ha dado a Conocer”, gracias a sus fotos.",
+      "quiz": "Tenía seis cámaras y me diseñaron para estrellarme contra la Luna."
+    },
+    "surveyor1": {
+      "story": "Surveyor 1 fue la primera nave de Estados Unidos en posarse suavemente en otro mundo. Usó cohetes para frenar, aterrizó sobre tres patas y después tomó miles de fotos del suelo a su alrededor.",
+      "ghost": "Algunas personas temían que la Luna estuviera cubierta de polvo profundo y esponjoso que se tragaría una nave. Yo fui la prueba. Me posé suavemente sobre tres patas… y no me hundí. Mis fotos le dijeron a los ingenieros del Apolo: aquí se puede aterrizar.",
+      "epitaph": "Demostré que la Luna podía sostenerte.",
+      "fun": "El Orbitador de Reconocimiento Lunar de la NASA fotografió a Surveyor 1 desde la órbita más de 40 años después: sigue ahí, de pie.",
+      "quiz": "Demostré que el suelo de la Luna era lo bastante firme para aterrizar."
+    },
+    "surveyor3": {
+      "story": "Surveyor 3 tenía una pequeña pala robótica que excavaba el suelo lunar. Dos años y medio después, los astronautas del Apolo 12 aterrizaron justo a su lado, caminaron hasta él y le cortaron la cámara para llevarla a la Tierra.",
+      "ghost": "Mi aterrizaje fue un poco vergonzoso: unas rocas brillantes confundieron mis sensores y reboté dos veces antes de quedarme quieto. Cavé las primeras zanjas hechas en otro mundo. Luego me dormí… hasta que dos astronautas vinieron a saludarme en noviembre de 1969.",
+      "epitaph": "Dos años y medio después, alguien vino a visitarme.",
+      "fun": "Surveyor 3 y el Apolo 12 son una pareja poco común: un explorador robot y las personas que fueron a ver cómo estaba.",
+      "quiz": "Unos astronautas caminaron hasta mí y se llevaron mi cámara a casa."
+    },
+    "apollo11": {
+      "story": "El 20 de julio de 1969, Neil Armstrong y Buzz Aldrin aterrizaron el módulo lunar Eagle. Al irse, la mitad inferior del Eagle se quedó como plataforma de lanzamiento. También dejaron una bandera, un sismómetro para sentir los sismos lunares y un espejo especial llamado retrorreflector.",
+      "ghost": "Soy la mitad inferior del módulo lunar Eagle. Fui la plataforma de lanzamiento para el viaje de regreso de Neil y Buzz, así que me quedé aquí. A mi lado hay un pequeño espejo. De vez en cuando, un rayo láser desde la Tierra lo encuentra, rebota y le dice a la ciencia exactamente a qué distancia está la Luna.",
+      "epitaph": "Aquí, hombres del planeta Tierra pisaron la Luna por primera vez.",
+      "fun": "Buzz Aldrin contó que el chorro del motor tumbó la bandera cuando despegó la mitad superior del Eagle.",
+      "quiz": "La ciencia todavía hace rebotar láseres en un espejo de mi lugar de aterrizaje."
+    },
+    "apollo12": {
+      "story": "El Apolo 12 dejó el primer ALSEP: un conjunto de instrumentos científicos alimentados por un pequeño generador nuclear. Incluía un sismómetro que sentía los sismos lunares y los golpes de meteoritos.",
+      "ghost": "Soy una estación que vigila los sismos lunares. Cuando estrellaron a propósito el módulo lunar vacío de mis astronautas, sentí la Luna sonar como una campana durante casi una hora. Nadie lo esperaba. Escuché durante ocho años, hasta que alguien en la Tierra me apagó.",
+      "epitaph": "Aterrizamos a un corto paseo de un robot que nos esperaba desde 1967.",
+      "fun": "El Apolo 12 aterrizó con tanta precisión que los astronautas caminaron hasta Surveyor 3, a unos 180 m.",
+      "quiz": "Sentí la Luna sonar como una campana durante casi una hora."
+    },
+    "apollo14": {
+      "story": "Los astronautas del Apolo 14 usaron un carrito de dos ruedas para llevar herramientas. Antes de irse, Alan Shepard puso la cabeza de un palo de golf en el mango de una herramienta y golpeó dos pelotas de golf en la Luna.",
+      "ghost": "Soy un carrito de mano de dos ruedas llamado MET; los astronautas me apodaron el ‘rickshaw’. Llevé sus herramientas cuesta arriba. No lejos de mí, dos pelotas de golf siguen en el polvo, golpeadas por Alan Shepard con un palo hecho en casa.",
+      "epitaph": "Cerca de mí, dos pelotas de golf todavía esperan que alguien las encuentre.",
+      "fun": "El palo de Shepard era la cabeza de un hierro 6 enganchada a un mango para recoger muestras.",
+      "quiz": "Dos pelotas de golf siguen tiradas cerca de mí."
+    },
+    "apollo15": {
+      "story": "El Apolo 15 llevó el primer auto lunar. Funcionaba con baterías, tenía ruedas de malla de alambre y podía llevar a dos astronautas y sus rocas por colinas y alrededor de cráteres.",
+      "ghost": "Fui el primer auto en la Luna. Me plegaba como un origami para caber en el costado del módulo lunar. Dave y Jim me condujeron por laderas a 13 km/h y dijeron que fue el paseo de su vida. Al irse, me estacionaron para que mi cámara pudiera filmar su despegue.",
+      "epitaph": "El primer auto en la Luna, todavía estacionado en Hadley.",
+      "fun": "La tripulación también dejó ‘Fallen Astronaut’, una pequeña figura de aluminio y una placa en honor a 14 astronautas y cosmonautas fallecidos.",
+      "quiz": "Fui el primer auto que se condujo en la Luna."
+    },
+    "apollo16": {
+      "story": "El Apolo 16 exploró las tierras altas, claras y montañosas. Los astronautas recorrieron 26,7 km y trajeron casi 96 kg de rocas. Charlie Duke dejó en el suelo una foto de su familia.",
+      "ghost": "Mis astronautas esperaban rocas volcánicas. En cambio, seguían encontrando rocas aplastadas por impactos gigantes: la ciencia había adivinado mal, y así es como funciona la ciencia. Cerca de mí hay una foto de una familia de la Tierra y el primer telescopio usado en la Luna.",
+      "epitaph": "A mi lado, en el polvo, descansa una foto familiar.",
+      "fun": "La foto familiar de Duke dice: “Esta es la familia del astronauta Duke, del planeta Tierra”.",
+      "quiz": "Mi tripulación esperaba rocas volcánicas, pero encontró rocas de impacto."
+    },
+    "apollo17": {
+      "story": "El Apolo 17 fue la última vez que personas caminaron en la Luna. Gene Cernan y Harrison Schmitt recorrieron unos 36 km. Encontraron un extraño suelo naranja hecho de diminutas cuentas de vidrio de una antigua erupción volcánica.",
+      "ghost": "Soy el último auto que los humanos condujeron en la Luna. Perdí un guardabarros y Gene lo arregló con cinta adhesiva y mapas doblados. Harrison, el único geólogo que caminó en la Luna, encontró suelo naranja cerca de mí. Mi cámara filmó su despegue. Desde entonces espero compañía.",
+      "epitaph": "El último auto en la Luna, estacionado justo donde lo dejaron.",
+      "fun": "La cámara del róver, controlada desde Houston, filmó a Cernan y Schmitt dejando la Luna.",
+      "quiz": "Soy el último auto que los humanos han conducido en la Luna."
+    },
+    "sivb16": {
+      "story": "A veces, los cohetes que llevaban a los astronautas del Apolo se estrellaban a propósito contra la Luna. Las sacudidas ayudaron a la ciencia a conocer cómo es el interior de la Luna.",
+      "ghost": "Fui la tercera etapa de un gigantesco cohete Saturno V. Después de enviar al Apolo 16 hacia la Luna, debía estrellarme donde los sismómetros pudieran sentirme. Me quedé en silencio antes del choque y nadie supo dónde caí… hasta que una nave encontró mi cráter 43 años después.",
+      "epitaph": "Escondí mi cráter durante 43 años.",
+      "fun": "Hay cinco terceras etapas de Saturno V en la Luna.",
+      "quiz": "Me quedé en silencio antes de estrellarme y mi cráter estuvo escondido 43 años."
+    },
+    "lcross": {
+      "story": "LCROSS estrelló un cohete vacío en un cráter donde nunca da el sol y luego atravesó la nube de polvo para buscar agua. ¡Y la encontró!",
+      "ghost": "Mi compañero, una etapa de cohete Centaur ya usada, chocó primero contra el cráter Cabeus. Yo volé directo a través de la nube que levantó, olfateando y fotografiando, y lo envié todo a casa. Cuatro minutos después también me estrellé. Encontramos agua, congelada en la oscuridad quizá durante miles de millones de años.",
+      "epitaph": "Vi a mi propio cohete chocar contra la Luna, y luego lo seguí.",
+      "fun": "Las trampas frías donde chocó LCROSS están entre los lugares más fríos medidos en el sistema solar.",
+      "quiz": "Atravesé una nube de polvo y encontré hielo de agua cerca del polo sur de la Luna."
+    },
+    "grail": {
+      "story": "GRAIL eran dos naves que volaban una detrás de la otra. Cuando una pasaba sobre una zona más pesada de la Luna, aceleraba un poquito. Medir eso permitió a la ciencia hacer un mapa de lo que hay bajo la superficie.",
+      "ghost": "Somos gemelas, Ebb y Flow. Nos perseguimos alrededor de la Luna midiendo los pequeñísimos cambios de distancia entre nosotras. Esos cambios revelaron el interior oculto de la Luna. Cuando nos quedamos sin combustible, volamos juntas contra una montaña cerca del polo norte.",
+      "epitaph": "Volamos en formación hasta el final.",
+      "fun": "El lugar del impacto lleva el nombre de Sally Ride, la primera mujer estadounidense en el espacio.",
+      "quiz": "Éramos gemelas que hicieron un mapa de la gravedad de la Luna persiguiéndose."
+    },
+    "ladee": {
+      "story": "LADEE voló bajo alrededor de la Luna para estudiar las finísimas nubecillas de gas y polvo que flotan sobre ella. Al final se estrelló en la cara oculta de la Luna.",
+      "ghost": "La Luna tiene atmósfera, solo que muy, muy delgada. Pasé rozando la superficie para probarla. Luego me estrellé en la cara oculta, donde nadie en la Tierra podía verme.",
+      "epitaph": "Probé el aire finísimo de la Luna y caí donde no podía dañar ninguna huella.",
+      "fun": "La estrellaron a propósito en la cara oculta para que no pudiera golpear ningún sitio histórico del Apolo.",
+      "quiz": "Estudié la atmósfera finísima de la Luna y me estrellé en su cara oculta."
+    },
+    "prospector": {
+      "story": "Lunar Prospector fue una nave pequeña que hizo un mapa de qué está hecha la Luna. Encontró pistas de que podía haber hielo escondido en cráteres cerca de los polos. También llevó las cenizas de un científico famoso, para que por fin pudiera ir a la Luna.",
+      "ghost": "Era pequeño y barato, y no llevaba ninguna cámara. En cambio, olfateé la superficie de la Luna desde la órbita y encontré pistas de hidrógeno escondido en los cráteres oscuros de los polos. Al final, mi equipo me dirigió hacia uno de esos cráteres. También llevaba algo valioso: parte de las cenizas de Gene Shoemaker, el científico que enseñó geología a los astronautas del Apolo.",
+      "epitaph": "Llevé a la Luna las cenizas de un científico que nunca pudo visitarla.",
+      "fun": "Gene Shoemaker fue la primera persona cuyas cenizas se enviaron a la Luna. Quería ser astronauta, pero un problema de salud se lo impidió.",
+      "quiz": "Llevé las cenizas de un científico famoso y me estrellé en un cráter cerca del polo sur de la Luna."
+    },
+    "viking1": {
+      "story": "Viking 1 fue la primera nave de Estados Unidos en aterrizar con éxito en Marte. Tomó las primeras fotos desde la superficie y analizó el suelo para buscar seres vivos diminutos.",
+      "ghost": "Aterricé exactamente siete años después de que las primeras personas caminaran en la Luna. Tomé la primerísima foto desde la superficie de Marte y analicé su suelo buscando vida. Durante seis años envié a casa informes del tiempo. Luego, una orden equivocada apuntó mi antena lejos de la Tierra y me quedé en silencio.",
+      "epitaph": "Alguien me dijo que apuntara mi antena hacia el lado equivocado.",
+      "fun": "Su estación meteorológica envió los primeros pronósticos del tiempo diarios desde otro planeta.",
+      "quiz": "Tomé la primera foto desde la superficie de Marte."
+    },
+    "viking2": {
+      "story": "Viking 2 aterrizó en una llanura rocosa. Durante el invierno fotografió escarcha blanca en el suelo: prueba de que en Marte se puede formar hielo de agua.",
+      "ghost": "Aterricé muy al norte, en una llanura llena de rocas. En invierno vi formarse una fina capa de escarcha a mi alrededor: ¡hielo de agua en Marte! Mis baterías por fin se agotaron en 1980.",
+      "epitaph": "Vi escarcha en Marte.",
+      "fun": "Viking 2 e InSight están en la misma gran región, con más de 40 años de diferencia.",
+      "quiz": "Fotografié escarcha en Marte."
+    },
+    "pathfinder": {
+      "story": "Pathfinder aterrizó en Marte dentro de grandes bolsas de aire y rebotó hasta detenerse. Luego se abrió como una flor y liberó un pequeño róver llamado Sojourner.",
+      "ghost": "Caí sobre Marte envuelto en bolsas de aire gigantes y reboté por el suelo como una pelota de playa. Cuando dejé de rodar, abrí mis pétalos y dejé salir a mi pequeño amigo Sojourner. Hablé con la Tierra durante casi tres meses.",
+      "epitaph": "Llegué rebotando a Marte en bolsas de aire y le abrí la puerta a un róver.",
+      "fun": "Su aterrizaje, el 4 de julio de 1997, atrajo un número récord de visitas a las páginas web de la NASA.",
+      "quiz": "Reboté por Marte sobre bolsas de aire."
+    },
+    "sojourner": {
+      "story": "Sojourner fue el primer róver en otro planeta. Era diminuto, de solo 10,6 kg, y avanzaba despacio de roca en roca para averiguar de qué estaban hechas.",
+      "ghost": "Soy el primer róver que condujo en otro planeta. Tengo el tamaño de un horno de microondas. Visité rocas que la ciencia llamó Barnacle Bill y Yogi. Solo podía hablar con la Tierra a través del módulo de aterrizaje, así que cuando él se quedó en silencio, yo también.",
+      "epitaph": "Las primeras ruedas en otro planeta.",
+      "fun": "Sojourner recibió su nombre por Sojourner Truth, una activista estadounidense contra la esclavitud y por los derechos de las mujeres, elegido en un concurso de redacción escolar.",
+      "quiz": "Fui el primer róver en otro planeta, del tamaño de un microondas."
+    },
+    "polarlander": {
+      "story": "Mars Polar Lander debía aterrizar cerca del polo sur de Marte. Algo salió mal durante el aterrizaje y nunca más se supo de él. Los ingenieros estudiaron qué pudo pasar para que no volviera a ocurrir.",
+      "ghost": "Soy el fantasma que nadie ha encontrado. Durante el descenso, un sensor de una de mis patas pudo confundir una sacudida con el aterrizaje, y mis motores se apagaron demasiado pronto. Estoy en silencio desde 1999. Mi historia hizo más seguros todos los aterrizajes en Marte que vinieron después.",
+      "epitaph": "Creí que ya había aterrizado.",
+      "fun": "Los orbitadores lo han buscado en fotos muchas veces; su ubicación exacta sigue sin conocerse.",
+      "quiz": "Desaparecí al aterrizar cerca del polo sur de Marte."
+    },
+    "spirit": {
+      "story": "Spirit era un róver del tamaño de un carrito de golf. Subió una colina, sobrevivió a tormentas de polvo y siguió funcionando años más de lo planeado. ¡Hasta su rueda rota hizo un descubrimiento!",
+      "ghost": "Se me rompió una rueda, así que conducía marcha atrás, arrastrándola. Esa rueda rota levantó un suelo blanco que resultó ser sílice casi pura, del tipo que forman las fuentes termales. Después me quedé atascado en arena suave en un lugar llamado Troya. Pasé allí mi último invierno y me quedé sin energía.",
+      "epitaph": "Spirit libre.",
+      "fun": "A veces, ráfagas de viento limpiaban el polvo de sus paneles solares; los ingenieros las llamaban ‘eventos de limpieza’.",
+      "quiz": "Mi rueda rota levantó pruebas de antiguas fuentes termales."
+    }
+  }
+}

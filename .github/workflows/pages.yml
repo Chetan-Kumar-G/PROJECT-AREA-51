@@ -1,0 +1,57 @@
+# Publishes the ./site folder to GitHub Pages on every push to main.
+name: Deploy site to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - "scripts/**"
+      - "i18n/**"
+      - "atlas/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      # "3D Worlds" (atlas/, Prasanna's app) is a Vite + React build. Its Mars Unity player (~100 MB) is cached
+      # between runs, keyed on the pinned player in atlas/unity-player.json.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: atlas/package-lock.json
+      - uses: actions/cache@v4
+        with:
+          path: atlas/unity-cache
+          key: unity-${{ hashFiles('atlas/unity-player.json') }}
+      - name: Build 3D Worlds into site/atlas
+        run: node scripts/build-atlas.mjs
+      # Stamp CSS/JS links with content fingerprints and rebuild the offline file list,
+      # so visitors never get a new page with an old stylesheet.
+      # Spanish/Hindi language files, then the search-friendly machine pages, sitemap and robots.txt.
+      - name: Build translations and SEO pages
+        run: node scripts/build-i18n.mjs && node scripts/build-pages.mjs
+      - name: Fingerprint assets and build service worker
+        run: node scripts/build-sw.mjs
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4

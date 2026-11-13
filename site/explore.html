@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>3D Explore — Ghosts of Exploration</title>
+  <meta name="description" content="Fly around the Moon, Mars and deep space and find the machines NASA left behind.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ghosts of Exploration">
+  <meta property="og:title" content="3D Explore — Ghosts of Exploration">
+  <meta property="og:description" content="Fly around the Moon, Mars and deep space and find the machines NASA left behind.">
+  <meta property="og:url" content="https://chetan-kumar-g.github.io/PROJECT-AREA-51/explore.html">
+  <meta property="og:image" content="https://chetan-kumar-g.github.io/PROJECT-AREA-51/assets/share/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ghosts of Exploration: the Apollo 17 lunar rover parked on the Moon, beside the site title.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://chetan-kumar-g.github.io/PROJECT-AREA-51/explore.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="css/style.css?v=9c999ce7">
+  <link rel="stylesheet" href="css/explore.css?v=b79562a5">
+  <link rel="icon" href="assets/ui/map.png">
+  <script type="importmap">
+    { "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    } }
+  </script>
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#060a13">
+  <link rel="apple-touch-icon" href="assets/ui/apple-touch-icon.png">
+</head>
+<body class="explore">
+  <div id="scene" aria-hidden="true"></div>
+  <div id="labels" aria-hidden="true"></div>
+
+  <header class="x-top">
+    <a class="btn btn-small" href="index.html">← Archive</a>
+    <div class="x-tabs" role="tablist" aria-label="Choose a destination">
+      <button role="tab" data-w="moon" aria-selected="true"><span class="dot moon"></span>Moon</button>
+      <button role="tab" data-w="mars" aria-selected="false"><span class="dot mars"></span>Mars</button>
+      <button role="tab" data-w="deep" aria-selected="false"><span class="dot deep"></span>Elsewhere</button>
+    </div>
+    <div class="x-tools">
+      <a class="btn btn-small" href="ask.html" title="Ask the Archive">💬 <span>Ask</span></a>
+      <button class="btn btn-small" id="xRotate" aria-pressed="true" title="Auto-rotate">⟳ <span>Spin</span></button>
+      <button class="btn btn-small" id="xLabels" aria-pressed="true" title="Show labels">🏷 <span>Labels</span></button>
+      <button class="btn btn-small" id="xJpl" aria-pressed="false" hidden title="Use NASA JPL data: real planet positions for today and detailed planet maps (downloads about 0.3 MB)">🪐 <span>NASA JPL</span></button>
+    </div>
+  </header>
+  <p class="x-jpl-note" id="xJplNote" hidden aria-live="polite"></p>
+
+  <aside class="x-list" id="xList" aria-label="Beacons">
+    <button class="x-list-toggle" id="xListToggle" aria-expanded="true">Beacons <span id="xCount"></span></button>
+    <ul id="xItems"></ul>
+  </aside>
+
+  <section class="x-card" id="xCard" hidden aria-live="polite"></section>
+
+  <div class="x-hint" id="xHint">Drag to spin · scroll or pinch to zoom · tap a glowing beacon</div>
+  <div class="x-loading" id="xLoading">Warming up the engines…</div>
+  <div class="x-error" id="xError" hidden>
+    <h2>3D mode couldn’t start</h2>
+    <p>Your browser or device may not support WebGL, or the 3D library couldn’t load (it needs an internet connection). Everything is still available in the <a href="index.html">2D archive</a>.</p>
+  </div>
+
+  <script src="js/data.js?v=83e574d5"></script>
+  <script src="js/atlas-links.js?v=b6d58afb"></script>
+  <script src="js/models.js?v=5e208a34"></script>
+  <script type="module" src="js/explore.js?v=1fdbdea3"></script>
+  <script src="js/pwa.js?v=68dca921"></script>
+</body>
+</html>

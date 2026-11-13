@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>NASA Eyes — Ghosts of Exploration</title>
+  <meta name="description" content="Fly to every machine in the archive inside NASA's Eyes on the Solar System: the real 3D solar system, built from real spacecraft data, at the moment each mission ended.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ghosts of Exploration">
+  <meta property="og:title" content="NASA Eyes — Ghosts of Exploration">
+  <meta property="og:description" content="Fly to every machine in the archive inside NASA's Eyes on the Solar System.">
+  <meta property="og:url" content="https://chetan-kumar-g.github.io/PROJECT-AREA-51/eyes.html">
+  <meta property="og:image" content="https://chetan-kumar-g.github.io/PROJECT-AREA-51/assets/share/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://chetan-kumar-g.github.io/PROJECT-AREA-51/eyes.html">
+  <link rel="preconnect" href="https://eyes.nasa.gov">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="css/style.css?v=9c999ce7">
+  <link rel="stylesheet" href="css/eyes.css?v=482a797b">
+  <link rel="icon" href="assets/ui/map.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#060a13">
+  <link rel="apple-touch-icon" href="assets/ui/apple-touch-icon.png">
+</head>
+<body class="eyes-page">
+  <a class="skip" href="#eyPanel">Skip to the destination list</a>
+
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Ghosts of Exploration, home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text"><strong>Ghosts of Exploration</strong><small>NASA Eyes on the Solar System</small></span>
+    </a>
+    <nav class="mainnav" aria-label="Main">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="navlist" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <ul id="navlist">
+        <li><a href="index.html#map">Ghost Map</a></li>
+        <li><a href="index.html#logs">Ghost Logs</a></li>
+        <li><a href="index.html#timeline">Timeline</a></li>
+        <li><a href="index.html#deep">Elsewhere</a></li>
+        <li><a href="lander.html">Play</a></li>
+        <li><a href="ask.html">Ask</a></li>
+        <li><a href="eyes.html" class="active" aria-current="page">NASA Eyes</a></li>
+      </ul>
+    </nav>
+    <div class="top-actions">
+      <a class="btn btn-glow" href="explore.html"><span aria-hidden="true">◎</span> 3D Explore</a>
+    </div>
+  </header>
+
+  <main class="ey-wrap" id="main">
+    <section class="ey-stage" aria-label="NASA Eyes on the Solar System">
+      <div class="ey-now">
+        <div class="ey-now-text">
+          <p class="eyebrow" id="eyKicker">NASA Eyes on the Solar System</p>
+          <h1 id="eyTitle">The whole solar system, live</h1>
+          <p id="eyNote">Every planet, moon and spacecraft where it really is, built by NASA/JPL from real mission data. Pick a machine from the archive and Eyes flies you there, to the moment its mission ended.</p>
+        </div>
+        <div class="ey-now-actions">
+          <div class="ey-seg" role="group" aria-label="When" id="eyWhen">
+            <button data-when="moment" aria-pressed="true">⏪ Its moment</button>
+            <button data-when="now" aria-pressed="false">Today</button>
+          </div>
+          <a class="btn btn-small" id="eyOpen" href="https://eyes.nasa.gov/apps/solar-system/" target="_blank" rel="noopener">Open full screen ↗</a>
+        </div>
+      </div>
+      <div class="ey-views" role="group" aria-label="View" id="eyViews"></div>
+      <div class="ey-frame">
+        <iframe id="eyFrame" title="NASA Eyes on the Solar System" allow="fullscreen; xr-spatial-tracking" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <div class="ey-loading" id="eyLoading" aria-live="polite">Contacting NASA Eyes…</div>
+      </div>
+      <p class="ey-help">Drag to spin · scroll or pinch to zoom · click anything to fly to it · use <b>Time controls</b> at the bottom to travel in time. Eyes needs an internet connection and a WebGL browser.</p>
+    </section>
+
+    <aside class="ey-panel" id="eyPanel" aria-label="Where to go">
+      <div class="ey-tabs" role="tablist" aria-label="Destinations">
+        <button role="tab" id="tab-m" aria-controls="pane-m" aria-selected="true">Our machines</button>
+        <button role="tab" id="tab-w" aria-controls="pane-w" aria-selected="false">Worlds</button>
+        <button role="tab" id="tab-s" aria-controls="pane-s" aria-selected="false">Stories</button>
+        <button role="tab" id="tab-o" aria-controls="pane-o" aria-selected="false">Settings</button>
+      </div>
+
+      <div role="tabpanel" id="pane-m" aria-labelledby="tab-m" class="ey-pane">
+        <label class="ey-filter"><span class="sr-only">Filter machines</span><input id="eyFilter" type="search" placeholder="Find a machine…" autocomplete="off"></label>
+        <p class="ey-legend"><span class="ey-tag self">In Eyes</span> the real spacecraft or landing site · <span class="ey-tag world">World</span> Eyes shows the world on that day</p>
+        <div id="eyMachines"></div>
+      </div>
+
+      <div role="tabpanel" id="pane-w" aria-labelledby="tab-w" class="ey-pane" hidden>
+        <p class="ey-sub">Planets, moons, dwarf planets and comets our machines visited.</p>
+        <div class="ey-grid" id="eyWorlds"></div>
+        <h2 class="ey-h">Jump to a date</h2>
+        <form class="ey-date" id="eyDate">
+          <label for="eyDateIn">See the solar system on</label>
+          <input id="eyDateIn" type="date" min="1957-10-04" max="2049-12-31" required>
+          <button class="btn btn-small" type="submit">Go</button>
+        </form>
+        <p class="ey-sub">Try your birthday, or 20 July 1969.</p>
+      </div>
+
+      <div role="tabpanel" id="pane-s" aria-labelledby="tab-s" class="ey-pane" hidden>
+        <p class="ey-sub">Guided tours made by the Eyes team at NASA/JPL. Use the arrows inside Eyes to step through.</p>
+        <ul class="ey-stories" id="eyStories"></ul>
+      </div>
+
+      <div role="tabpanel" id="pane-o" aria-labelledby="tab-o" class="ey-pane" hidden>
+        <p class="ey-sub">These are the same options NASA's own Eyes embed builder offers. Changes reload the view.</p>
+        <ul class="ey-opts" id="eyOpts"></ul>
+        <button class="btn btn-small" id="eyReset" type="button">Reset to defaults</button>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer ey-foot">
+    <div>
+      <p>3D view: <a href="https://eyes.nasa.gov/apps/solar-system/" target="_blank" rel="noopener">NASA's Eyes on the Solar System</a>, by NASA/JPL-Caltech, embedded as NASA allows. NASA does not endorse this project. <a href="index.html">← Back to the archive</a></p>
+    </div>
+  </footer>
+
+  <script src="js/data.js?v=83e574d5"></script>
+  <script src="js/eyes-data.js?v=67a28b33"></script>
+  <script src="js/eyes.js?v=63e52a83"></script>
+  <script src="js/pwa.js?v=68dca921"></script>
+</body>
+</html>

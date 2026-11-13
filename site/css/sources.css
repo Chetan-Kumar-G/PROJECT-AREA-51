@@ -1,0 +1,19 @@
+.src-wrap { max-width: 980px; margin: 0 auto; padding: 96px 16px 64px; }
+.src-hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: .3em; }
+.src-stats { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0 14px; }
+.src-stats div { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 12px 18px; min-width: 150px; }
+.src-stats b { display: block; font-family: var(--head); font-size: 1.8rem; color: var(--amber); }
+.src-stats span { color: var(--muted); font-size: .88rem; }
+.src-note { color: var(--muted); font-size: .92rem; }
+.src-sec { margin-top: 44px; scroll-margin-top: 80px; }
+.src-sec h2 { font-size: 1.6rem; border-bottom: 1px solid var(--line); padding-bottom: 8px; }
+.src-sec h2 small { font-size: .9rem; color: var(--muted); font-weight: 500; }
+.src-item { padding: 16px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 80px; }
+.src-item.hl { background: rgba(255,179,71,.07); border-radius: var(--radius-sm); padding: 16px 14px; outline: 1px solid rgba(255,179,71,.4); }
+.src-item h3 { font-size: 1.1rem; margin: 0 0 8px; }
+.src-item h3 a { color: var(--text); text-decoration: none; }
+.src-item h3 a:hover { color: var(--amber); }
+.src-item h3 small { color: var(--muted); font-weight: 400; font-size: .85rem; }
+.src-docs { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; font-size: .92rem; overflow-wrap: anywhere; }
+.src-docs small, .src-none { color: var(--dim); }
+.src-photos { margin: 8px 0 0; font-size: .86rem; color: var(--muted); overflow-wrap: anywhere; }

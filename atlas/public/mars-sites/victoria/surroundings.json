@@ -1,0 +1,42 @@
+{
+ "origin": [
+  -2.0513630760095034,
+  354.5042359725547
+ ],
+ "elevationReferenceM": -1387.5589599609375,
+ "tile": "HiRISE DTM DTEEC_001414_1780_001612_1780_U01 (MRO-M-HIRISE-5-DTM-V1.0)",
+ "registration": {
+  "shiftEastM": -452.0,
+  "shiftNorthM": -34.0,
+  "p90BeforeM": 44.8191570324077,
+  "p90AfterM": 19.452563819411523,
+  "product": "G01_018701_1776_XN_02S005W__G02_018846_1791_XN_00S005W",
+  "method": "tile relief (every 16th post) matched to the CTX DTM sampled at 10 m; coarse +-1 km / 20 m, fine +-30 m / 2 m; minimum 90th-percentile height difference after the median"
+ },
+ "horizon": {
+  "width": 751,
+  "height": 751,
+  "spacingM": [
+   24,
+   24
+  ],
+  "validCells": 517061,
+  "cells": 564001,
+  "datumOffsetM": -296.38889367295843,
+  "seamP90M": 1.6691234433078939,
+  "tileGapNodesFilled": 3124
+ },
+ "far": {
+  "width": 301,
+  "height": 301,
+  "spacingM": [
+   200,
+   200
+  ],
+  "validCells": 84283,
+  "cells": 90601,
+  "datumOffsetM": -295.20633899013126,
+  "seamP90M": 10.993780470392513
+ },
+ "seconds": 83
+}

@@ -1,0 +1,60 @@
+{
+ "width": 751,
+ "height": 751,
+ "rowOrder": "north-to-south",
+ "spacingM": [
+  24,
+  24
+ ],
+ "gridEastOfOriginM": -9000.0,
+ "gridNorthOfOriginM": 9000.0,
+ "upMinM": -163.73735285541647,
+ "upMaxM": 188.69834525296164,
+ "quantStepM": 0.005377906096200112,
+ "nodata": 65535,
+ "validCells": 517061,
+ "cells": 564001,
+ "source": "USGS Astrogeology controlled CTX DTMs (mro_ctx_controlled_usgs_dtms): G01_018701_1776_XN_02S005W__G02_018846_1791_XN_00S005W, D22_035909_1778_XN_02S005W__D21_035408_1772_XN_02S005W, B02_010486_1779_XN_02S005W__B02_010341_1778_XI_02S005W, K13_058564_1776_XN_02S005W__K14_058854_1776_XN_02S005W, B05_011765_1780_XN_02S005W__B08_012820_1779_XN_02S005W, G02_018912_1779_XN_02S005W__G04_019980_1779_XN_02S005W, F13_040828_1778_XN_02S005W__F13_040973_1778_XN_02S005W, F18_042674_1775_XN_02S005W__F18_042740_1775_XN_02S005W, D09_030727_1776_XN_02S005W__D06_029738_1759_XN_04S004W, D04_028670_1777_XN_02S005W__D04_028815_1777_XN_02S005W",
+ "elevationReferenceM": -1387.5589599609375,
+ "inpaintedNodes": 11410,
+ "speckleNodes": 16740,
+ "medianProductsPerNode": 5.0,
+ "gapFill": null,
+ "datumOffsetM": -296.38889367295843,
+ "overlapNodes": 3101,
+ "residualP90BeforeM": 14.078264393685387,
+ "seamP90M": 1.6691234433078939,
+ "tileGapNodesFilled": 3124,
+ "registration": {
+  "shiftEastM": -452.0,
+  "shiftNorthM": -34.0,
+  "p90BeforeM": 44.8191570324077,
+  "p90AfterM": 19.452563819411523,
+  "product": "G01_018701_1776_XN_02S005W__G02_018846_1791_XN_00S005W",
+  "method": "tile relief (every 16th post) matched to the CTX DTM sampled at 10 m; coarse +-1 km / 20 m, fine +-30 m / 2 m; minimum 90th-percentile height difference after the median"
+ },
+ "cutout": "nodes more than two cells inside the HiRISE tile are left out; on the tile edge the ring takes the tile height 0.5 m lower",
+ "curvature": "up includes the sphere curvature about the origin",
+ "provenance": "MEASURED (CTX DTM, ~20 m posts, sampled at 24 m)",
+ "albedo": {
+  "file": "horizon_albedo.jpg",
+  "spacingM": 12,
+  "valid": 0.953243252000332,
+  "overlapPixels": 15444,
+  "channelFit": [
+   [
+    0.5385733675587245,
+    0.15978247336709556
+   ],
+   [
+    0.41139818309637677,
+    0.0708430102539207
+   ],
+   [
+    0.2915014147560268,
+    0.03317421370865947
+   ]
+  ],
+  "source": "CTX orthoimages of the same DTMs, mapped per channel onto the HiRISE tile's ground image (itself an ILLUSTRATIVE tint of the single RED band) by a least-squares fit where they overlap"
+ }
+}

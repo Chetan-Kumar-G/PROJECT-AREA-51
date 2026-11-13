@@ -1,0 +1,48 @@
+# Unzipped copy of the asset packs (the original zips in "ASSET PACKS/" are kept)
+_assets_extracted/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node (in case a build step is added later)
+node_modules/
+
+# Blender backups and working files
+*.blend1
+*.blend2
+
+# Claude Code local settings (launch.json stays shared)
+.claude/settings.local.json
+
+# Environment / secrets
+.env
+.env.*
+
+# OS and editor clutter
+.DS_Store
+__MACOSX/
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.log
+
+# Cloudflare Worker local secrets and build output
+worker/.dev.vars
+worker/.wrangler/
+worker/src/knowledge.js
+
+# Generated at deploy time (scripts/build-i18n.mjs, scripts/build-pages.mjs)
+site/js/i18n/
+site/machines/
+site/sitemap.xml
+site/robots.txt
+
+# Prasanna's 3D app (atlas/): built into site/atlas by scripts/build-atlas.mjs, never committed
+atlas/node_modules/
+atlas/unity-cache/
+site/atlas/

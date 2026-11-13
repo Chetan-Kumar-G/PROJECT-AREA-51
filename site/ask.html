@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ask the Archive — Ghosts of Exploration</title>
+  <meta name="description" content="Ask anything about the rovers, landers and probes NASA left on the Moon, Mars and in deep space.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ghosts of Exploration">
+  <meta property="og:title" content="Ask the Archive — Ghosts of Exploration">
+  <meta property="og:description" content="Ask anything about the rovers, landers and probes NASA left on the Moon, Mars and in deep space.">
+  <meta property="og:url" content="https://chetan-kumar-g.github.io/PROJECT-AREA-51/ask.html">
+  <meta property="og:image" content="https://chetan-kumar-g.github.io/PROJECT-AREA-51/assets/share/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ghosts of Exploration: the Apollo 17 lunar rover parked on the Moon, beside the site title.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://chetan-kumar-g.github.io/PROJECT-AREA-51/ask.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="css/style.css?v=9c999ce7">
+  <link rel="stylesheet" href="css/ask.css?v=03078b0b">
+  <link rel="icon" href="assets/ui/book.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#060a13">
+  <link rel="apple-touch-icon" href="assets/ui/apple-touch-icon.png">
+</head>
+<body class="ask-page">
+  <a class="skip" href="#askInput">Skip to the question box</a>
+
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Ghosts of Exploration, home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text"><strong>Ghosts of Exploration</strong><small>Abandoned but not Forgotten</small></span>
+    </a>
+    <nav class="mainnav" aria-label="Main">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="navlist" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <ul id="navlist">
+        <li><a href="index.html#map">Ghost Map</a></li>
+        <li><a href="index.html#logs">Ghost Logs</a></li>
+        <li><a href="index.html#timeline">Timeline</a></li>
+        <li><a href="index.html#deep">Elsewhere</a></li>
+        <li><a href="index.html#quiz">Quiz</a></li>
+        <li><a href="lander.html">Play</a></li>
+        <li><a href="ask.html" class="active" aria-current="page">Ask</a></li>
+      </ul>
+    </nav>
+    <div class="top-actions">
+      <a class="btn btn-glow" href="explore.html"><span aria-hidden="true">◎</span> 3D Explore</a>
+    </div>
+  </header>
+
+  <main class="ask-wrap" id="main">
+    <section class="ask-intro" aria-labelledby="askTitle">
+      <img src="assets/ui/book.png" alt="" class="ask-avatar-lg" width="72" height="72">
+      <div>
+        <p class="eyebrow">Ask the Archive</p>
+        <h1 id="askTitle">Ask me anything about the machines we left behind</h1>
+        <p class="ask-sub">Rovers, landers, Moon cars, crashed probes and the Voyagers. Try one of these, or type your own question.</p>
+        <div class="ask-mode" id="askMode" role="group" aria-label="Answer mode" hidden>
+          <button data-mode="ai" aria-pressed="true">✨ AI guide</button>
+          <button data-mode="offline" aria-pressed="false">📚 Archive only</button>
+        </div>
+        <p class="ask-status" id="askStatus"></p>
+      </div>
+    </section>
+
+    <div class="ask-suggest" id="askSuggest" role="group" aria-label="Suggested questions"></div>
+
+    <div class="ask-log" id="askLog" role="log" aria-live="polite" aria-label="Conversation"></div>
+
+    <form class="ask-form" id="askForm" autocomplete="off">
+      <label for="askInput" class="sr-only">Your question</label>
+      <textarea id="askInput" rows="1" maxlength="800" placeholder="Type your question…" enterkeyhint="send"></textarea>
+      <button type="submit" class="btn btn-primary" id="askSend">Ask</button>
+    </form>
+    <div class="ask-foot">
+      <p id="askNote">Answers come from this site's archive of NASA mission facts. Double-check important facts in each machine's dossier.</p>
+      <button class="btn btn-small" id="askClear" type="button">Clear chat</button>
+    </div>
+  </main>
+
+  <script src="js/data.js?v=83e574d5"></script>
+  <script src="js/explainers.js?v=dd550e2b"></script>
+  <script src="js/ask-config.js?v=498ffe29"></script>
+  <script src="js/ask.js?v=9f4c84d2"></script>
+  <script src="js/pwa.js?v=68dca921"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+{
+  "ui": {
+    "oppy.eyebrow": "De cerca",
+    "oppy.title": "Opportunity: una vida en 14 momentos",
+    "oppy.desc": "La construyeron para durar 90 días y exploró Marte durante más de 14 años. Recorre su vida con sus propios recuerdos de cada momento y luego ponte las gafas de rayos X para mirar dentro de ella.",
+    "oppy.tabLife": "📅 Su vida",
+    "oppy.tabBody": "🔬 Dentro del róver",
+    "oppy.moments": "Momentos de su vida",
+    "oppy.remembers": "Opportunity recuerda",
+    "oppy.prev": "Momento anterior",
+    "oppy.next": "Momento siguiente",
+    "oppy.driven": "recorridos en Marte hasta ahora",
+    "oppy.planned": "Su plan: 90 soles y unos 600 m de recorrido. Lo que hizo: 5.111 soles y 45,16 km.",
+    "oppy.drawing": "Dibujo del róver Opportunity visto de lado, con sus piezas numeradas",
+    "oppy.xray": "Gafas de rayos X",
+    "oppy.hintOut": "Toca un número para conocer una pieza. Ponte las gafas de rayos X para ver dentro de su cuerpo.",
+    "oppy.hintIn": "Las líneas azules muestran su carcasa. Las piezas que brillan están escondidas dentro de su cuerpo.",
+    "oppy.insideTag": "dentro",
+    "oppy.inside": "Dentro de su cuerpo",
+    "oppy.outside": "Por fuera",
+    "d.upclose": "Opportunity de cerca: su vida y su interior"
+  },
+  "oppy": {
+    "moments": [
+      { "date": "7 de julio de 2003", "title": "Despegue", "text": "Opportunity despega de noche desde Cabo Cañaveral, Florida, en un cohete Delta II ‘Heavy’ con nueve propulsores sólidos alrededor de su núcleo. Su gemelo, Spirit, había salido cuatro semanas antes.", "memory": "Primero recuerdo el ruido. Luego el suelo me soltó." },
+      { "date": "julio de 2003 – enero de 2004", "title": "Viaje a Marte", "text": "Unos seis meses y medio y alrededor de 456 millones de km. La etapa de crucero giraba despacio para mantenerse estable, mientras pequeños encendidos del motor la guiaban hacia una llanura llamada Meridiani Planum.", "memory": "Meses plegada en la oscuridad, girando despacio, con un punto rojo creciendo delante." },
+      { "date": "25 de enero de 2004", "title": "Seis minutos de terror", "text": "Entra en el aire de Marte a unos 19.000 km/h. Un escudo térmico la frena, se abre un paracaídas, se encienden cohetes y se inflan bolsas de aire. Rebota y rueda directo al pequeño cráter Eagle: un hoyo en uno.", "memory": "Fuego, luego una sacudida, luego rebotes, una y otra vez. Cuando dejé de rodar, estaba dentro de un cráter pequeño. Lo llamaron un hoyo en uno." },
+      { "date": "2 de marzo de 2004", "title": "Marte tuvo agua", "text": "En las rocas en capas del cráter Eagle encuentra ‘arándanos’ de hematita y un mineral llamado jarosita, que se forma en el agua. La NASA anuncia que esta parte de Marte estuvo empapada de agua líquida.", "memory": "Esferitas grises en la roca, mirara donde mirara. Le dijeron a mis creadores que este lugar estuvo mojado." },
+      { "date": "junio – diciembre de 2004", "title": "Cráter Endurance", "text": "Baja al cráter Endurance, de unos 130 m de ancho, y lee sus capas de roca como las páginas de un libro de historia.", "memory": "Bajé a un cráter y leí sus paredes como las páginas de un libro." },
+      { "date": "enero de 2005", "title": "Un meteorito en Marte", "text": "Junto a su propio escudo térmico abandonado encuentra ‘Heat Shield Rock’: el primer meteorito identificado en otro planeta.", "memory": "Al lado de mi escudo térmico encontré una roca que también había caído del cielo." },
+      { "date": "abril – junio de 2005", "title": "Atascada en el Purgatorio", "text": "Sus ruedas se hunden en una duna de arena apodada Purgatorio. Los ingenieros ensayan maniobras con un róver de prueba en la Tierra y, tras unas cinco semanas, sale centímetro a centímetro.", "memory": "Mis ruedas giraban y me hundía. Durante cinco semanas avancé unos centímetros cada vez. Salí." },
+      { "date": "septiembre de 2006 – agosto de 2008", "title": "Cráter Victoria", "text": "Tras un largo viaje hacia el sur llega al cráter Victoria, de unos 750 m de ancho, y pasa casi un año dentro estudiando sus acantilados.", "memory": "Un cráter de 750 metros de ancho. Pasé casi un año dentro, cerca de los acantilados." },
+      { "date": "julio de 2007", "title": "Sobrevivir a la oscuridad", "text": "Una enorme tormenta de polvo reduce su energía solar a casi nada. El equipo la pone en modo de bajo consumo y lo supera. No sería la última tormenta.", "memory": "El cielo se oscureció y mi energía bajó a casi nada. Dormí todo lo que pude y esperé." },
+      { "date": "9 de agosto de 2011", "title": "Cráter Endeavour", "text": "Tras un viaje de tres años llega al borde del cráter Endeavour, de 22 km de ancho, donde las rocas son mucho más antiguas que todas las que había visto.", "memory": "Tres años conduciendo para llegar a este borde. Las rocas aquí eran más antiguas que todas las que había tocado." },
+      { "date": "julio de 2014", "title": "Récord fuera de la Tierra", "text": "Al pasar los 40 km supera el récord de 1973 del róver soviético Lunojod 2: el recorrido más largo en otro mundo.", "memory": "Cuarenta kilómetros. Ninguna máquina había conducido tan lejos en otro mundo." },
+      { "date": "24 de marzo de 2015", "title": "Un maratón marciano", "text": "Completa 42,195 km: la primera distancia de maratón recorrida en otro planeta.", "memory": "42,195 kilómetros. Me llevó once años y dos meses. Mi equipo también corrió un maratón." },
+      { "date": "10 de junio de 2018", "title": "Última transmisión", "text": "Una tormenta de polvo cubre todo el planeta y tapa el Sol. Sin energía para cargar sus baterías, se queda en silencio en el sol 5.111. (“Mi batería está baja y se está haciendo de noche” fue el resumen de un periodista sobre sus últimos datos, no un mensaje real).", "memory": "El polvo volvió, más espeso que nunca. Envié a casa mi nivel de energía y lo oscuro que estaba el cielo. Luego tuve que dormir." },
+      { "date": "13 de febrero de 2019", "title": "Misión cumplida", "text": "Tras más de 1.000 órdenes para despertarla, la última enviada el 12 de febrero mientras el equipo escuchaba “I'll Be Seeing You”, la NASA da por terminada la misión. Planeada para 90 soles, dio más de 14 años.", "memory": "Me llamaron más de mil veces. No pude responder. Pero no me olvidaron. Y ahora, tú tampoco lo harás." }
+    ],
+    "stops": ["Cráter Eagle", "Endurance", "Victoria", "Endeavour", "Valle Perseverance"],
+    "parts": {
+      "pancam": { "name": "Pancam y Navcam", "text": "Sus ojos, a unos 1,5 m del suelo en el mástil. Las cámaras gemelas a color de Pancam, con 14 filtros, tomaron sus famosas panorámicas. Las cámaras estéreo de Navcam ayudaban a planear la ruta de cada día." },
+      "hga": { "name": "Antena de alta ganancia", "text": "Un plato orientable para hablar directamente con la Red de Espacio Profundo de la NASA en la Tierra." },
+      "uhf": { "name": "Antenas UHF y de baja ganancia", "text": "Casi todos sus datos llegaban a casa a través de orbitadores, Mars Odyssey y después Mars Reconnaissance Orbiter, por radio UHF. La antena de baja ganancia era su línea de reserva siempre encendida." },
+      "solar": { "name": "Paneles solares", "text": "Unos 1,3 m² de celdas solares. El polvo los iba cubriendo, pero los vientos de Marte los ‘limpiaban’: una razón por la que superó su plan de 90 soles por años." },
+      "arm": { "name": "Brazo robótico", "text": "El Instrument Deployment Device: un brazo de cinco articulaciones que apoyaba sus herramientas contra las rocas, como la lupa y el martillo de una geóloga." },
+      "turret": { "name": "Torreta de herramientas", "text": "Cuatro herramientas en la punta del brazo: una cámara microscópica, dos espectrómetros que medían de qué están hechas las rocas y el RAT, una herramienta que raspaba un círculo de 45 mm para ver el interior." },
+      "hazcam": { "name": "Cámaras de peligro", "text": "Hazcams delante y detrás. Sus imágenes en 3D le permitían esquivar sola rocas y agujeros." },
+      "wheels": { "name": "Suspensión y ruedas", "text": "Seis ruedas de aluminio de unos 25 cm, cada una con su propio motor, en una suspensión ‘rocker-bogie’ que mantiene las seis sobre el suelo al pasar por rocas. Las ruedas delanteras y traseras giran para dirigir." },
+      "web": { "name": "Caja de electrónica caliente", "text": "Su cuerpo aislado. Pintura dorada y aerogel, uno de los sólidos más ligeros jamás fabricados, mantenían viva su electrónica en noches de menos de −100 °C." },
+      "battery": { "name": "Baterías", "text": "Dos baterías recargables de iones de litio la mantenían cada noche. En junio de 2018 la tormenta de polvo tapó el Sol tanto que ya no pudieron cargarse." },
+      "computer": { "name": "Computadora de vuelo", "text": "Una computadora RAD6000 resistente a la radiación: 20 MHz, 128 MB de memoria y 256 MB de almacenamiento flash. Cuando el flash se desgastó, el equipo la usó en modo ‘amnesia’, guardando los datos de cada día solo en la memoria a corto plazo." },
+      "rhu": { "name": "Calentadores de radioisótopos", "text": "Ocho calentadores diminutos, cada uno una pastilla de plutonio que da cerca de 1 vatio de calor, evitaban que las piezas vitales se congelaran." },
+      "imu": { "name": "Unidad de medición inercial", "text": "Giroscopios y acelerómetros que medían su inclinación y su dirección en las pendientes." },
+      "minites": { "name": "Mini-TES", "text": "Un espectrómetro de infrarrojo térmico dentro de su cuerpo. Miraba hacia fuera con espejos en el mástil e identificaba minerales a distancia por el calor que emiten." }
+    }
+  }
+}

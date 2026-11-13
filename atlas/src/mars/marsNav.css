@@ -1,0 +1,110 @@
+/* Mars navigation, contextual card and mission story (audit N1, U1, S1). */
+
+/* ── compact contextual card: low and centred, never a docked side window */
+.mctx {
+  position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 30;
+  width: min(620px, calc(100vw - 32px)); max-height: min(38vh, 330px); overflow-y: auto;
+  padding: 12px 14px; border-radius: var(--r); pointer-events: auto;
+}
+.mctx-nearby { bottom: 150px; width: min(460px, calc(100vw - 32px)); }
+.mctx-head { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; }
+.mctx-head h2 { margin: 2px 0 2px; font-size: 1.05rem; }
+.mctx-purpose { margin: 6px 0 2px; color: var(--txt-dim); font-size: 0.9rem; }
+.mctx-key { margin: 4px 0; color: var(--txt-dim); }
+.mctx-parts { display: flex; flex-wrap: nowrap; gap: 6px; margin: 8px 0 4px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: thin; }
+.mctx-parts button { flex: 0 0 auto; }
+.mctx-parts button { font: inherit; font-size: 0.8rem; padding: 4px 9px; border-radius: 999px; border: 1px solid var(--line); background: var(--glass-card); color: var(--txt); cursor: pointer; }
+.mctx-parts button.on { border-color: var(--cy); color: var(--cy); }
+.mctx-part-line { margin: 6px 0; color: var(--txt-dim); }
+.mctx-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.mars-root[data-story='on'] .mctx { display: none; }
+
+/* ── destination guide chip */
+.mwm-guide { display: inline-flex; align-items: center; gap: 8px; border-color: var(--cy) !important; }
+.mwm-arrow { display: inline-block; color: var(--cy); font-style: normal; transition: transform 0.2s; }
+.mwm-arrived { border-color: var(--ok) !important; color: var(--ok); }
+.linklike { background: none; border: 0; color: var(--cy); cursor: pointer; font: inherit; padding: 0 2px; text-decoration: underline; }
+
+/* ── unified map */
+.mars-map.mwm { width: min(1080px, calc(100vw - 32px)); }
+.replay-root-mars { grid-template-columns: 1fr; }
+.mwm-head { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.mwm-title { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mwm-tabs { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+.mwm-tabs button, .mstory-views button { font: inherit; font-size: 0.85rem; padding: 5px 14px; background: transparent; color: var(--txt-dim); border: 0; cursor: pointer; }
+.mwm-tabs button.on, .mstory-views button.on { background: rgba(103, 232, 249, 0.16); color: var(--cy); }
+.mwm-body { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 14px; align-items: start; }
+.mwm-svg { max-height: min(64vh, calc(100vh - 200px)); }
+.mwm-side { max-height: min(64vh, calc(100vh - 200px)); overflow-y: auto; }
+.mwm-side h3 { margin: 10px 0 6px; font-size: 0.9rem; }
+.mwm-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.mwm-list li { display: flex; justify-content: space-between; gap: 8px; align-items: center; border-bottom: 1px solid var(--line-subtle); padding-bottom: 5px; }
+.mwm-list li > span { min-width: 0; }
+.mwm-t { cursor: pointer; }
+.mwm-t circle { fill: #fbbf24; stroke: #000; stroke-width: 3; }
+.mwm-t path { fill: #f97316; stroke: #000; stroke-width: 3; }
+.mwm-t rect { fill: #cbd5e1; stroke: #000; stroke-width: 3; }
+.mwm-t.on circle, .mwm-t.on path, .mwm-t.on rect { stroke: var(--cy); stroke-width: 6; }
+.mwm-guide-line { stroke: var(--cy); stroke-width: 5; stroke-dasharray: 16 10; }
+.mwm-globe { width: 100%; border-radius: var(--r-sm); background: #000; }
+.mwm-grat { stroke: rgba(255, 255, 255, 0.12); stroke-width: 0.25; }
+.mwm-site { cursor: pointer; }
+.mwm-site circle { fill: #fbbf24; stroke: #000; stroke-width: 0.6; }
+.mwm-site.visited circle { fill: #34d399; }
+.mwm-site.here circle { fill: var(--cy); stroke: #fff; stroke-width: 0.8; }
+.mwm-site.on circle { stroke: var(--cy); stroke-width: 1.2; }
+.mwm-site text { fill: #fff; font: 600 4.2px system-ui, sans-serif; paint-order: stroke; stroke: rgba(0, 0, 0, 0.85); stroke-width: 1px; }
+.mwm-card h3 { margin: 4px 0; }
+.mwm-here { color: var(--cy); }
+.mwm-elsewhere { margin-top: 10px; font-size: 0.85rem; }
+.mwm-transport { max-width: 640px; margin: 0 auto; padding: 4px 4px 8px; }
+.mwm-steps { padding-left: 20px; display: grid; gap: 6px; }
+.mwm-actions { display: flex; gap: 10px; margin-top: 12px; }
+@media (max-width: 820px) { .mwm-body { grid-template-columns: 1fr; } .mwm-side { max-height: none; } }
+
+/* ── mission story: a bottom sheet, the scene stays visible above it */
+.mstory {
+  position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); z-index: 40;
+  width: min(880px, calc(100vw - 24px)); max-height: min(52vh, 480px); overflow-y: auto;
+  padding: 12px 16px; border-radius: var(--r); pointer-events: auto;
+}
+.mstory-head { display: flex; align-items: center; gap: 12px; }
+.mstory-head > div:first-child { flex: 1; min-width: 0; display: grid; }
+.mstory-views { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+.mstory-card { margin: 10px 0 6px; }
+.mstory-card h3 { margin: 4px 0; font-size: 1rem; }
+.mstory-card p { margin: 4px 0 8px; color: var(--txt-dim); line-height: 1.45; }
+.mstory-meta { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; font-size: 0.78rem; color: var(--mut); }
+.mstory-meta time { color: var(--txt); font-weight: 600; }
+.mstory-know { font-size: 0.7rem; padding: 1px 7px; border-radius: 999px; border: 1px solid var(--line); margin-left: 6px; white-space: nowrap; }
+.mstory-know.k-record { color: var(--ok); border-color: rgba(52, 211, 153, 0.4); }
+.mstory-know.k-derived { color: var(--warm); border-color: rgba(251, 191, 36, 0.4); }
+.mstory-know.k-reconstruction { color: var(--vi); border-color: rgba(167, 139, 250, 0.4); }
+.mstory-where { color: var(--cy); }
+.mstory-controls { display: flex; align-items: center; gap: 8px; }
+.mstory-strip { position: relative; height: 34px; margin: 8px 0 2px; }
+.mstory-line { position: absolute; left: 2%; right: 2%; top: 11px; height: 2px; background: var(--line); }
+.mstory-mark { position: absolute; top: 5px; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; border: 2px solid #000; background: var(--mut); cursor: pointer; padding: 0; }
+.mstory-mark.here { background: var(--warm); }
+.mstory-mark.on { background: var(--cy); box-shadow: 0 0 0 3px var(--cy-glow); }
+.mstory-end { position: absolute; top: 22px; font-size: 0.7rem; color: var(--mut); }
+.mstory-end.l { left: 2%; } .mstory-end.r { right: 2%; }
+.mstory-chapters { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 14px; margin-top: 10px; }
+.mstory-toc { display: grid; gap: 4px; align-content: start; }
+.mstory-toc button { text-align: left; font: inherit; font-size: 0.85rem; padding: 5px 8px; border-radius: var(--r-sm); border: 1px solid transparent; background: transparent; color: var(--txt-dim); cursor: pointer; }
+.mstory-toc button.on { border-color: var(--line-hi); color: var(--cy); }
+.mstory-chapter-body h3 { margin: 0 0 6px; }
+.mstory-chapter-body ul { padding-left: 18px; display: grid; gap: 8px; margin: 0; }
+.mstory-chapter-body time { display: block; font-size: 0.75rem; color: var(--mut); }
+@media (max-width: 720px) { .mstory-chapters { grid-template-columns: 1fr; } }
+
+/* ── the record (full details) is a sheet on demand; the replay timeline is a bottom strip */
+.mars-root .site-inspector, .mars-root .discovery { z-index: 45; }
+
+/* ── Victoria replay: the beat card on the bottom strip */
+.replay-beat { margin: 0 0 8px; }
+.replay-beat b { display: block; margin: 3px 0 2px; }
+.replay-beat p { margin: 2px 0; }
+.replay-mark.data { background: var(--vi); }
+
+.mwm-storm { border-color: var(--warm) !important; color: var(--warm); cursor: pointer; }

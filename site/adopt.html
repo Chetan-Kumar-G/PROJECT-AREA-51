@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adopt a Ghost — Ghosts of Exploration</title>
+  <meta name="description" content="Adopt one of the 49 machines NASA left behind and print a certificate with its photo, epitaph, resting place and a fun fact. Make one for yourself or a whole class.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ghosts of Exploration">
+  <meta property="og:title" content="Adopt a Ghost — Ghosts of Exploration">
+  <meta property="og:description" content="Adopt one of the machines NASA left behind and print its certificate.">
+  <meta property="og:url" content="https://chetan-kumar-g.github.io/PROJECT-AREA-51/adopt.html">
+  <meta property="og:image" content="https://chetan-kumar-g.github.io/PROJECT-AREA-51/assets/share/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://chetan-kumar-g.github.io/PROJECT-AREA-51/adopt.html">
+  <script>
+    // Same language choice as the home page: ?lang= wins, then the last choice, else English.
+    window.GOE_LANG = (function () {
+      var l = "";
+      try { l = new URLSearchParams(location.search).get("lang") || localStorage.getItem("goe:lang") || ""; if (l) localStorage.setItem("goe:lang", l); } catch (e) { }
+      l = l === "es" || l === "hi" ? l : "en";
+      document.documentElement.lang = l;
+      if (l === "hi") document.write('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap">');
+      return l;
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css?v=9c999ce7">
+  <link rel="stylesheet" href="css/adopt.css?v=692bc0b0">
+  <link rel="icon" href="assets/ui/star.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#060a13">
+  <link rel="apple-touch-icon" href="assets/ui/apple-touch-icon.png">
+</head>
+<body class="adopt-page">
+  <a class="skip" href="#adName">Skip to the form</a>
+
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Ghosts of Exploration, home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text"><strong>Ghosts of Exploration</strong><small data-t="brandSub">Adopt a Ghost</small></span>
+    </a>
+    <nav class="mainnav" aria-label="Main">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="navlist" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <ul id="navlist">
+        <li><a data-t="navMap" href="index.html#map">Ghost Map</a></li>
+        <li><a data-t="navArchive" href="index.html#archive">Archive</a></li>
+        <li><a data-t="navW3d" href="index.html#worlds3d">3D Worlds</a></li>
+        <li><a data-t="navTeacher" href="teacher.html">Teacher pack</a></li>
+        <li><a data-t="navAdopt" href="adopt.html" class="active" aria-current="page">Adopt a Ghost</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="ad-wrap" id="main">
+    <section class="ad-form no-print" aria-labelledby="adTitle">
+      <p class="eyebrow" data-t="eyebrow">Keep a story alive</p>
+      <h1 id="adTitle" data-t="title">Adopt a Ghost</h1>
+      <p class="ad-lede" data-t="lede">Pick one of the 49 machines NASA left behind, add your name, and print its adoption certificate: its photo, its epitaph, where it rests and a fun fact.</p>
+
+      <div class="ad-tabs" role="tablist" aria-label="Who is adopting">
+        <button role="tab" id="tabOne" aria-controls="paneOne" aria-selected="true" data-t="tabOne">Just me</button>
+        <button role="tab" id="tabClass" aria-controls="paneClass" aria-selected="false" data-t="tabClass">My whole class</button>
+      </div>
+
+      <div id="paneOne" role="tabpanel" aria-labelledby="tabOne" class="ad-pane">
+        <label class="ad-field"><span data-t="name">Your name</span>
+          <input id="adName" type="text" maxlength="40" autocomplete="off" placeholder="Your name">
+        </label>
+        <label class="ad-field"><span data-t="pick">Your machine</span>
+          <select id="adPick"></select>
+        </label>
+        <button class="btn btn-small" id="adRandom" type="button" data-t="surprise">🎲 Surprise me</button>
+      </div>
+
+      <div id="paneClass" role="tabpanel" aria-labelledby="tabClass" class="ad-pane" hidden>
+        <label class="ad-field"><span data-t="names">Names, one per line (up to 49)</span>
+          <textarea id="adNames" rows="6" placeholder="Ana&#10;Ravi&#10;Sam"></textarea>
+        </label>
+        <p class="ad-hint" data-t="classHint">Each name gets a different machine, picked at random. One certificate per page.</p>
+        <button class="btn btn-small" id="adShuffle" type="button" data-t="shuffle">🎲 Shuffle the machines</button>
+      </div>
+
+      <div class="ad-actions">
+        <button class="btn btn-primary" id="adPrint" type="button" data-t="print">🖨 Print or save as PDF</button>
+        <a class="btn btn-small" id="adDossier" href="index.html" data-t="dossier">Read its dossier →</a>
+      </div>
+      <p class="ad-privacy" data-t="privacy">Names stay on this device. Nothing is sent anywhere.</p>
+    </section>
+
+    <section class="ad-preview" aria-label="Certificate preview">
+      <div id="adCerts"></div>
+    </section>
+  </main>
+
+  <footer class="footer ad-foot no-print">
+    <div><p><a href="index.html" data-t="back">← Back to the archive</a> · <span data-t="credit">Photos: NASA Image and Video Library (public domain; NASA does not endorse this project).</span></p></div>
+  </footer>
+
+  <script src="js/data.js?v=83e574d5"></script>
+  <script>if (window.GOE_LANG !== "en") document.write('<script src="' + { es: "js/i18n/es.js?v=21193e9b", hi: "js/i18n/hi.js?v=78b878dd" }[window.GOE_LANG] + '"><\/script>');</script>
+  <script src="js/i18n.js?v=22597147"></script>
+  <script src="js/adopt.js?v=c07f1fae"></script>
+  <script src="js/pwa.js?v=68dca921"></script>
+</body>
+</html>

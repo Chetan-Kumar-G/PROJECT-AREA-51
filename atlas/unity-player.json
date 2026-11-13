@@ -1,0 +1,37 @@
+{
+  "comment": "Unity WebGL players that a clean checkout (e.g. the Render build) downloads before `vite build`. See scripts/fetch-unity-player.mjs and DEPLOYMENT.md.",
+  "players": {
+    "mars": {
+      "id": "b2ca08f4d080",
+      "unity": "6000.3.28f1",
+      "dir": "unity-cache/MarsExplorer/Build",
+      "baseUrl": "https://github.com/Agneay-Community-Hub/Abandoned-But-Not-Forgotten-Assets/releases/download/unity-mars-b2ca08f4d080/",
+      "files": [
+        {
+          "name": "MarsExplorer.data",
+          "bytes": 41744991,
+          "modified": "2026-11-12T11:50:31.149Z",
+          "sha256": "ad4f327441587ca2ebfe2a96b84231cdb80bcdf506de12073331016d958678ba"
+        },
+        {
+          "name": "MarsExplorer.framework.js",
+          "bytes": 469831,
+          "modified": "2026-11-12T11:54:15.238Z",
+          "sha256": "92edb9da30cd798b0db6db21a1322ee3462dee29a499cd923ce9baaff3923d18"
+        },
+        {
+          "name": "MarsExplorer.loader.js",
+          "bytes": 26983,
+          "modified": "2026-11-12T11:54:15.238Z",
+          "sha256": "3342bc500efdee266296ba856a8df1b7a864d0b0af286017dcdcf703ce9b3844"
+        },
+        {
+          "name": "MarsExplorer.wasm",
+          "bytes": 58524922,
+          "modified": "2026-11-12T11:54:14.103Z",
+          "sha256": "db333b107f483eb5390a515d103defea0df7d049626d1a434ae5aaa627c02cc2"
+        }
+      ]
+    }
+  }
+}

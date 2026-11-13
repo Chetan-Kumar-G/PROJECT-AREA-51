@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pitch — Ghosts of Exploration</title>
+  <meta name="description" content="Seven-slide pitch for Ghosts of Exploration, NASA Space Apps Challenge 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ghosts of Exploration">
+  <meta property="og:title" content="Pitch — Ghosts of Exploration">
+  <meta property="og:description" content="Seven-slide pitch for Ghosts of Exploration, NASA Space Apps Challenge 2026.">
+  <meta property="og:url" content="https://chetan-kumar-g.github.io/PROJECT-AREA-51/pitch.html">
+  <meta property="og:image" content="https://chetan-kumar-g.github.io/PROJECT-AREA-51/assets/share/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ghosts of Exploration: the Apollo 17 lunar rover parked on the Moon, beside the site title.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://chetan-kumar-g.github.io/PROJECT-AREA-51/pitch.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
+  <link rel="icon" href="assets/ui/star.png">
+  <style>
+    :root { --bg: #060a13; --panel: #0f1729; --line: #2f4166; --text: #e9eef7; --muted: #9eabc2; --amber: #ffb347; --amber2: #ffd08a; --cyan: #7fd4ff; --ok: #5ee6a8; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: #000; color: var(--text); font-family: "Atkinson Hyperlegible", system-ui, sans-serif; }
+    .deck { height: 100%; display: grid; place-items: center; }
+    .slide { display: none; width: min(100vw, calc(100vh * 16 / 9)); aspect-ratio: 16 / 9; background: radial-gradient(900px 500px at 85% 0%, rgba(255,179,71,.1), transparent 60%), radial-gradient(700px 500px at 0% 100%, rgba(127,212,255,.08), transparent 60%), var(--bg);
+      position: relative; overflow: hidden; padding: 4.2% 5%; font-size: clamp(10px, 1.55vw, 22px); }
+    .slide.on { display: flex; flex-direction: column; }
+    h1, h2, h3 { font-family: "Space Grotesk", sans-serif; margin: 0 0 .4em; line-height: 1.1; }
+    h1 { font-size: 3.6em; } h2 { font-size: 2.3em; } h3 { font-size: 1.15em; color: var(--amber2); }
+    .eyebrow { color: var(--amber); text-transform: uppercase; letter-spacing: .18em; font-weight: 700; font-size: .75em; margin: 0 0 .8em; }
+    p, li { font-size: 1em; line-height: 1.45; color: #d6deea; }
+    .muted { color: var(--muted); }
+    .accent { color: var(--amber); }
+    .row { display: grid; gap: 3%; flex: 1; min-height: 0; }
+    .r2 { grid-template-columns: 1fr 1.25fr; align-items: center; }
+    .r3 { grid-template-columns: repeat(3, 1fr); grid-template-rows: 1fr 1fr; gap: 2.2%; }
+    .shot { width: 100%; border-radius: 12px; border: 1px solid var(--line); box-shadow: 0 20px 40px -20px #000; display: block; }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 3% 4%; display: flex; flex-direction: column; min-height: 0; overflow: hidden; }
+    .card img { width: 100%; border-radius: 8px; margin-bottom: .45em; flex: 1; min-height: 0; object-fit: cover; object-position: top; }
+    .card b { font-family: "Space Grotesk", sans-serif; }
+    .card p { font-size: .78em; margin: .2em 0 0; }
+    .big { font-family: "Space Grotesk", sans-serif; font-size: 2.4em; color: var(--amber2); line-height: 1; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2%; margin-top: auto; }
+    .stats div { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: .7em .9em; }
+    .stats span { display: block; color: var(--muted); font-size: .78em; margin-top: .2em; }
+    .stats .big { font-size: 2.4em; color: var(--amber2); margin: 0; }
+    ul.ticks { list-style: none; padding: 0; margin: 0; } ul.ticks li { padding-left: 1.4em; position: relative; margin: .35em 0; } ul.ticks li::before { content: "★"; color: var(--amber); position: absolute; left: 0; }
+    .num { position: absolute; right: 2.4%; bottom: 3%; color: var(--muted); font-size: .7em; }
+    .title-bg { position: absolute; right: -6%; top: 50%; transform: translateY(-50%); width: 52%; border-radius: 50%; opacity: .9; filter: drop-shadow(0 0 60px rgba(255,179,71,.35)); }
+    .nav { position: fixed; bottom: 14px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; align-items: center; background: rgba(15,23,41,.85); border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px; }
+    .nav button { background: transparent; border: 0; color: var(--text); font-size: 1.1rem; cursor: pointer; width: 36px; height: 36px; border-radius: 50%; }
+    .nav button:hover { background: #1b2742; }
+    .nav span { color: var(--muted); font-size: .85rem; min-width: 4em; text-align: center; }
+    /* Portrait phones: each slide fills the screen as a scrollable card with readable text */
+    @media screen and (max-width: 760px) and (orientation: portrait) {
+      .deck { display: block; height: 100%; }
+      .slide { width: 100%; height: 100%; height: 100dvh; aspect-ratio: auto; font-size: 15px; padding: 28px 18px 88px; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+      h1 { font-size: 2.3em; } h2 { font-size: 1.7em; } .eyebrow { font-size: .8em; }
+      .row, .r2, .r3 { grid-template-columns: 1fr; grid-template-rows: none; gap: 14px; flex: none; }
+      .card { padding: 14px; overflow: visible; }
+      .card img { flex: none; max-height: 200px; }
+      .card p { font-size: .9em; }
+      .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 18px; }
+      .stats .big, .big { font-size: 1.8em; }
+      .title-bg { position: static; transform: none; width: 55%; margin: 8px auto 0; display: block; }
+      .num { position: static; display: block; margin-top: 16px; text-align: right; font-size: .8em; }
+      .nav button { width: 44px; height: 44px; }
+    }
+    @media print {
+      @page { size: 1600px 900px; margin: 0; }
+      html, body { background: var(--bg); }
+      .deck { display: block; height: auto; }
+      .slide { display: flex !important; flex-direction: column; width: 1600px; height: 900px; aspect-ratio: auto; font-size: 22px; page-break-after: always; break-after: page; }
+      .nav { display: none; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+  <section class="slide" aria-label="Slide 1: Title">
+    <p class="eyebrow">NASA Space Apps Challenge 2026 · Abandoned but not Forgotten</p>
+    <h1>Ghosts of<br>Exploration</h1>
+    <p style="font-size:1.35em;max-width:52%">They stopped talking.<br><span class="accent">Their stories didn't.</span></p>
+    <p class="muted" style="max-width:48%;margin-top:auto">A story-driven website that introduces kids aged 8–14 to the machines NASA left on the Moon, Mars and across the solar system.</p>
+    <img class="title-bg" src="assets/nasa/as17-152-23272.jpg" alt="">
+    <span class="num">1 / 7</span>
+  </section>
+
+  <section class="slide" aria-label="Slide 2: The problem">
+    <p class="eyebrow">The problem</p>
+    <h2>Kids only hear about the missions that are still running</h2>
+    <div class="row r2">
+      <div>
+        <ul class="ticks">
+          <li>More than <b>180 tonnes</b> of human-made hardware rests on the Moon, and about <b>7 tonnes</b> on Mars (estimates vary).</li>
+          <li>Rovers, landers and probes that changed what we know about the solar system went silent decades ago.</li>
+          <li>Their stories are locked inside dense technical pages written for adults.</li>
+          <li>Kids miss how today's missions grew from these “ghosts”.</li>
+        </ul>
+      </div>
+      <img class="shot" src="assets/nasa/PIA25287.jpg" alt="InSight's dusty final selfie">
+    </div>
+    <p class="muted" style="font-size:.8em">InSight's final selfie, 2022: its solar panels covered in Martian dust (NASA · PIA25287).</p>
+    <span class="num">2 / 7</span>
+  </section>
+
+  <section class="slide" aria-label="Slide 3: Our solution">
+    <p class="eyebrow">Our solution</p>
+    <h2>Every machine tells its own story</h2>
+    <div class="row r2">
+      <div>
+        <p>49 machines from <b>Vanguard 1 (1958)</b> to <b>Ingenuity (2024)</b>. Each one speaks in a first-person <b>ghost log</b> built from real mission facts:</p>
+        <ul class="ticks">
+          <li>where it is now (real coordinates)</li>
+          <li>what was planned vs. what really happened</li>
+          <li>what it discovered, and why it matters today</li>
+          <li>NASA photos, videos, 3D models and sounds</li>
+        </ul>
+      </div>
+      <img class="shot" src="assets/pitch/03-dossier.jpg" alt="Opportunity's dossier with its ghost log">
+    </div>
+    <span class="num">3 / 7</span>
+  </section>
+
+  <section class="slide" aria-label="Slide 4: Explore">
+    <p class="eyebrow">Showing how, not just telling</p>
+    <h2>See it, hear it, try it</h2>
+    <div class="row r3">
+      <div class="card"><img src="assets/pitch/04-how-it-worked.jpg" alt=""><b>11 “How it worked” animations</b><p>Airbags, sky cranes, rocket landings, impactors, laser ranging, marsquakes, gravity assists.</p></div>
+      <div class="card"><img src="assets/pitch/05-then-and-now.jpg" alt=""><b>Then &amp; now</b><p>Drag between Apollo 11 in 1969 and the same site seen from orbit in 2009.</p></div>
+      <div class="card"><img src="assets/pitch/07-lander-game.jpg" alt=""><b>Land it yourself</b><p>A landing game with real Moon and Mars gravity. Every crash explains what real missions did.</p></div>
+      <div class="card"><img src="assets/pitch/08-3d-explore.jpg" alt=""><b>3D Explore</b><p>Spin the Moon, Mars and the solar system; tap glowing beacons.</p></div>
+      <div class="card"><img src="assets/pitch/12-model-viewer.jpg" alt=""><b>NASA 3D models</b><p>22 machines, viewable in AR on phones.</p></div>
+      <div class="card"><img src="assets/pitch/09-ask.jpg" alt=""><b>Ask the Archive</b><p>Questions answered from the archive, even offline.</p></div>
+    </div>
+    <span class="num">4 / 7</span>
+  </section>
+
+  <section class="slide" aria-label="Slide 5: For every learner">
+    <p class="eyebrow">For every learner and every classroom</p>
+    <h2>Designed for ages 8–14</h2>
+    <div class="row r2">
+      <ul class="ticks">
+        <li>Two reading levels: Explorer (8–11) and Scientist (12+)</li>
+        <li>Read-aloud for every story and animation</li>
+        <li>Four text sizes, dyslexia-friendly spacing, reduce-motion support, full keyboard support</li>
+        <li>Works on phones and tablets, <b>and offline</b> once loaded. It can be installed as an app.</li>
+        <li><b>Teacher pack:</b> 3 lesson plans linked to NGSS standards, 4 printable worksheets, an answer key and a projector quiz</li>
+        <li>Free, no sign-up, no tracking</li>
+      </ul>
+      <img class="shot" src="assets/pitch/10-teacher.jpg" alt="Printable worksheet from the teacher pack">
+    </div>
+    <span class="num">5 / 7</span>
+  </section>
+
+  <section class="slide" aria-label="Slide 6: Built on NASA data">
+    <p class="eyebrow">Accuracy first</p>
+    <h2>Built on real NASA data</h2>
+    <div class="row r2">
+      <div>
+        <ul class="ticks">
+          <li><b>NASA Image &amp; Video Library:</b> 68 photos and 10 videos, each labelled with its NASA ID</li>
+          <li><b>NASA 3D Resources:</b> 16 official models (we converted Curiosity from Blender)</li>
+          <li><b>NASA SVS CGI Moon Kit</b> (LRO data) for the Moon map and globe</li>
+          <li>Facts from NASA mission records, with myths corrected: “My battery is low and it's getting dark” was a journalist's summary, not a real message</li>
+          <li>Real sounds: Mars wind, Ingenuity's blades, marsquakes, astronauts driving on the Moon</li>
+        </ul>
+      </div>
+      <img class="shot" src="assets/pitch/02-ghost-map.jpg" alt="Ghost Map of the Moon">
+    </div>
+    <span class="num">6 / 7</span>
+  </section>
+
+  <section class="slide" aria-label="Slide 7: Impact and next steps">
+    <p class="eyebrow">Impact &amp; next steps</p>
+    <h2>Give the ghosts a voice</h2>
+    <p style="max-width:70%">Kids leave knowing that today's missions stand on the shoulders of Surveyor, Viking, Spirit, Opportunity and dozens more, and that some machines were crashed on purpose to protect worlds that might hold life.</p>
+    <p><b>Next:</b> more languages · more NASA 3D models (Lunar Roving Vehicle, Sojourner) · Artemis-era updates · a classroom challenge mode</p>
+    <div class="stats">
+      <div><span class="big">49</span><span>machines across the solar system</span></div>
+      <div><span class="big">11</span><span>explainer animations</span></div>
+      <div><span class="big">22</span><span>NASA 3D models to spin</span></div>
+      <div><span class="big">3</span><span>lesson plans + worksheets</span></div>
+    </div>
+    <p class="accent" style="margin-top:1.2em;font-size:1.1em"><b>chetan-kumar-g.github.io/PROJECT-AREA-51</b></p>
+    <span class="num">7 / 7</span>
+  </section>
+</div>
+
+<nav class="nav" aria-label="Slides">
+  <button id="prev" aria-label="Previous slide">←</button><span id="pos">1 / 7</span><button id="next" aria-label="Next slide">→</button>
+  <button id="fs" aria-label="Full screen" title="Full screen">⛶</button>
+</nav>
+<script>
+  (() => {
+    const slides = [...document.querySelectorAll(".slide")];
+    let i = Math.max(0, Math.min(slides.length - 1, (parseInt(location.hash.slice(1), 10) || 1) - 1));
+    const show = n => { i = Math.max(0, Math.min(slides.length - 1, n)); slides.forEach((s, k) => s.classList.toggle("on", k === i)); document.getElementById("pos").textContent = `${i + 1} / ${slides.length}`; history.replaceState(null, "", "#" + (i + 1)); };
+    document.getElementById("prev").onclick = () => show(i - 1);
+    document.getElementById("next").onclick = () => show(i + 1);
+    document.getElementById("fs").onclick = () => (document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen());
+    addEventListener("keydown", e => {
+      if (["ArrowRight", "PageDown", " "].includes(e.key)) { e.preventDefault(); show(i + 1); }
+      if (["ArrowLeft", "PageUp"].includes(e.key)) show(i - 1);
+      if (e.key === "Home") show(0); if (e.key === "End") show(slides.length - 1);
+      if (e.key === "f") document.getElementById("fs").click();
+    });
+    let x0 = null; addEventListener("touchstart", e => (x0 = e.touches[0].clientX)); addEventListener("touchend", e => { if (x0 == null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) show(i + (dx < 0 ? 1 : -1)); x0 = null; });
+    show(i);
+  })();
+</script>
+</body>
+</html>

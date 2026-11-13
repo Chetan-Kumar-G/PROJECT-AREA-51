@@ -1,0 +1,36 @@
+{
+ "width": 401,
+ "height": 401,
+ "rowOrder": "north-to-south",
+ "spacingM": [
+  250,
+  250
+ ],
+ "gridEastOfOriginM": -50000.0,
+ "gridNorthOfOriginM": 50000.0,
+ "upMinM": -727.1357445191898,
+ "upMaxM": 307.41839265952603,
+ "quantStepM": 0.015786525119460368,
+ "nodata": 65535,
+ "validCells": 159856,
+ "cells": 160801,
+ "source": "USGS Astrogeology controlled CTX DTMs (collection mro_ctx_controlled_usgs_dtms), mosaicked: ",
+ "datumOffsetM": -0.9948788434103335,
+ "datumResidualP90M": 3.7221168224698875,
+ "elevationReferenceM": -4131.829552936924,
+ "despikedNodes": 0,
+ "gapFill": {
+  "source": "MGS MOLA global DEM 463 m (USGS Astrogeology mosaic)",
+  "nodes": 160801,
+  "offsetM": 0.0
+ },
+ "cutout": "nodes where the HiRISE local terrain or horizon has data are left out (they are drawn there); the ring fills HiRISE gaps and drops up to 25 m beside the finer layers",
+ "curvature": "up includes the sphere curvature about the origin",
+ "provenance": "MEASURED (CTX DTM, ~20 m posts, sampled at 250 m)",
+ "albedo": {
+  "file": "far_albedo.jpg",
+  "spacingM": 125,
+  "source": "CTX orthoimages of the same DTMs, colourised with an ILLUSTRATIVE soil ramp",
+  "valid": 0.0
+ }
+}

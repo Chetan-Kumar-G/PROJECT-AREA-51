@@ -1,0 +1,104 @@
+/* NASA Eyes on the Solar System page */
+body.eyes-page { background:
+  radial-gradient(900px 500px at 80% -10%, rgba(127,212,255,.08), transparent 60%),
+  radial-gradient(800px 500px at -10% 110%, rgba(255,179,71,.06), transparent 60%), var(--bg); }
+.mainnav a.active { color: var(--text); background: var(--panel2); }
+
+.ey-wrap {
+  max-width: 1500px; margin: 0 auto; padding: 18px 16px 24px;
+  display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 18px; align-items: start;
+}
+.ey-stage { min-width: 0; }
+.ey-now { display: flex; gap: 16px; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; margin-bottom: 10px; }
+.ey-now-text { flex: 1 1 420px; min-width: 0; }
+.ey-now h1 { font-size: clamp(1.4rem, 3vw, 2rem); margin: 0 0 .25em; }
+.ey-now p#eyNote { color: var(--muted); margin: 0; max-width: 72ch; }
+.ey-now p#eyNote a { color: var(--cyan); white-space: nowrap; }
+.ey-now-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+
+.ey-seg, .ey-views { display: inline-flex; flex-wrap: wrap; background: var(--bg2); border: 1px solid var(--line); border-radius: 12px; padding: 3px; gap: 2px; }
+.ey-seg button, .ey-views button {
+  border: 0; background: transparent; color: var(--muted); padding: 6px 12px; border-radius: 9px;
+  font: inherit; font-weight: 700; font-size: .88rem; cursor: pointer; min-height: 36px;
+}
+.ey-seg button[aria-pressed="true"], .ey-views button[aria-pressed="true"] { background: var(--panel2); color: var(--text); box-shadow: inset 0 0 0 1px var(--line2); }
+.ey-seg button:hover, .ey-views button:hover { color: var(--text); }
+.ey-views { margin-bottom: 10px; }
+
+.ey-frame {
+  position: relative; width: 100%; height: min(72vh, 820px); min-height: 420px;
+  border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line2); background: #000; box-shadow: var(--shadow);
+}
+.ey-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+.ey-loading {
+  position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted); font-weight: 700; letter-spacing: .08em;
+  background: radial-gradient(circle at 50% 50%, #0b1424, #000 70%); pointer-events: none; transition: opacity .4s;
+}
+.ey-help { color: var(--dim); font-size: .85rem; margin: 8px 2px 0; }
+
+/* side panel */
+.ey-panel {
+  position: sticky; top: 76px; max-height: calc(100vh - 92px); max-height: calc(100dvh - 92px);
+  display: flex; flex-direction: column; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
+}
+.ey-tabs { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--line); background: var(--bg2); }
+.ey-tabs button {
+  border: 0; background: transparent; color: var(--muted); font: inherit; font-weight: 700; font-size: .85rem;
+  padding: 12px 4px; cursor: pointer; border-bottom: 2px solid transparent; min-height: 44px;
+}
+.ey-tabs button[aria-selected="true"] { color: var(--text); border-bottom-color: var(--amber); }
+.ey-pane { padding: 12px 14px 16px; overflow-y: auto; }
+.ey-sub, .ey-legend { color: var(--muted); font-size: .85rem; margin: 0 0 10px; }
+.ey-h { font-size: .8rem; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin: 14px 0 6px; display: flex; align-items: center; gap: 8px; }
+.ey-h .dot { width: 9px; height: 9px; }
+
+.ey-filter input {
+  width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line2); background: var(--bg2); color: var(--text); font: inherit; margin-bottom: 8px;
+}
+.ey-list, .ey-stories, .ey-opts { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.ey-list button, .ey-stories button {
+  width: 100%; display: grid; grid-template-columns: 1fr auto; grid-template-areas: "n t" "m t"; text-align: left; gap: 0 8px;
+  border: 1px solid transparent; background: transparent; color: var(--text); font: inherit; padding: 7px 10px; border-radius: 10px; cursor: pointer;
+}
+.ey-list button:hover, .ey-stories button:hover { background: var(--panel2); }
+.ey-list button[aria-current], .ey-stories button[aria-current], .ey-grid button[aria-current] { background: var(--panel2); border-color: var(--amber); }
+.ey-li-name { grid-area: n; font-weight: 700; }
+.ey-li-meta { grid-area: m; color: var(--dim); font-size: .8rem; }
+.ey-list .ey-tag { grid-area: t; align-self: center; }
+.ey-tag { display: inline-block; font-size: .68rem; font-weight: 700; letter-spacing: .04em; padding: 2px 7px; border-radius: 999px; white-space: nowrap; }
+.ey-tag.self { background: rgba(94,230,168,.14); color: var(--ok); }
+.ey-tag.world { background: rgba(143,184,255,.14); color: var(--deep); }
+
+.ey-stories button { display: block; }
+.ey-stories b { display: block; }
+.ey-stories span { color: var(--muted); font-size: .85rem; }
+
+.ey-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
+.ey-grid button {
+  border: 1px solid var(--line2); background: var(--bg2); color: var(--text); font: inherit; font-weight: 700; font-size: .9rem;
+  padding: 10px; border-radius: 10px; cursor: pointer; text-align: left; min-height: 44px;
+}
+.ey-grid button:hover { border-color: var(--cyan); }
+.ey-date { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.ey-date label { width: 100%; color: var(--muted); font-size: .9rem; }
+.ey-date input { flex: 1; min-width: 0; padding: 8px 10px; border-radius: 10px; border: 1px solid var(--line2); background: var(--bg2); color: var(--text); font: inherit; color-scheme: dark; }
+
+.ey-opts { gap: 2px; margin-bottom: 12px; }
+.ey-opts label { display: flex; gap: 10px; align-items: flex-start; padding: 8px 6px; border-radius: 10px; cursor: pointer; }
+.ey-opts label:hover { background: var(--panel2); }
+.ey-opts input { margin-top: 4px; width: 18px; height: 18px; accent-color: var(--amber); flex-shrink: 0; }
+.ey-opts b { display: block; }
+.ey-opts small { color: var(--muted); font-size: .82rem; }
+
+.ey-foot { padding-top: 10px; }
+.ey-foot p { color: var(--dim); font-size: .85rem; }
+
+@media (max-width: 959px) {
+  .ey-wrap { grid-template-columns: 1fr; }
+  .ey-panel { position: static; max-height: none; }
+  .ey-frame { height: 62vh; min-height: 360px; }
+}
+@media (max-width: 520px) {
+  .ey-frame { height: 70vh; border-radius: 12px; }
+  .ey-tabs button { font-size: .78rem; }
+}

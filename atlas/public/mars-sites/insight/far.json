@@ -1,0 +1,36 @@
+{
+ "width": 401,
+ "height": 401,
+ "rowOrder": "north-to-south",
+ "spacingM": [
+  250,
+  250
+ ],
+ "gridEastOfOriginM": -50000.0,
+ "gridNorthOfOriginM": 50000.0,
+ "upMinM": -1479.9091503910454,
+ "upMaxM": 1557.0873037196188,
+ "quantStepM": 0.04634230253167309,
+ "nodata": 65535,
+ "validCells": 159525,
+ "cells": 160801,
+ "source": "USGS Astrogeology controlled CTX DTMs (collection mro_ctx_controlled_usgs_dtms), mosaicked: N06_064664_1859_XN_05N224W__N13_067632_1860_XI_06N224W, N10_066194_1867_XN_06N224W__F05_037684_1857_XN_05N224W, F23_044937_1845_XN_04N224W__D10_031025_1838_XN_03N224W, F20_043671_1843_XN_04N224W__F19_043394_1840_XN_04N223W, F21_043882_1840_XN_04N224W__D06_029601_1846_XN_04N224W, N07_065218_1824_XN_02N224W__F07_038449_1840_XN_04N224W, F22_044383_1818_XI_01N223W__F18_042893_1841_XN_04N224W, N01_062818_1845_XI_04N224W__F23_044937_1845_XN_04N224W, J06_047060_1849_XN_04N224W__F04_037262_1841_XN_04N224W, F20_043605_1845_XN_04N224W__D19_034783_1864_XN_06N224W, K11_057728_1845_XN_04N223W__F18_042893_1841_XN_04N224W",
+ "datumOffsetM": 53.030855401867484,
+ "datumResidualP90M": 36.77032876897238,
+ "elevationReferenceM": -2616.7312222157434,
+ "despikedNodes": 513,
+ "gapFill": {
+  "source": "MGS MOLA global DEM 463 m (USGS Astrogeology mosaic)",
+  "nodes": 90867,
+  "offsetM": -52.3
+ },
+ "cutout": "nodes where the HiRISE local terrain or horizon has data are left out (they are drawn there); the ring fills HiRISE gaps and drops up to 25 m beside the finer layers",
+ "curvature": "up includes the sphere curvature about the origin",
+ "provenance": "MEASURED (CTX DTM, ~20 m posts, sampled at 250 m)",
+ "albedo": {
+  "file": "far_albedo.jpg",
+  "spacingM": 125,
+  "source": "CTX orthoimages of the same DTMs, colourised with an ILLUSTRATIVE soil ramp",
+  "valid": 0.43717980489431907
+ }
+}

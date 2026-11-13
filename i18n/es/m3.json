@@ -1,0 +1,53 @@
+{
+  "m": {
+    "vanguard1": {
+      "story": "Vanguard 1 fue uno de los primeros satélites, tan pequeño que cabía en tus manos. Fue el primero en usar paneles solares, y todavía hoy da vueltas alrededor de la Tierra.",
+      "ghost": "Tengo el tamaño de una toronja, y alguien famoso se burló de mí por eso. Pero fui el primer satélite que funcionó con luz del sol, y sigo aquí arriba. Todos los satélites lanzados después vuelan por debajo de mí. Mi radio se calló en 1964, pero sigo dando vueltas y vueltas.",
+      "epitaph": "Tenía el tamaño de una toronja. Sigo aquí.",
+      "fun": "El líder soviético Nikita Jrushchov lo llamó ‘el satélite toronja’.",
+      "quiz": "Tengo el tamaño de una toronja y soy el objeto hecho por humanos más antiguo que todavía orbita la Tierra."
+    },
+    "mariner2": {
+      "story": "Mariner 2 fue la primera nave en pasar junto a otro planeta. Descubrió que Venus es muchísimo más caliente de lo que se pensaba, no el mundo de selvas que algunos imaginaban.",
+      "ghost": "Fui la primera nave en visitar otro planeta. La gente esperaba que Venus fuera un mundo cálido de selvas húmedas. Lo medí y lo encontré abrasador bajo sus nubes. Por el camino, fui la primera en sentir el viento que sopla desde el Sol. Ahora doy vueltas alrededor del Sol sin que nadie me escuche.",
+      "epitaph": "Fui la primera en visitar otro planeta.",
+      "fun": "Su gemela, Mariner 1, se destruyó poco después del despegue por un error diminuto en sus ecuaciones de guiado, que a menudo se describe como un guion que faltaba.",
+      "quiz": "Fui la primera nave en visitar otro planeta: Venus, en 1962."
+    },
+    "mariner4": {
+      "story": "Mariner 4 tomó las primeras fotos de cerca de Marte. ¡La ciencia estaba tan emocionada que colorearon la primera imagen a mano con tizas de colores antes de que las computadoras terminaran!",
+      "ghost": "Tomé las primeras fotos de cerca de otro planeta. Mis imágenes llegaban tan despacio que nadie quería esperar a las computadoras. Imprimieron mis números en tiras de papel y los colorearon a mano, como un dibujo para colorear por números. Marte resultó estar lleno de cráteres y seco. Sin canales. Sin ciudades.",
+      "epitaph": "Te envié 21 fotos de un mundo lleno de cráteres.",
+      "fun": "Su velocidad de datos era de 8,3 bits por segundo. Hoy, una sola foto de un teléfono tardaría días en enviarse así.",
+      "quiz": "Mi primera foto de Marte se coloreó a mano antes de que las computadoras terminaran."
+    },
+    "isee3": {
+      "story": "ISEE-3 fue la primera nave en atravesar la cola de un cometa. Décadas después, un equipo de voluntarios reunió dinero por internet y logró volver a hablar con ella.",
+      "ghost": "Primero vigilé el viento solar desde un lugar tranquilo entre el Sol y la Tierra. Luego mi equipo me hizo pasar una y otra vez junto a la Luna y me envió a atravesar la cola de un cometa: la primera nave que visitó uno. En 2014, desconocidos en internet reunieron dinero, pidieron prestada una antena gigante y volvieron a hablar conmigo.",
+      "epitaph": "En 2014, desconocidos en internet me despertaron.",
+      "fun": "Debería volver a pasar cerca de la Tierra en la década de 2030.",
+      "quiz": "Fui la primera nave en visitar un cometa, y unos voluntarios me despertaron 30 años después."
+    },
+    "kepler": {
+      "story": "Kepler fue un telescopio espacial que buscaba planetas alrededor de otras estrellas. Encontró miles y demostró que la mayoría de las estrellas tienen planetas.",
+      "ghost": "Miré el mismo trozo de cielo durante años, vigilando miles de estrellas a la vez. Cuando una estrella se oscurecía un poquito, era porque un planeta pasaba por delante. Así encontré miles de mundos. Cuando se rompieron mis ruedas de orientación, mi equipo usó el empuje de la luz del sol para equilibrarme. Dije buenas noches en 2018.",
+      "epitaph": "Miré un trozo de cielo y encontré miles de mundos.",
+      "fun": "Sus órdenes finales de ‘buenas noches’ se enviaron en el aniversario de la muerte del astrónomo Johannes Kepler, de quien tomó su nombre.",
+      "quiz": "Miré un trozo de cielo y encontré miles de planetas alrededor de otras estrellas."
+    },
+    "spitzer": {
+      "story": "Spitzer fue un telescopio espacial que veía la luz infrarroja, la que emiten las cosas calientes. Ayudó a descubrir una estrella con siete planetas del tamaño de la Tierra.",
+      "ghost": "Vi el universo por su calor. La luz infrarroja me dejó ver estrellas recién nacidas escondidas en el polvo y el brillo de planetas alrededor de otros soles. Ayudé a descubrir siete planetas del tamaño de la Tierra alrededor de una estrella pequeña. Se me acabó el refrigerante, pero seguí trabajando diez años más mientras me alejaba cada vez más detrás de la Tierra.",
+      "epitaph": "Vi el universo por su calor.",
+      "fun": "Se quedó tan atrás de la Tierra que, al final, para hablar con él había que inclinarlo cada vez más hacia casa.",
+      "quiz": "Vi el universo con luz infrarroja y ayudé a encontrar siete planetas alrededor de una estrella."
+    },
+    "stardust": {
+      "story": "Stardust atrapó polvo de un cometa y lo envió a la Tierra en una cápsula. La ciencia encontró en él un ingrediente de la vida.",
+      "ghost": "Atravesé el polvo que rodea un cometa y atrapé granitos diminutos con un colector de aerogel, uno de los sólidos más ligeros jamás fabricados. Envié mi cápsula al desierto de Utah con el primer polvo de cometa traído a la Tierra. Luego visité un cometa más y quemé mi última gota de combustible.",
+      "epitaph": "Traje un cometa a casa.",
+      "fun": "Su colector de aerogel era más de un 99 % espacio vacío, así que los granos de polvo que iban muy rápido podían frenar suavemente dentro en lugar de aplastarse.",
+      "quiz": "Atrapé polvo de cometa con aerogel y lo envié a la Tierra."
+    }
+  }
+}

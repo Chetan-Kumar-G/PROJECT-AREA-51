@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Land It Yourself — Ghosts of Exploration</title>
+  <meta name="description" content="Try to land a spacecraft on the Moon and Mars the way NASA's real landers did.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ghosts of Exploration">
+  <meta property="og:title" content="Land It Yourself — Ghosts of Exploration">
+  <meta property="og:description" content="Try to land a spacecraft on the Moon and Mars the way NASA's real landers did.">
+  <meta property="og:url" content="https://chetan-kumar-g.github.io/PROJECT-AREA-51/lander.html">
+  <meta property="og:image" content="https://chetan-kumar-g.github.io/PROJECT-AREA-51/assets/share/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ghosts of Exploration: the Apollo 17 lunar rover parked on the Moon, beside the site title.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://chetan-kumar-g.github.io/PROJECT-AREA-51/lander.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="css/style.css?v=9c999ce7">
+  <link rel="stylesheet" href="css/lander.css?v=c2fe78ba">
+  <link rel="icon" href="assets/ui/star.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#060a13">
+  <link rel="apple-touch-icon" href="assets/ui/apple-touch-icon.png">
+</head>
+<body class="lander-page">
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Ghosts of Exploration, home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text"><strong>Ghosts of Exploration</strong><small>Abandoned but not Forgotten</small></span>
+    </a>
+    <nav class="mainnav" aria-label="Main">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="navlist" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <ul id="navlist">
+        <li><a href="index.html#map">Ghost Map</a></li>
+        <li><a href="index.html#how">How it worked</a></li>
+        <li><a href="lander.html" class="active" aria-current="page">Play</a></li>
+        <li><a href="ask.html">Ask</a></li>
+      </ul>
+    </nav>
+    <div class="top-actions"><a class="btn btn-glow" href="explore.html"><span aria-hidden="true">◎</span> 3D Explore</a></div>
+  </header>
+
+  <main class="lg-wrap" id="main">
+    <!-- level picker -->
+    <section class="lg-menu" id="lgMenu" aria-labelledby="lgTitle">
+      <p class="eyebrow">Mini-game</p>
+      <h1 id="lgTitle">Land it yourself</h1>
+      <p class="lg-sub">Every machine in our archive had to land without crashing, with no pilot on board. Now it's your turn. Touch down slower than <b>3 m/s</b>, on the flat landing zone, before your fuel runs out.</p>
+      <div class="lg-levels" id="lgLevels"></div>
+      <details class="lg-help"><summary>How to play</summary>
+        <ul>
+          <li><b>Main engine:</b> hold <kbd>↑</kbd>, <kbd>W</kbd> or <kbd>Space</kbd>, or the 🔥 button.</li>
+          <li><b>Steer sideways:</b> <kbd>←</kbd> <kbd>→</kbd> or <kbd>A</kbd> <kbd>D</kbd>, or the ◀ ▶ buttons.</li>
+          <li><b>Cut the parachute</b> (Mars): <kbd>C</kbd> or the ✂ button.</li>
+          <li><kbd>P</kbd> pauses, <kbd>R</kbd> restarts.</li>
+          <li>The numbers turn <span style="color:var(--ok)">green</span> when you're slow enough to land safely.</li>
+        </ul>
+      </details>
+    </section>
+
+    <!-- game -->
+    <section class="lg-game" id="lgGame" hidden aria-label="Landing game">
+      <div class="lg-stage">
+        <canvas id="lgCanvas" aria-label="Lander game view" role="img"></canvas>
+        <div class="lg-hud" aria-hidden="true">
+          <div><small>Height</small><b id="hAlt">0 m</b></div>
+          <div><small>Falling speed</small><b id="hVy">0 m/s</b></div>
+          <div><small>Sideways</small><b id="hVx">0 m/s</b></div>
+          <div class="fuel"><small>Fuel</small><span class="bar"><i id="hFuel"></i></span></div>
+        </div>
+        <div class="lg-tip" id="lgTip"></div>
+        <button class="btn btn-small lg-pause" id="lgPause" aria-label="Pause">⏸</button>
+      </div>
+      <div class="lg-controls" aria-label="Controls">
+        <button class="lg-btn" data-key="left" aria-label="Steer left">◀</button>
+        <button class="lg-btn thrust" data-key="up" aria-label="Fire main engine">🔥</button>
+        <button class="lg-btn" data-key="right" aria-label="Steer right">▶</button>
+        <button class="lg-btn chute" data-key="cut" id="lgCut" aria-label="Cut the parachute">✂ Cut chute</button>
+      </div>
+      <p class="sr-only" id="lgLive" aria-live="assertive"></p>
+    </section>
+
+    <!-- result -->
+    <div class="modal" id="lgResult" role="dialog" aria-modal="true" aria-labelledby="rTitle" hidden>
+      <div class="modal-card lg-result">
+        <div class="lg-stars" id="rStars" aria-hidden="true"></div>
+        <h2 id="rTitle"></h2>
+        <p id="rText"></p>
+        <div class="lg-fact" id="rFact"></div>
+        <div class="lg-result-btns">
+          <button class="btn btn-primary" id="rAgain">Try again</button>
+          <button class="btn" id="rNext">Next level →</button>
+          <button class="btn" id="rMenu">All levels</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/lander.js?v=0750bcad"></script>
+  <script src="js/pwa.js?v=68dca921"></script>
+</body>
+</html>

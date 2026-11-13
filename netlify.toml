@@ -1,0 +1,24 @@
+# Netlify config: the website is a static site in ./site — no build step needed.
+[build]
+  publish = "site"
+  command = ""
+
+# Basic security headers for every page
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Images, maps, icons and 3D models rarely change: let browsers cache them for a week
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# Make sure .glb models are served with the right type (needed for AR on phones)
+[[headers]]
+  for = "/assets/models/*.glb"
+  [headers.values]
+    Content-Type = "model/gltf-binary"
+    Cache-Control = "public, max-age=604800"
